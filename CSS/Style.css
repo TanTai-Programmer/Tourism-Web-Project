@@ -413,28 +413,175 @@
 }
 .Service{
   display: flex;
-  
+  justify-content:center;
+  align-items: center;
 }
 .Service__Container{
+  width: 1440px;
+  height: 820px;
+  background-color:#222222 ;
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
 
 }
 .Service__Container__Content{
-
+  display: flex;
+  justify-content: space-between;
+  width:1000px;
+  align-items: center;
+  margin-bottom:30px ;
 }
 .Service__Container__Content__Left{
-
+  padding:0 50px;
 }
 .Service__Container__Content__Left--item1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
 
+  position: relative;
+  left: -100px;
+
+  color: #48DEFF;
 }
 .Service__Container__Content__Left--item2{
-
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  
+  color: #FFFFFF;
 }
 .Service__Container__Content__Left--item3{
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 102px;
 
+  position: relative;
+  right: -100px;
+  
+  color: #FF007A;
 }
 .Service__Container__Content__Left--item4{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  
+  position: relative;
+  left:350px;
 
+  color: #FFFFFF;
+}
+.Service__Container__Content__Right{
+  width: 421px;
+  height: 180px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  padding:50px;
+  
+  color: #B1ADAD;
+}
+.Service__Container__Items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+.Service__Container__Items--Hotel{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 255px;
+  height: 415px;
+  background-image: url(../Image/Picture/Hotel.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: -100px;
+  filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
+  border-radius: 35px;
+  margin:0 30px;
+}
+.Service__Container__Items--Hotel--Content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius:35px ;
+  border-bottom-right-radius:35px ;
+  width: 100%;
+}
+.Service__Container__Items--Hotel--Content:hover p:last-child{
+  display: block;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+.Service__Container__Items--Hotel--Content p:first-child{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #FFFFFF;
+
+  padding:30px;
+}
+.Service__Container__Items--Hotel--Content p:last-child{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  text-align:center;
+  display: none;
+  padding: 10px 0;
+  transition: 2s ease-in-out;
+}
+.Service__Container__Items--TiketPlane{
+  width: 255px;
+  height: 415px;
+  background-image: url(../Image/Picture/Plane.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
+  border-radius: 34px;
+  margin:0 30px;
+}
+.Service__Container__Items--Tourist{
+  width: 255px;
+  height: 415px;
+  background-image: url(../Image/Picture/Tourist.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
+  border-radius: 34px;
+  margin:0 30px;
+}
+.Service__Container__Items--Restaurant{
+  width: 255px;
+  height: 415px;
+  background-image: url(../Image/Picture/Resturant.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
+  border-radius: 34px;
+  margin:0 30px;
 }
 .Banner{
   display: flex;
