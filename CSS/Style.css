@@ -1,6 +1,16 @@
 *{
   margin:0px;
 }
+::-webkit-scrollbar{
+  background:none;
+  opacity: 10%;
+  border-radius: 20px;
+  width:5px;
+}
+::-webkit-scrollbar-thumb{
+  background:none;
+  border-radius: 10px;
+}
 .Menu{
   display: flex;
   justify-content:center;
@@ -368,16 +378,6 @@
   scroll-snap-type:y mandatory;
   /* display:-webkit-box; */
 }
-.Destination__Container__Right__Image__Item--Info--content::-webkit-scrollbar{
-  background:none;
-  opacity: 10%;
-  border-radius: 20px;
-  width:5px;
-}
-.Destination__Container__Right__Image__Item--Info--content::-webkit-scrollbar-thumb{
-  background:none;
-  border-radius: 10px;
-}
 .Destination__Container__Right__Image__Item--Info--Address{
   display: flex;
   align-items: center;
@@ -513,6 +513,16 @@
   filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
   border-radius: 35px;
   margin:0 30px;
+  overflow: hidden;
+  position: relative;
+  transition:0.5s ease-in-out
+}
+.Service__Container__Items--Hotel:hover {
+  transform: scale(1.1)
+}
+.Service__Container__Items--Hotel:hover .Service__Container__Items--Hotel--Content{
+  position: relative;
+  top: 0px;
 }
 .Service__Container__Items--Hotel--Content{
   display: flex;
@@ -523,13 +533,12 @@
   border-bottom-left-radius:35px ;
   border-bottom-right-radius:35px ;
   width: 100%;
+  transition: 1s;
+  position: relative;
+  top:200px;
+  overflow-x: hidden;
 }
-.Service__Container__Items--Hotel--Content:hover p:last-child{
-  display: block;
-  max-height: 200px;
-  overflow-y: scroll;
-}
-.Service__Container__Items--Hotel--Content p:first-child{
+.Service__Container__Items--Hotel--Content >p:first-child{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -540,48 +549,299 @@
 
   padding:30px;
 }
-.Service__Container__Items--Hotel--Content p:last-child{
+.Service__Container__Items--Hotel--Content--Description{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: #D0D0D0;
-  text-align:center;
-  display: none;
-  padding: 10px 0;
-  transition: 2s ease-in-out;
+  /* text-align:center; */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+}
+.Service__Container__Items--Hotel--Content--Description{
+  overflow-y:scroll;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px;
+}
+.Service__Container__Items--Hotel--Content--Description--p1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center;  */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+  scroll-snap-align: start;
+  /* overflow-y:scroll; */
+  height: 200px;
+}
+.Service__Container__Items--Hotel--Content--Description--p1:hover{
+  scroll-snap-align: start; /*Tự quận về đầu Chỉ áp dụng được cho chính nó không áp dụng được cho con nếu muốn cho con thì làm tương tự như cha */
+  overflow-y:scroll;
 }
 .Service__Container__Items--TiketPlane{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   width: 255px;
   height: 415px;
   background-image: url(../Image/Picture/Plane.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
+  background-position: center;
   filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
-  border-radius: 34px;
+  border-radius: 35px;
   margin:0 30px;
+  overflow: hidden;
+  position: relative;
+  transition:0.5s ease-in-out
+}
+.Service__Container__Items--TiketPlane:hover {
+  transform: scale(1.1)
+}
+.Service__Container__Items--TiketPlane:hover .Service__Container__Items--TiketPlane--Content{
+  position: relative;
+  top: 0px;
+}
+.Service__Container__Items--TiketPlane--Content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius:35px ;
+  border-bottom-right-radius:35px ;
+  width: 100%;
+  transition: 1s;
+  position: relative;
+  top:200px;
+  overflow-x: hidden;
+}
+.Service__Container__Items--TiketPlane--Content >p:first-child{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #FFFFFF;
+
+  padding:30px;
+}
+.Service__Container__Items--TiketPlane--Content--Description{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center; */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+}
+.Service__Container__Items--TiketPlane--Content--Description{
+  overflow-y:scroll;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px;
+}
+.Service__Container__Items--TiketPlane--Content--Description--p1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center;  */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+  scroll-snap-align: start;
+  /* overflow-y:scroll; */
+  height: 200px;
+}
+.Service__Container__Items--TiketPlane--Content--Description--p1:hover{
+  scroll-snap-align: start; /*Tự quận về đầu Chỉ áp dụng được cho chính nó không áp dụng được cho con nếu muốn cho con thì làm tương tự như cha */
+  overflow-y:scroll;
 }
 .Service__Container__Items--Tourist{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   width: 255px;
   height: 415px;
   background-image: url(../Image/Picture/Tourist.jpg);
   background-repeat: no-repeat;
   background-size:cover;
-  background-position:center;
+  background-position: center;
   filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
-  border-radius: 34px;
+  border-radius: 35px;
   margin:0 30px;
+  overflow: hidden;
+  position: relative;
+  transition:0.5s ease-in-out
+}
+.Service__Container__Items--Tourist:hover {
+  transform: scale(1.1)
+}
+.Service__Container__Items--Tourist:hover .Service__Container__Items--Tourist--Content{
+  position: relative;
+  top: 0px;
+}
+.Service__Container__Items--Tourist--Content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius:35px ;
+  border-bottom-right-radius:35px ;
+  width: 100%;
+  transition: 1s;
+  position: relative;
+  top:200px;
+  overflow-x: hidden;
+}
+.Service__Container__Items--Tourist--Content >p:first-child{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #FFFFFF;
+
+  padding:30px;
+}
+.Service__Container__Items--Tourist--Content--Description{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center; */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+}
+.Service__Container__Items--Tourist--Content--Description{
+  overflow-y:scroll;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px;
+}
+.Service__Container__Items--Tourist--Content--Description--p1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center;  */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+  scroll-snap-align: start;
+  /* overflow-y:scroll; */
+  height: 200px;
+}
+.Service__Container__Items--Tourist--Content--Description--p1:hover{
+  scroll-snap-align: start; /*Tự quận về đầu Chỉ áp dụng được cho chính nó không áp dụng được cho con nếu muốn cho con thì làm tương tự như cha */
+  overflow-y:scroll;
 }
 .Service__Container__Items--Restaurant{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   width: 255px;
   height: 415px;
   background-image: url(../Image/Picture/Resturant.jpg);
   background-repeat: no-repeat;
   background-size:cover;
+  background-position: center;
   filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
-  border-radius: 34px;
+  border-radius: 35px;
   margin:0 30px;
+  overflow: hidden;
+  position: relative;
+  transition:0.5s ease-in-out
+}
+.Service__Container__Items--Restaurant:hover {
+  transform: scale(1.1)
+}
+.Service__Container__Items--Restaurant:hover .Service__Container__Items--Restaurant--Content{
+  position: relative;
+  top: 0px;
+}
+.Service__Container__Items--Restaurant--Content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius:35px ;
+  border-bottom-right-radius:35px ;
+  width: 100%;
+  transition: 1s;
+  position: relative;
+  top:200px;
+  overflow-x: hidden;
+}
+.Service__Container__Items--Restaurant--Content >p:first-child{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #FFFFFF;
+
+  padding:30px;
+}
+.Service__Container__Items--Restaurant--Content--Description{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center; */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+}
+.Service__Container__Items--Restaurant--Content--Description{
+  overflow-y:scroll;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px;
+}
+.Service__Container__Items--Restaurant--Content--Description--p1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D0D0D0;
+  /* text-align:center;  */
+  padding: 0 10px;
+  transition: 1s ease-in-out;
+  scroll-snap-align: start;
+  /* overflow-y:scroll; */
+  height: 200px;
+}
+.Service__Container__Items--Restaurant--Content--Description--p1:hover{
+  scroll-snap-align: start; /*Tự quận về đầu Chỉ áp dụng được cho chính nó không áp dụng được cho con nếu muốn cho con thì làm tương tự như cha */
+  overflow-y:scroll;
 }
 .Banner{
   display: flex;
