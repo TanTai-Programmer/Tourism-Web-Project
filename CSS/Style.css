@@ -5,11 +5,12 @@
   background:none;
   opacity: 10%;
   border-radius: 20px;
-  width:5px;
+  width:10px;
 }
 ::-webkit-scrollbar-thumb{
-  background:none;
+  background-color: #fd9c9e;
   border-radius: 10px;
+  opacity: 0.5;
 }
 .Menu{
   display: flex;
@@ -595,6 +596,7 @@
 .Service__Container__Items--Hotel:hover .Service__Container__Items--Hotel--Content{
   position: relative;
   top:0px;
+  padding-bottom: 20px;
 }
 .Service__Container__Items--Hotel--Content{
   display: flex;
@@ -671,6 +673,7 @@
 .Service__Container__Items--TiketPlane:hover .Service__Container__Items--TiketPlane--Content{
   position: relative;
   top:0;
+  padding-bottom: 20px;
 }
 .Service__Container__Items--TiketPlane--Content{
   display: flex;
@@ -748,6 +751,7 @@
 .Service__Container__Items--Tourist:hover .Service__Container__Items--Tourist--Content{
   position: relative;
   top:0px;
+  padding-bottom: 20px;
 }
 .Service__Container__Items--Tourist--Content{
   display: flex;
@@ -824,6 +828,7 @@
 .Service__Container__Items--Restaurant:hover .Service__Container__Items--Restaurant--Content{
   position: relative;
   top:0px;
+  padding-bottom: 20px;
 }
 .Service__Container__Items--Restaurant--Content{
   display: flex;
@@ -977,7 +982,7 @@
   cursor: pointer;
   transition: 1s;
 }
-.Banner__Container__Button >button:hover{
+.Banner__Container__Button >button:focus{
   background-color: #72f8c2;
 }
 .Footer{
