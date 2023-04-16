@@ -75,14 +75,16 @@
 }
 .Menu__Container__Header__Right--More{
   position: relative;
+  background: none;
+  border: none;
 }
-.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--bar1{
+.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--bar1{
   transform: translate(0, 11px) rotate(-45deg);
 }
-.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--bar2{
+.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--bar2{
   opacity: 0;
 }
-.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--bar3{
+.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--bar3{
   transform: translate(0, -11px) rotate(45deg);
 }
 .Menu__Container__Header__Right--More--bar1,.Menu__Container__Header__Right--More--bar2,.Menu__Container__Header__Right--More--bar3 {
@@ -103,12 +105,12 @@
   left:-130px;
   text-align: right;
   z-index: 1;
-  background-color: rgba(42, 66, 67, 0.25);
+  background-color: rgba(10, 10, 10, 0.5);
   border-radius: 10px;
   width:max-content;
   display: none;
 }
-.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--list{
+.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--list{
   display: block;
 }
 .Menu__Container__Header__Right--More--list >li >a{
@@ -131,7 +133,7 @@
   border-radius: 10px;
   display: none;
 }
-.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--list--1:hover .Menu__Container__Header__Right--More--list--1--1_1{
+.Menu__Container__Header__Right--More--list--1:hover .Menu__Container__Header__Right--More--list--1--1_1{
   display: block;
 }
 .Menu__Container__Header__Right--More--list--1--1_1 a, li{
@@ -590,19 +592,9 @@
 .Service__Container__Items--Hotel:hover {
   transform: scale(1.1)
 }
-.Service__Container__Items--Hotel:hover .Service__Container__Items--Hotel--Content {
+.Service__Container__Items--Hotel:hover .Service__Container__Items--Hotel--Content{
   position: relative;
-  top: 0px;
-}
-.Service__Container__Items--Hotel:hover .Service__Container__Items--Hotel--Content__Description:hover{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
-}
-.Service__Container__Items--Hotel--Content__Description{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+  top:0px;
 }
 .Service__Container__Items--Hotel--Content{
   display: flex;
@@ -615,8 +607,7 @@
   width: 100%;
   transition: 1s;
   position: relative;
-  top:200px;
-  /* overflow-x: hidden; */
+  top:80px;
 }
 .Service__Container__Items--Hotel--Content >p:first-child{
   font-family: 'Inter';
@@ -640,17 +631,22 @@
   padding: 0 10px;
   transition: 1s ease-in-out;
 }
-.Service__Container__Items--Hotel--Content--Description{
-  height: 200px;
-  transition: .5s ease-in-out; 
-  overflow-x: hidden; 
-  overflow-y: scroll; 
+.Service__Container__Items--Hotel--Content--Description:hover{
+  max-height: 200px;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 20px;
-} 
+  max-height: 200px;
+}
+.Service__Container__Items--Hotel--Content--Description{
+  max-height:80px;
+  transition: .5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px
+}
 .Service__Container__Items--Hotel--Content--Description--p1{
   scroll-snap-align: start;
-  /* max-height: 200px; */
 }
 .Service__Container__Items--TiketPlane{
   display: flex;
@@ -672,19 +668,9 @@
 .Service__Container__Items--TiketPlane:hover {
   transform: scale(1.1)
 }
-.Service__Container__Items--TiketPlane:hover .Service__Container__Items--TiketPlane--Content {
+.Service__Container__Items--TiketPlane:hover .Service__Container__Items--TiketPlane--Content{
   position: relative;
-  top: 0px;
-}
-.Service__Container__Items--TiketPlane:hover .Service__Container__Items--TiketPlane--Content__Description:hover{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
-}
-.Service__Container__Items--TiketPlane--Content__Description{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+  top:0;
 }
 .Service__Container__Items--TiketPlane--Content{
   display: flex;
@@ -697,8 +683,7 @@
   width: 100%;
   transition: 1s;
   position: relative;
-  top:200px;
-  /* overflow-x: hidden; */
+  top:80px;
 }
 .Service__Container__Items--TiketPlane--Content >p:first-child{
   font-family: 'Inter';
@@ -722,17 +707,22 @@
   padding: 0 10px;
   transition: 1s ease-in-out;
 }
-.Service__Container__Items--TiketPlane--Content--Description{
-  height: 200px;
-  transition: .5s ease-in-out; 
-  overflow-x: hidden; 
-  overflow-y: scroll; 
+.Service__Container__Items--TiketPlane--Content--Description:hover{
+  max-height: 200px;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 20px;
-} 
+  max-height: 200px;
+}
+.Service__Container__Items--TiketPlane--Content--Description{
+  max-height:80px;
+  transition: .5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px
+}
 .Service__Container__Items--TiketPlane--Content--Description--p1{
   scroll-snap-align: start;
-  /* max-height: 200px; */
 }
 .Service__Container__Items--Tourist{
   display: flex;
@@ -744,6 +734,7 @@
   background-image: url(../Image/Picture/Tourist.jpg);
   background-repeat: no-repeat;
   background-size:cover;
+  background-position: center;
   filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
   border-radius: 35px;
   margin:0 30px;
@@ -754,19 +745,9 @@
 .Service__Container__Items--Tourist:hover {
   transform: scale(1.1)
 }
-.Service__Container__Items--Tourist:hover .Service__Container__Items--Tourist--Content {
+.Service__Container__Items--Tourist:hover .Service__Container__Items--Tourist--Content{
   position: relative;
-  top: 0px;
-}
-.Service__Container__Items--Tourist:hover .Service__Container__Items--Tourist--Content__Description:hover{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
-}
-.Service__Container__Items--Tourist--Content__Description{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+  top:0px;
 }
 .Service__Container__Items--Tourist--Content{
   display: flex;
@@ -779,8 +760,7 @@
   width: 100%;
   transition: 1s;
   position: relative;
-  top:200px;
-  /* overflow-x: hidden; */
+  top:80px;
 }
 .Service__Container__Items--Tourist--Content >p:first-child{
   font-family: 'Inter';
@@ -804,17 +784,22 @@
   padding: 0 10px;
   transition: 1s ease-in-out;
 }
-.Service__Container__Items--Tourist--Content--Description{
-  height: 200px;
-  transition: .5s ease-in-out; 
-  overflow-x: hidden; 
-  overflow-y: scroll; 
+.Service__Container__Items--Tourist--Content--Description:hover{
+  max-height: 200px;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 20px;
-} 
+  max-height: 200px;
+}
+.Service__Container__Items--Tourist--Content--Description{
+  max-height:80px;
+  transition: .5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px
+}
 .Service__Container__Items--Tourist--Content--Description--p1{
   scroll-snap-align: start;
-  /* max-height: 200px; */
 }
 .Service__Container__Items--Restaurant{
   display: flex;
@@ -836,19 +821,9 @@
 .Service__Container__Items--Restaurant:hover {
   transform: scale(1.1)
 }
-.Service__Container__Items--Restaurant:hover .Service__Container__Items--Restaurant--Content {
+.Service__Container__Items--Restaurant:hover .Service__Container__Items--Restaurant--Content{
   position: relative;
-  top: 0px;
-}
-.Service__Container__Items--Restaurant:hover .Service__Container__Items--Restaurant--Content__Description:hover{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
-}
-.Service__Container__Items--Restaurant--Content__Description{
-  max-height: 300px;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+  top:0px;
 }
 .Service__Container__Items--Restaurant--Content{
   display: flex;
@@ -861,8 +836,7 @@
   width: 100%;
   transition: 1s;
   position: relative;
-  top:200px;
-  /* overflow-x: hidden; */
+  top:80px;
 }
 .Service__Container__Items--Restaurant--Content >p:first-child{
   font-family: 'Inter';
@@ -886,17 +860,22 @@
   padding: 0 10px;
   transition: 1s ease-in-out;
 }
-.Service__Container__Items--Restaurant--Content--Description{
-  height: 200px;
-  transition: .5s ease-in-out; 
-  overflow-x: hidden; 
-  overflow-y: scroll; 
+.Service__Container__Items--Restaurant--Content--Description:hover{
+  max-height: 200px;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 20px;
-} 
+  max-height: 200px;
+}
+.Service__Container__Items--Restaurant--Content--Description{
+  max-height:80px;
+  transition: .5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px
+}
 .Service__Container__Items--Restaurant--Content--Description--p1{
   scroll-snap-align: start;
-  /* max-height: 200px; */
 }
 .Banner{
   display: flex;
