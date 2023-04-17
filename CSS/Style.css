@@ -57,6 +57,7 @@
   background-position:15px ;
   background-repeat: no-repeat;
   outline: none;
+  color: white;
 }
 .Menu__Container__Header__Right input::placeholder{
   color: #fff;
@@ -79,13 +80,13 @@
   background: none;
   border: none;
 }
-.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--bar1{
+.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--bar1{
   transform: translate(0, 11px) rotate(-45deg);
 }
-.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--bar2{
+.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--bar2{
   opacity: 0;
 }
-.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--bar3{
+.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--bar3{
   transform: translate(0, -11px) rotate(45deg);
 }
 .Menu__Container__Header__Right--More--bar1,.Menu__Container__Header__Right--More--bar2,.Menu__Container__Header__Right--More--bar3 {
@@ -111,7 +112,7 @@
   width:max-content;
   display: none;
 }
-.Menu__Container__Header__Right--More:focus .Menu__Container__Header__Right--More--list{
+.Menu__Container__Header__Right--More:hover .Menu__Container__Header__Right--More--list{
   display: block;
 }
 .Menu__Container__Header__Right--More--list >li >a{
@@ -355,9 +356,9 @@
   background-image:url('../Image/Icon/Plane.svg');
   background-repeat: no-repeat;
   background-position:310px;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.Destination__Container__Left__Top--button:focus{
+.Destination__Container__Left__Top--button:hover{
   background-image:url('../Image/Icon/Plane.svg');
   background-repeat: no-repeat;
   background-position:right -50px;
