@@ -221,6 +221,7 @@
     align-items: center;
     width:1440px;
     height: 2600px;
+    background: none;
     background-color: rgba(112,210,255,0.5);
 }
 .Destination__Container__Title{
@@ -271,9 +272,6 @@
     position: relative;
     right:-200px;
 }
-.Destination__Container__Map{
-
-}
 svg{
   transform: scale(2.5);
   position: relative;
@@ -282,14 +280,14 @@ svg{
   fill:#EDCECE;
   stroke: #f4f4f4;
 }
-.VN-SG{
-  stroke-width:5s;
-  transition: 1s;
+#VNSG{
+  fill:rgb(86, 255, 168);
+  stroke: #ffffff;
 }
-.VN-SG:hover{
-  fill:rgb(255, 255, 255);
-  stroke:rgb(179, 229, 16);
-  stroke-width:5s;
+#VNSG:hover{
+  fill:rgb(21, 253, 0);
+  stroke: #ffffff;
+  transition: 1s;
 }
 .Destination__Container__Test{
   width: 300px;
@@ -302,6 +300,26 @@ svg{
     height: 300px;
     background-color: rgb(7, 51, 227);
     display: block;
+}
+.Test__Destination{
+  width:500px;
+  display:flex;
+  flex-direction:column ;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  left:30px;
+  top:30px;
+}
+.Test__Destination--image img{
+ padding:0px;
+ border-radius: 10px;
+}
+.Test__Destination p{
+ padding:20px 20px;
+ font-size: 18px;
+ font-family: 'Inter';
+ font-weight: 400;
 }
 .Banner{
     display: flex;
