@@ -1,0 +1,14 @@
+{"TP": [{
+	"id": "1" ,
+    "urlimg":"../Image/Picture/DaNangCity.jpg",
+	"type": "donut",
+	"name": "Cake"
+},
+{
+	"id": "2" ,
+    "urlimg":"../Image/Picture/Hotel.jpg",
+	"type": "donut",
+	"name": "Dono"
+}
+]
+}

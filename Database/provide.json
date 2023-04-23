@@ -1,0 +1,20 @@
+{
+    "TP":[
+
+        {
+    "HaNoi": [{
+        "id":1,
+        "name":"DaNangCity",
+        "src":"Image/Picture/DaNangCity.jpg",
+        "MoTa":"DaNangLorem ipsum dolor sit amet, consectetur adipfdbxdg"
+        }
+        ],
+    "DongNai":[{
+    "id":2,
+    "name":"DongNai",
+    "src":"Image/Picture/HaLong.jpg",
+    "MoTa":"DongNaiLorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor Lorem ipsum"
+    }] 
+        }
+]
+}
