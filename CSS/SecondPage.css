@@ -353,8 +353,10 @@ path:hover{
 }
 .Destination-Top-Item1__Content{
   margin: 10px;
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0));
 }
 .Destination-Top-Item1__Content-p{
+  max-height: 200px;  
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -366,6 +368,22 @@ path:hover{
   color: #FFFFFF;
 
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.Destination-Top__Item1--btn{
+  background:none;
+  border:none;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: rgba(177, 173, 173, 0.5);
+  padding-top:40px;
+  background-image: url(../Image/Icon/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px;
+  position: relative;
+  top:-50px;
+  cursor: pointer;
 }
 .Destination-Top__Item2{
   display: flex;
@@ -398,8 +416,10 @@ path:hover{
   top:300px;
   left:150px;
   width: 450px;
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item2__Content-p{
+  max-height: 200px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -408,8 +428,26 @@ path:hover{
   padding:10px;
   text-align: right;
   color: #ffffff;
+  overflow: hidden;
 
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.Destination-Top__Item2--btn{
+  background:none;
+  border:none;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: rgba(177, 173, 173, 0.5);
+  padding-top:40px;
+  background-image: url(../Image/Icon/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px;
+  position: relative;
+  top:200px;
+  left: 200px;
+  cursor: pointer;
 }
 .Destination-Top__Item3{
   display: flex;
@@ -439,8 +477,10 @@ path:hover{
 }
 .Destination-Top-Item3__Content{
   margin: 10px;
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item3__Content-p{
+  max-height: 200px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -451,6 +491,22 @@ path:hover{
   color: #ffffff;
 
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.Destination-Top__Item3--btn{
+  background:none;
+  border:none;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: rgba(177, 173, 173, 0.5);
+  padding-top:40px;
+  background-image: url(../Image/Icon/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px;
+  position: relative;
+  top:-50px;
+  cursor: pointer;
 }
 .Destination-Top__Item4{
   display: flex;
@@ -482,6 +538,7 @@ path:hover{
 .Destination-Top-Item4__Content{
   margin: 10px;
   width: 500px;
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item4__Content-p{
   font-family: 'Inter';
@@ -494,6 +551,22 @@ path:hover{
   color: #ffffff;
 
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.Destination-Top__Item4--btn{
+  background:none;
+  border:none;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: rgba(177, 173, 173, 0.5);
+  padding-top:40px;
+  background-image: url(../Image/Icon/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px;
+  position: relative;
+  top:-50px;
+  cursor: pointer;
 }
 .Destination-Top__Item5{
   display: flex;
@@ -524,6 +597,7 @@ path:hover{
 .Destination-Top-Item5__Content{
   margin: 10px;
   width: 500px;
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item5__Content-p{
   font-family: 'Inter';
@@ -536,6 +610,22 @@ path:hover{
   color: #ffffff;
 
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.Destination-Top__Item5--btn{
+  background:none;
+  border:none;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: rgba(177, 173, 173, 0.5);
+  padding-top:40px;
+  background-image: url(../Image/Icon/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px;
+  position: relative;
+  top:-50px;
+  cursor: pointer;
 }
 .Banner{
     display: flex;
