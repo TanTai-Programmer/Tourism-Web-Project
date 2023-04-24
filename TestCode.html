@@ -7,39 +7,130 @@
   <title>Test code</title>
 </head>
 <body>
-  <button class="js-btn" style="width:100px;height: 100px;background-color:aqua; cursor:pointer">Cai nut </button>
-  <h1 id="First" class="Dono">Test code show infomation</h1>
+  <button id="First" class="Cake" style="width:100px;height: 100px;background-color:rgb(23, 168, 115); cursor:pointer">Cai nut xanh  </button>
+  <button id="Second" class="Dono" style="width:100px;height: 100px;background-color:aqua; cursor:pointer">Cai nut do </button>
+  <h1>Test code show infomation</h1>
   <p id="Render"></p>
   <script>
     var First = document.querySelector('#First');
+    var Second = document.querySelector('#Second');
     var Name=First.getAttribute('class')
+    var SecondName=Second.getAttribute('class')
+    // console.log(SecondName)
     var DataAPI = 'http://localhost:3000/TP'
-    // const compare_API = 2
-    fetch(DataAPI)
-  .then(function(response) {
-    return response.json()
-  })
-  .then((data) => {myfunc(data)})
-  function myfunc(a) {
-    var b = a.filter((testfunc))
-    var qq = b.map((testfunc))
     const inhtml = document.querySelector('#Render')
-    inhtml.innerHTML = qq.join('')
-  }
-  function Showcode(q) {
-    console.log(q.name)
-    return `<p>${q.name}</p>` 
-  }
-  function testfunc(c) {
-    if (c.name === Name){
-      return `<p>${c.name}</p>
-      <p>${c.id}</p>
-      <img src ="${c.urlimg}">`  
+    const compare_API = 2
+    fetch(DataAPI)
+    .then(function(response) {
+        return response.json()
+    })
+    .then((data) => {myfunc(data)})
+    function myfunc(a) {
+      First.onmouseover= ()=>{
+      DataInfor(Name)
+      const Thay = a.filter(Locdata)
+      const qq = Thay.map(Inra)
+      inhtml.innerHTML = qq.join('')
+    }    
+    First.onmouseout= Remo
+    Second.onmouseout= Remo
+    function Remo(){
+    inhtml.innerHTML=''
     }
-  }
+    Second.onmouseover= ()=>{
+      DataInfor(SecondName)
+      const Thay = a.filter(Locdata)
+      const qq = Thay.map(Inra)
+      inhtml.innerHTML = qq.join('')
+    }    
+    }
+    function Locdata(a){
+      if (a.name === Gan){
+        return a.name === Gan
+      }
+    }
+    var Gan = ''
+    function DataInfor(data){
+      Gan = data
+      return Gan
+    }
+    function Inra(b){
+      return `<p>${b.name}</p>
+      <p>${b.id} </p>
+      <img src="${b.img}">`
+    }
   </script>
 </body>
 </html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test code</title>
+</head>
+<body>
+  <button id="First" class="Cake" style="width:100px;height: 100px;background-color:rgb(23, 168, 115); cursor:pointer">Cai nut xanh  </button>
+  <button id="Second" class="Dono" style="width:100px;height: 100px;background-color:aqua; cursor:pointer">Cai nut do </button>
+  <h1>Test code show infomation</h1>
+  <p id="Render"></p>
+  <script>
+    var First = document.querySelector('#First');
+    var Second = document.querySelector('#Second');
+    var Name=First.getAttribute('class')
+    var SecondName=Second.getAttribute('class')
+    // console.log(SecondName)
+    var DataAPI = 'http://localhost:3000/TP'
+    const inhtml = document.querySelector('#Render')
+    // const compare_API = 2
+    First.onclick = function (){
+      Display(Name)
+    }
+    function Display(Name){
+      // console.log(Name)
+        fetch(DataAPI)
+        .then(function(response) {
+          return response.json()
+        })
+        .then((data) => {myfunc(data,Name)})
+  }
+  function myfunc(a,ten) {
+    // console.log(ten)
+    var b = a.filter(function (){
+      testfunc(a,ten)
+    })
+    console.log(b)
+    var qq = b.map(function (){
+      testfunc(a,ten)})
+    inhtml.innerHTML = qq.join('')
+  }
+  // function Showcode(q) {
+  //   console.log(q.name)
+  //   return `<p>${q.name}</p>` 
+  // }
+  function testfunc(c,ten) { 
+    // const caiquan = c.filter()
+    // if (c.name === ten){
+    //     // console.log(c)
+    //     // console.log(ten)
+    //   return `<p>${c.name}</p>
+    //   <p>${c.id}</p>
+    //   <img src ="${c.urlimg}">`  
+    // }
+    }
+  First.onmouseout= Remo
+  Second.onmouseout= Remo
+function Remo(){
+    inhtml.innerHTML=''
+}
+  </script>
+</body>
+</html> -->
 
 
 <!-- <!DOCTYPE html>
