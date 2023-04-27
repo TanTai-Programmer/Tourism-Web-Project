@@ -35,20 +35,26 @@
     background-position:center;
     background-size: 1440px 740px;
   }
-  25%{
+  20%{
     background-image: url(../Image/Picture/CauRong.jpg);
     background-repeat: no-repeat;
     background-position:center;
     background-size: 1440px 740px;
   }
-  50%{
+  40%{
     background-image: url(../Image/Picture/SonDoong.jpg);
     background-repeat: no-repeat;
     background-position:center;
     background-size:1440px 740px;
   }
-  75%{
+  60%{
     background-image: url(../Image/Picture/CanTho.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 1440px 740px;
+  }
+  80%{
+    background-image: url(../Image/Picture/GoldenBridge.jpg);
     background-repeat: no-repeat;
     background-position:center;
     background-size: 1440px 740px;
@@ -238,7 +244,7 @@
   padding-left: 70px;
   color: #fff;
   font-size:24px;
-  background-color: rgba(72,198,206,0.7);
+  background-color: rgba(96, 149, 152, 0.7);
   filter: drop-shadow(5px 5px 6px rgba(0,0,0,0.25));
   border-radius:10px;
   border:none;
@@ -529,6 +535,136 @@
   position: relative;
   right:60px;
 }
+.Active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Active__Container{
+  width:1440px ;
+  height: 1000px;
+  background-color: #2d2727;
+  display: flex;
+  justify-content:center;
+  align-items:start;
+}
+.Active__Container__Left{
+  padding:70px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.Active__Container__Left h4{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  padding:20px;
+
+  color: #FFFFFF;
+}
+.Active__Container__Left--Videomain iframe{
+  border-radius: 10px;
+}
+.Active__Container__Left--Select{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Active__Container__Left--Select button:first-child{
+  cursor: pointer;
+}
+.Active__Container__Left--Select button:last-child{
+  cursor: pointer;
+}
+.Active__Container__Left--Videoitems{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Active__Container__Left--Videoitems div{
+  padding:20px;
+}
+.Active__Container__Left--Videoitems iframe{
+  border-radius: 10px;
+}
+.Active__Container__Right{
+  width: 460px;
+  padding:20px;
+}
+.Active__Container__Right h1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  color:#fff;
+  padding:30px 0;
+
+  text-shadow: 10px 8px 5px rgba(0, 0, 0, 0.25);
+}
+.Active__Container__Right h1 span:first-child{
+  color: #48DEFF;
+}
+.Active__Container__Right h1 span:last-child{
+  color:red;
+  font-family: 'Fasthand';
+  font-size: 70px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #ff0000;
+  color:transparent;
+}
+.Active__Container__Right h3{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #fff;
+  padding: 30px 0;
+}
+.Active__Container__Right--Description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Active__Container__Right--Description p{
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0));
+  height: 200px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  overflow-y: scroll;
+
+  color: #B1ADAD;
+  padding: 30px 0;
+}
+.Active__Container__Right--Description button{
+  background:none;
+  border:none;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: rgba(196, 196, 196, 0.5);
+  padding-top:40px;
+  background-image: url(../Image/Icon/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px;
+  cursor: pointer;
+}
+.Active__Container__Right--Description button:hover{
+  color:rgba(196, 196, 196, 1);
+  transition:1s
+}
 .Service{
   display: flex;
   justify-content:center;
@@ -542,7 +678,6 @@
   flex-direction: column;
   justify-content:start;
   align-items: center;
-
 }
 .Service__Container__Content{
   display: flex;
