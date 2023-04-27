@@ -576,9 +576,35 @@
 }
 .Active__Container__Left--Select button:first-child{
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin:20px;
+  background: none;
+  border:none;
+  background-image: url(../Image/Icon/previous-arrow-backward-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .5s;
+}
+.Active__Container__Left--Select button:first-child:hover{
+  background-color:rgba(0,240,255,1); ;
 }
 .Active__Container__Left--Select button:last-child{
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin:20px;
+  background: none;
+  border:none;
+  background-image: url(../Image/Icon/next-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .5s;
+}
+.Active__Container__Left--Select button:last-child:hover{
+  background-color: rgba(0,240,255,1);
 }
 .Active__Container__Left--Videoitems{
   display: flex;
@@ -594,6 +620,9 @@
 .Active__Container__Right{
   width: 460px;
   padding:20px;
+}
+.Active__Container__Right a{ 
+  text-decoration: none;
 }
 .Active__Container__Right h1{
   font-family: 'Inter';
@@ -633,10 +662,20 @@
   justify-content: center;
   align-items: center;
 }
-.Active__Container__Right--Description p{
-  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0));
-  height: 200px;
-
+.Active__Container__Right--Description{
+  max-height: 200px;
+  transition: .5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 20px;
+}
+.Active__Container__Right--Description:hover{
+  max-height: 400px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.Active__Container__Right--Description-p{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -646,8 +685,13 @@
 
   color: #B1ADAD;
   padding: 30px 0;
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0.2));
 }
-.Active__Container__Right--Description button{
+.Active__Container__Right a{
+  display: flex;
+  justify-content: center;
+}
+.Active__Container__Right--Description-btn{
   background:none;
   border:none;
   font-size: 24px;
