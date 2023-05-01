@@ -301,24 +301,74 @@
   width: 300px;
   height: 490px;
   transform: skew(-10deg);
-  background-image: url(../Image/Picture/Cảnh\ đẹp\ Viêt\ Nam_Ruộng\ lúa.jpg);
-  background-size: cover;
-  background-position: center center;
+  animation: imagechange1 30s infinite;
   box-shadow: 12px 10px 10px rgba(0,0,0,0.25);
   position: relative;
   top:200px;
   z-index: 1;
 }
+@keyframes imagechange1{
+  0%{
+    background-image: url(../Image/Picture/BinhThuan.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  30%{
+    background-image: url(../Image/Picture/CauRong.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  60%{
+    background-image: url(../Image/Picture/DongNai.webp);
+    background-size: cover;
+    background-position: center center;
+  }
+  90%{
+    background-image: url(../Image/Picture/Ho\ Guom.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  100%{
+    background-image: url(../Image/Picture/BinhThuan.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+}
 .Menu__Container__Content--Right--image2{
   width: 300px;
   height: 490px;
   transform: skew(-10deg);
-  background-image: url(../Image/Picture/Ảnh\ nền\ Hang\ Sơn\ Đoòng.jpg);
-  background-size: cover;
-  background-position: center center;
+  animation: imagechange2 30s infinite;
   box-shadow: 12px 10px 10px rgba(0,0,0,0.25);
   position: relative;
   left:-30px;
+}
+@keyframes imagechange2{
+  0%{
+    background-image: url(../Image/Picture/Cảnh\ đẹp\ Viêt\ Nam_Ruộng\ lúa.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  30%{
+    background-image: url(../Image/Picture/Cảnh\ đẹp\ Việt\ Nam_Đồi\ bậc\ thang.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  60%{
+    background-image: url(../Image/Picture/CanTho.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  90%{
+    background-image: url(../Image/Picture/HoChiMinhCity.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  100%{
+    background-image: url(../Image/Picture/Cảnh\ đẹp\ Viêt\ Nam_Ruộng\ lúa.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
 }
 .Destination{
   display: flex;
