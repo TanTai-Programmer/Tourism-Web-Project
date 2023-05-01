@@ -420,7 +420,6 @@
   height: 800px;
   display:flex;
   flex-direction: column;
-  justify-content:space-around;
   align-items:center;
 }
 .Destination__Container__Right--Total{
@@ -435,18 +434,42 @@
 
 }
 .Destination__Container__Right__Image{
-  display:flex;
-  justify-content: center;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
   align-items:center;
+}
+.carousel{
+  height:100% !important;
+  overflow:visible !important;
+  left: -50px;
+  top:-250px;
+}
+.Destination__Container__Right__Image--background1{
+  background-image: url(../Image/Picture/Cảnh\ đep\ Việt\ Nam_Cầu\ Vàng.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Destination__Container__Right__Image--background2{
+  background-image: url(../Image/Picture/HaLong.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Destination__Container__Right__Image--background3{
+  background-image: url(../Image/Picture/CanTho.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Destination__Container__Right__Image--background4{
+  background-image: url(../Image/Picture/SonDoong.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .Destination__Container__Right__Image__Item{
   display:flex;
   flex-direction:column;
   justify-content: space-between;
   filter: drop-shadow(0px 10px 10px rgba(255, 255, 255, 0.25));
-  background-image: url(../Image/Picture/Cảnh\ đep\ Việt\ Nam_Cầu\ Vàng.jpg);
-  background-position: center;
-  background-size: cover;
   width:450px;
   height: 682px;
   border-radius: 50px;
@@ -515,26 +538,6 @@
   padding:10px;
   width: 20px;
 }
-.Destination__Container__Right__Image__1{
-  background-image: url(../Image/Picture/Cảnh\ đep\ Việt\ Nam_Cầu\ Vàng.jpg);
-  background-position: center;
-  background-size: cover;
-  width:230px;
-  height: 350px;
-  border-radius: 50px;
-  position: relative;
-  left:60px;
-}
-.Destination__Container__Right__Image__2{
-  background-image: url(../Image/Picture/Cảnh\ đep\ Việt\ Nam_Cầu\ Vàng.jpg);
-  background-position: center;
-  background-size: cover;
-  width:230px;
-  height: 350px;
-  border-radius: 50px;
-  position: relative;
-  right:60px;
-}
 .Active{
   display: flex;
   justify-content: center;
@@ -576,35 +579,39 @@
 }
 .Active__Container__Left--Select button:first-child{
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  margin:20px;
+  margin:10px;
   background: none;
   border:none;
   background-image: url(../Image/Icon/previous-arrow-backward-svgrepo-com.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 25px 25px;
+  background-position: center;
   transition: .5s;
 }
 .Active__Container__Left--Select button:first-child:hover{
-  background-color:rgba(0,240,255,1); ;
+  background-color:rgba(0,240,255,1); 
+  filter: drop-shadow(0px 0px 25px rgba(0, 240, 255, 1));
 }
 .Active__Container__Left--Select button:last-child{
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  margin:20px;
+  margin:10px;
   background: none;
   border:none;
   background-image: url(../Image/Icon/next-svgrepo-com.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 25px ;
+  background-position: center;
   transition: .5s;
 }
 .Active__Container__Left--Select button:last-child:hover{
-  background-color: rgba(0,240,255,1);
+  background-color:rgba(0,240,255,1); 
+  filter: drop-shadow(0px 0px 25px rgba(0, 240, 255, 1));
 }
 .Active__Container__Left--Videoitems{
   display: flex;

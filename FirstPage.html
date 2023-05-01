@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="CSS/Style.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Hachi Maru Pop' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.Destination__Container__Right__Image').carousel({
+                  padding: 200
+          });
+          // autoplay();
+          // function autoplay() {
+          // 	$('.carousel').carousel('next');
+          // 	setTimeout(autoplay, 4500);
+          // }
+        });
+      </script>
 </head>
 <body>
     <div class="Menu">
@@ -90,31 +107,92 @@
             <div class="Destination__Container__Right">
                 <div class="Destination__Container__Right--Total">
                     <span> 500 +</span> Destination</div>
-                <div class="Destination__Container__Right__Image">
-                    <div class="Destination__Container__Right__Image__1">
+                <div class="Destination__Container__Right__Image carousel">
+                        <div class="carousel-item">
+                            <div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background1 ">
+                                <div class="Destination__Container__Right__Image__Item--Header">
+                                <img src="Image/Icon/Heart.svg" alt="Like">
+                            </div>
+                            <div class="Destination__Container__Right__Image__Item--Info">
+                                <p class="Destination__Container__Right__Image__Item--Info--Header">
+                                    Golden Bridge
+                                </p>
+                                <div class="Destination__Container__Right__Image__Item--Info--content">
+                                    <p class="Destination__Container__Right__Image__Item--Info--content--item">This "century" bridge is located in Thien Thai garden. Located on an altitude of 1414m and located in Ba Na Hills tourist area, Da Nang city Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae. Soluta, laborum atque aliquam molestiae amet, repellat quae, consectetur sint mollitia dolor iusto? Maxime reprehenderit praesentium sit officiis ipsam eveniet.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at corrupti, et totam ad id, veritatis sapiente architecto enim commodi, a quia nemo. Placeat sed, aliquam blanditiis fugiat dolorum magnam!
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae maiores mollitia illum animi recusandae provident dignissimos at consequatur cum. Beatae fugit quam magnam autem pariatur id expedita mollitia placeat voluptas!Molestiae maiores mollitia illum animi recusandae provident dignissMolestiae maiores mollitia illum animi recusandae provident digniss</p>
+                                </div>
+                                <div class="Destination__Container__Right__Image__Item--Info--Address">
+                                    <img src="Image/Icon/Pin Map.svg" alt="Pin map">
+                                    <p>Da Nang Provide</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background2">
+                                <div class="Destination__Container__Right__Image__Item--Header">
+                                <img src="Image/Icon/Heart.svg" alt="Like">
+                            </div>
+                            <div class="Destination__Container__Right__Image__Item--Info">
+                                <p class="Destination__Container__Right__Image__Item--Info--Header">
+                                    Ha Long Bay
+                                </p>
+                                <div class="Destination__Container__Right__Image__Item--Info--content">
+                                    <p class="Destination__Container__Right__Image__Item--Info--content--item">Ha Long tourism is known as a beautiful ink painting in Quang Ninh. This place attracts millions of visitors every year, both domestic and foreign tourists. When it comes to attractive tourist destinations in Vietnam, Ha Long is definitely a place chosen by many tourists. Because of the beautiful, majestic and unique natural scenery with many impressive caves and historical monuments. Ha Long Bay is one of the top beautiful bays in the world with dreamy scenery, truly a masterpiece of nature. 
+                                    Ha Long Bay is a small bay on the west coast of the Gulf of Tonkin in Vietnam. Including the sea and islands of Ha Long city in Quang Ninh province. Ha Long Bay has an area of about 1,553 square kilometers, including 1,969 large and small islands. Most of them are limestone islands, in which the core area of the bay has an area of 335km2, with a dense concentration of 775 islands.
+                                    </p>
+                                </div>
+                                <div class="Destination__Container__Right__Image__Item--Info--Address">
+                                    <img src="Image/Icon/Pin Map.svg" alt="Pin map">
+                                    <p>Quang Ninh Provide</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                            <div class="carousel-item">
+                                <div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background3">
+                                    <div class="Destination__Container__Right__Image__Item--Header">
+                                    <img src="Image/Icon/Heart.svg" alt="Like">
+                                </div>
+                                <div class="Destination__Container__Right__Image__Item--Info">
+                                    <p class="Destination__Container__Right__Image__Item--Info--Header">
+                                       Cai Rang Floated market
+                                    </p>
+                                    <div class="Destination__Container__Right__Image__Item--Info--content">
+                                        <p class="Destination__Container__Right__Image__Item--Info--content--item">Cai Rang Floating Market is a unique and typical type of market in the Mekong Delta that cannot be found anywhere else in Vietnam. And this is also the typical, bustling, and most famous market for the culture of the West River.
+                                            Cai Rang Floating Market Can Tho will bring you 1-0-2 experiences such as the poetic scenery of the floating market at dawn, sitting on a boat, immersing in the bustling business atmosphere in the early morning and waking up in the morning. enjoy vermicelli right on the boat… extremely wonderful.</p>
+                                    </div>
+                                    <div class="Destination__Container__Right__Image__Item--Info--Address">
+                                        <img src="Image/Icon/Pin Map.svg" alt="Pin map">
+                                        <p>Can Tho Provide</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                                <div class="carousel-item">
+                                    <div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background4">
+                                        <div class="Destination__Container__Right__Image__Item--Header">
+                                        <img src="Image/Icon/Heart.svg" alt="Like">
+                                    </div>
+                                    <div class="Destination__Container__Right__Image__Item--Info">
+                                        <p class="Destination__Container__Right__Image__Item--Info--Header">
+                                            Son Dong Cave
+                                        </p>
+                                        <div class="Destination__Container__Right__Image__Item--Info--content">
+                                            <p class="Destination__Container__Right__Image__Item--Info--content--item">Son Doong Cave has coordinates 17°55'N and 106°14'E, located in Son Trach commune, Bo Trach district, Quang Binh province. Son Doong Cave is located in the core zone of Phong Nha Ke Bang National Park. The cave is located close to the Vietnam-Laos border. Twice recognized by UNESCO as a World Natural Heritage Site. Son Doong Cave is located in Bo Trach district, Quang Binh province.
 
-                    </div>
-                    <div class="Destination__Container__Right__Image__Item">
-                        <div class="Destination__Container__Right__Image__Item--Header">
-                        <img src="Image/Icon/Heart.svg" alt="Like">
-                    </div>
-                    <div class="Destination__Container__Right__Image__Item--Info">
-                        <p class="Destination__Container__Right__Image__Item--Info--Header">
-                            Golden Bridge
-                        </p>
-                        <div class="Destination__Container__Right__Image__Item--Info--content">
-                            <p class="Destination__Container__Right__Image__Item--Info--content--item">This "century" bridge is located in Thien Thai garden. Located on an altitude of 1414m and located in Ba Na Hills tourist area, Da Nang city Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae. Soluta, laborum atque aliquam molestiae amet, repellat quae, consectetur sint mollitia dolor iusto? Maxime reprehenderit praesentium sit officiis ipsam eveniet.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at corrupti, et totam ad id, veritatis sapiente architecto enim commodi, a quia nemo. Placeat sed, aliquam blanditiis fugiat dolorum magnam!
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae maiores mollitia illum animi recusandae provident dignissimos at consequatur cum. Beatae fugit quam magnam autem pariatur id expedita mollitia placeat voluptas!Molestiae maiores mollitia illum animi recusandae provident dignissMolestiae maiores mollitia illum animi recusandae provident digniss</p>
+                                                Son Doong Cave was formed about 2-5 million years ago, when river water flowed through the limestone area that had been buried along a fault line. The water flow eroded and created a giant tunnel in the ground under the mountain range. In places where the rock is soft, the ceiling collapses to form sinkholes, which over time form giant cave arches.
+                                                
+                                                The cave has a width of 150 meters, a height of more than 200 meters, a length of up to nearly 9km. Estimated capacity of Son Doong Cave is 38.5 million cubic meters (equivalent to 15,000 Olympic swimming pools).</p>
+                                        </div>
+                                        <div class="Destination__Container__Right__Image__Item--Info--Address">
+                                            <img src="Image/Icon/Pin Map.svg" alt="Pin map">
+                                            <p>Quang Binh Provide</p>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
-                        <div class="Destination__Container__Right__Image__Item--Info--Address">
-                            <img src="Image/Icon/Pin Map.svg" alt="Pin map">
-                            <p>Da Nang Provide</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="Destination__Container__Right__Image__2">
-                        
                     </div>
                 </div>
             </div>
@@ -130,7 +208,7 @@
                 <div class="Active__Container__Left--Select">
                     <h4>Selection your Video:</h4>
                     <div class="Active__Container__Left--Select--btn">
-                        <button class="bi bi-arrow-left-circle-fill"></button>   
+                        <button></button>   
                         <button></button>                    
                     </div>
                 </div>

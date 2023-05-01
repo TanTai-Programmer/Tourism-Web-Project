@@ -1,4 +1,223 @@
 <!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <title>How to 3D Pricing Carousel using Materialize CSS</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+      body {
+
+	background: #08091d; 
+	display:flex;
+	justify-content:center;
+	flex-direction: column;
+}
+.carousel{
+    height: 1200px; 
+    perspective: 1000px;
+	display: flex;
+	justify-content:center;
+	flex-direction: column;
+	align-items:center;
+}
+.Destination__Container__Right__Image{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+  }
+  .Destination__Container__Right__Image--background3{
+  background-image: url(Image/Picture/DaNang.jpg);
+  background-position: center;
+	background-size: cover;
+}
+.Destination__Container__Right__Image--background4{
+  background-image: url(Image/Picture/HaLong.jpg);
+  background-position: center;
+	background-size: cover;
+}
+  .Destination__Container__Right__Image__Item{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+	filter: drop-shadow(0px 10px 10px rgba(255, 255, 255, 0.25));
+	width:450px;
+	height: 682px;
+	border-radius: 50px;
+	z-index: 1;
+  }
+  .Destination__Container__Right__Image__Item--Header{
+	padding:30px;
+	display: flex;
+	justify-content: flex-end;
+  }
+  .Destination__Container__Right__Image__Item--Info--Header{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 36px;
+	padding:15px;
+  
+	color: #FFFFFF;
+  }
+  
+  .Destination__Container__Right__Image__Item--Info{
+	background-color: rgba(0,0,0,0.5);
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+  }
+  .Destination__Container__Right__Image__Item--Info--content {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	padding:0px 15px;
+	color: #D0D0D0;
+  }
+  .Destination__Container__Right__Image__Item--Info--content{
+	max-height: 80px;
+	transition: .5s ease-in-out;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scroll-padding-top: 20px;
+	/* display:-webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;  */
+  }
+  .Destination__Container__Right__Image__Item--Info--content--item{
+	scroll-snap-align: start;
+  }
+  .Destination__Container__Right__Image__Item--Info--content:hover{
+	max-height: 300px;
+	overflow-y:scroll;
+	scroll-snap-type:y mandatory;
+	/* display:-webkit-box; */
+  }
+  .Destination__Container__Right__Image__Item--Info--Address{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: #cbcbcb;
+	font-size: 18px;
+	font-family: 'Inter';
+	padding:10px 30px 10px 0;
+  }
+  .Destination__Container__Right__Image__Item--Info--Address img{
+	padding:10px;
+	width: 20px;
+  }
+    </style>  
+</head>
+<body>   
+	<div class="carousel">
+		<div class="carousel-item">
+			<div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background1 ">
+				<div class="Destination__Container__Right__Image__Item--Header">
+				<img src="Image/Icon/Heart.svg" alt="Like">
+			</div>
+			<div class="Destination__Container__Right__Image__Item--Info">
+				<p class="Destination__Container__Right__Image__Item--Info--Header">
+					Golden Bridge
+				</p>
+				<div class="Destination__Container__Right__Image__Item--Info--content">
+					<p class="Destination__Container__Right__Image__Item--Info--content--item">This "century" bridge is located in Thien Thai garden. Located on an altitude of 1414m and located in Ba Na Hills tourist area, Da Nang city Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae. Soluta, laborum atque aliquam molestiae amet, repellat quae, consectetur sint mollitia dolor iusto? Maxime reprehenderit praesentium sit officiis ipsam eveniet.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at corrupti, et totam ad id, veritatis sapiente architecto enim commodi, a quia nemo. Placeat sed, aliquam blanditiis fugiat dolorum magnam!
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae maiores mollitia illum animi recusandae provident dignissimos at consequatur cum. Beatae fugit quam magnam autem pariatur id expedita mollitia placeat voluptas!Molestiae maiores mollitia illum animi recusandae provident dignissMolestiae maiores mollitia illum animi recusandae provident digniss</p>
+				</div>
+				<div class="Destination__Container__Right__Image__Item--Info--Address">
+					<img src="Image/Icon/Pin Map.svg" alt="Pin map">
+					<p>Da Nang Provide</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background2">
+				<div class="Destination__Container__Right__Image__Item--Header">
+				<img src="Image/Icon/Heart.svg" alt="Like">
+			</div>
+			<div class="Destination__Container__Right__Image__Item--Info">
+				<p class="Destination__Container__Right__Image__Item--Info--Header">
+					Golden Bridge
+				</p>
+				<div class="Destination__Container__Right__Image__Item--Info--content">
+					<p class="Destination__Container__Right__Image__Item--Info--content--item">This "century" bridge is located in Thien Thai garden. Located on an altitude of 1414m and located in Ba Na Hills tourist area, Da Nang city Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae. Soluta, laborum atque aliquam molestiae amet, repellat quae, consectetur sint mollitia dolor iusto? Maxime reprehenderit praesentium sit officiis ipsam eveniet.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at corrupti, et totam ad id, veritatis sapiente architecto enim commodi, a quia nemo. Placeat sed, aliquam blanditiis fugiat dolorum magnam!
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae maiores mollitia illum animi recusandae provident dignissimos at consequatur cum. Beatae fugit quam magnam autem pariatur id expedita mollitia placeat voluptas!Molestiae maiores mollitia illum animi recusandae provident dignissMolestiae maiores mollitia illum animi recusandae provident digniss</p>
+				</div>
+				<div class="Destination__Container__Right__Image__Item--Info--Address">
+					<img src="Image/Icon/Pin Map.svg" alt="Pin map">
+					<p>Da Nang Provide</p>
+				</div>
+			</div>
+			</div>
+		</div>
+			<div class="carousel-item">
+				<div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background3">
+					<div class="Destination__Container__Right__Image__Item--Header">
+					<img src="Image/Icon/Heart.svg" alt="Like">
+				</div>
+				<div class="Destination__Container__Right__Image__Item--Info">
+					<p class="Destination__Container__Right__Image__Item--Info--Header">
+						Golden Bridge
+					</p>
+					<div class="Destination__Container__Right__Image__Item--Info--content">
+						<p class="Destination__Container__Right__Image__Item--Info--content--item">This "century" bridge is located in Thien Thai garden. Located on an altitude of 1414m and located in Ba Na Hills tourist area, Da Nang city Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae. Soluta, laborum atque aliquam molestiae amet, repellat quae, consectetur sint mollitia dolor iusto? Maxime reprehenderit praesentium sit officiis ipsam eveniet.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at corrupti, et totam ad id, veritatis sapiente architecto enim commodi, a quia nemo. Placeat sed, aliquam blanditiis fugiat dolorum magnam!
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae maiores mollitia illum animi recusandae provident dignissimos at consequatur cum. Beatae fugit quam magnam autem pariatur id expedita mollitia placeat voluptas!Molestiae maiores mollitia illum animi recusandae provident dignissMolestiae maiores mollitia illum animi recusandae provident digniss</p>
+					</div>
+					<div class="Destination__Container__Right__Image__Item--Info--Address">
+						<img src="Image/Icon/Pin Map.svg" alt="Pin map">
+						<p>Da Nang Provide</p>
+					</div>
+				</div>
+				</div>
+			</div>
+				<div class="carousel-item">
+					<div class="Destination__Container__Right__Image__Item Destination__Container__Right__Image--background4">
+						<div class="Destination__Container__Right__Image__Item--Header">
+						<img src="Image/Icon/Heart.svg" alt="Like">
+					</div>
+					<div class="Destination__Container__Right__Image__Item--Info">
+						<p class="Destination__Container__Right__Image__Item--Info--Header">
+							Golden Bridge
+						</p>
+						<div class="Destination__Container__Right__Image__Item--Info--content">
+							<p class="Destination__Container__Right__Image__Item--Info--content--item">This "century" bridge is located in Thien Thai garden. Located on an altitude of 1414m and located in Ba Na Hills tourist area, Da Nang city Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae. Soluta, laborum atque aliquam molestiae amet, repellat quae, consectetur sint mollitia dolor iusto? Maxime reprehenderit praesentium sit officiis ipsam eveniet.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at corrupti, et totam ad id, veritatis sapiente architecto enim commodi, a quia nemo. Placeat sed, aliquam blanditiis fugiat dolorum magnam!
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae maiores mollitia illum animi recusandae provident dignissimos at consequatur cum. Beatae fugit quam magnam autem pariatur id expedita mollitia placeat voluptas!Molestiae maiores mollitia illum animi recusandae provident dignissMolestiae maiores mollitia illum animi recusandae provident digniss</p>
+						</div>
+						<div class="Destination__Container__Right__Image__Item--Info--Address">
+							<img src="Image/Icon/Pin Map.svg" alt="Pin map">
+							<p>Da Nang Provide</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+    
+    <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel({
+			padding: 200
+	});
+	// autoplay();
+	// function autoplay() {
+	// 	$('.carousel').carousel('next');
+	// 	setTimeout(autoplay, 4500);
+	// }
+  });
+</script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -61,7 +280,7 @@
     }
   </script>
 </body>
-</html>
+</html> -->
 
 
 
