@@ -1,0 +1,70 @@
+
+body{
+    margin:0px;
+}
+.Container{
+    display: flex;
+}
+.Sidebar-Left{
+    background-color: aqua;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.Sidebar-Left-List-Items ul{
+    list-style: none;
+    font-size: 24px;
+    font-family: 'Inter';
+    padding:0px;
+}
+.Sidebar-Left-List-Items a{
+    text-decoration: none;
+    padding:10px;
+    color:gray;
+}
+.Sidebar-Left-List-Items li i{
+    width: 40px;
+}
+.Sidebar-Right{
+    display: flex;
+}
+.Sidebar-Right-Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(255, 203, 203, 0.5);
+    position: fixed;
+}
+.Sidebar-Right-Header__Right ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Sidebar-Right-Header__Right a{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 24px;
+    padding:10px;
+    color:silver;
+}
+.Sidebar-Right-Header__Right a i{
+    padding:5px;
+}
+.Sidebar-Right-Header__Left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Sidebar-Right-Header__Left span{
+    font-size:24px;
+    padding:10px;
+    color:silver;
+}
+.Avarta{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
