@@ -83,7 +83,7 @@
   display: flex;
   justify-content:space-between;
   align-items:center;
-  width: 740px;
+  width: fit-content;
   height: 60px;
   padding:20px;
 }
@@ -93,7 +93,7 @@
   text-decoration: none;
   font-weight: 400;
   font-family: 'Inter';
-  padding:10px;
+  padding:20px;
 }
 .Menu__Container__Header__Right input{
   width:240px ;
@@ -101,13 +101,17 @@
   border-radius: 96px;
   border:3px solid #fff;
   background: none;
-  padding-left: 90px;
+  padding-left: 70px;
   font-size:24px;
   background-image: url(../Image/Icon/Search.svg) ;
   background-position:15px ;
   background-repeat: no-repeat;
   outline: none;
   color: white;
+  transition: .5s;
+}
+.Menu__Container__Header__Right input:focus{
+  width:400px;
 }
 .Menu__Container__Header__Right input::placeholder{
   color: #fff;
@@ -124,6 +128,7 @@
   font-weight: 400;
   padding:10px;
   font-family: 'Inter';
+  outline: none;
 }
 .Menu__Container__Header__Right--More{
   position: relative;
@@ -591,7 +596,7 @@
 .Destination__Container__Right__Image__Item--Info--Address p{
   background-image: url(../Image/Icon/Pin\ Map.svg);
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 17px;
   padding-left: 30px;
 }
 .Active{
@@ -1385,6 +1390,7 @@
 .Footer__Container__Top__Right--Item--List li:first-child{
   font-size: 24px;
   padding-bottom:10px;
+  font-weight: 700;
 }
 .Footer__Container__Top__Right--Item--List li {
   padding:5px 0;
@@ -1438,4 +1444,10 @@
   font-size: 18px;
   font-family: 'Inter';
   font-weight: 500;
+}
+.Footer__Container__Button--Right a{
+  margin: 5px;
+}
+.Footer__Container__Button--Right img:hover{
+  box-shadow:0 0 10px rgb(255, 255, 255);
 }
