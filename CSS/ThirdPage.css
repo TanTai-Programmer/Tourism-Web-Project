@@ -285,6 +285,7 @@
   flex-direction: column;
   justify-content:space-between;
   align-items: center;
+  background-color: #fef0f0;
   transform: scale(1);
   transition: .5s;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
@@ -304,6 +305,7 @@
   font-family: 'Inter';
   text-shadow:1px 1px 5px #222222;
   padding:10px 0;
+  padding-left: 10px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
