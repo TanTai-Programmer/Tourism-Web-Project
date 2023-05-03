@@ -5,66 +5,41 @@ body{
 .Container{
     display: flex;
 }
-.Sidebar-Left{
-    background-color: aqua;
-    padding:10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+.Sidebar{
+    background-color:aquamarine;
+    width: 20%;
+    transition: 1s;
+    height: 1000px;
 }
-.Sidebar-Left-List-Items ul{
-    list-style: none;
-    font-size: 24px;
-    font-family: 'Inter';
-    padding:0px;
+.Content{
+    background-color:salmon;
+    width: 80%;
+    transition: 1s;
+    overflow: hidden;
 }
-.Sidebar-Left-List-Items a{
-    text-decoration: none;
-    padding:10px;
-    color:gray;
+.btnclose{
+    animation: close 1s;
 }
-.Sidebar-Left-List-Items li i{
-    width: 40px;
+.Sidebar-logo{
+    height: 30px;
 }
-.Sidebar-Right{
-    display: flex;
+.btnopen{
+    display: none;
+    animation: open 1s;
 }
-.Sidebar-Right-Header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:rgba(255, 203, 203, 0.5);
-    position: fixed;
+@keyframes open {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
-.Sidebar-Right-Header__Right ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.Sidebar-Right-Header__Right a{
-    text-decoration: none;
-    font-family: 'Inter';
-    font-size: 24px;
-    padding:10px;
-    color:silver;
-}
-.Sidebar-Right-Header__Right a i{
-    padding:5px;
-}
-.Sidebar-Right-Header__Left{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.Sidebar-Right-Header__Left span{
-    font-size:24px;
-    padding:10px;
-    color:silver;
-}
-.Avarta{
-    width:50px;
-    height: 50px;
-    border-radius: 50%;
+@keyframes close {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

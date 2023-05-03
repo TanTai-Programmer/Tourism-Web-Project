@@ -10,10 +10,41 @@
     <!-- <link rel="stylesheet" href="CSS/iconall.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="CSS/AdminPage.css">
+
 </head>
 <body>
     <div class="Container">
-        <div class="Sidebar-Left">
+        <div class="Sidebar">
+            <div class="Sidebar-logo">
+                <button class="btnclose" onclick="Close()"> Dong</button>
+            </div>
+            <p>fsdvbdxf xfd</p>
+        </div>
+        <div class="Content">
+            <div class="Sidebar-logo">
+                <button class="btnopen" onclick="Open()">Mo</button>
+            </div>
+            <p>vsxbgfnch</p>
+        </div>
+        <script>
+        var sidebar = document.querySelector(".Sidebar")
+        var Content = document.querySelector(".Content")
+        var btnclose=document.querySelector(".btnclose")
+        var btnopen = document.querySelector(".btnopen")
+        function Close(){
+            Content.style.width ="95%";
+            sidebar.style.width ="5%";
+            btnclose.style.display="none"
+            btnopen.style.display="inline"
+        }
+        function Open(){
+            Content.style.width ="80%";
+            sidebar.style.width ="20%";
+            btnclose.style.display="inline"
+            btnopen.style.display="none"
+        }
+    </script>
+        <!-- <div class="Sidebar-Left Sidebar-Left-Response">
             <div class="Sidebar-Left-Logo">
                 <img src="Image/Icon/Plane.svg" alt="Logo">
             </div>
@@ -28,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="Sidebar-Right">
+        <div class="Sidebar-Right Sidebar-Right-Response">
             <div class="Sidebar-Right-Header">
                 <div class="Sidebar-Right-Header__Right">
                     <ul>
@@ -45,7 +76,7 @@
                     </span>
                 </div>
             </div>
-        </div> 
+        </div>  -->
     </div>
 </body>
 </html>
