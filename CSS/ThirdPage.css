@@ -304,9 +304,8 @@
   font-size: 24px;
   font-family: 'Inter';
   text-shadow:1px 1px 5px #222222;
-  padding:10px 0;
-  padding-left: 10px;
-  width: 100%;
+  padding:10px;
+  width: 100% -20px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .Container-Content-Activitie-Items--2{
