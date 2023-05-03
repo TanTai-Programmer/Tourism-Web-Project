@@ -4,7 +4,7 @@
   
 }
 ::-webkit-scrollbar{
-  background:none;
+  background-color:rgba(0, 0, 0, 0.05);
   opacity: 10%;
   border-radius: 20px;
   width:10px;
@@ -264,12 +264,23 @@
   display: flex;
   justify-content:space-around;
   align-items:center;
-  margin: 100px 50px;
+  margin: 50px 50px;
+}
+.swiper {
+  width: 95%;
+  height: 100%;
+}
+.swiper-slide {
+  font-size: 18px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 .Container-Content-Activitie-Items{
   width: 350px;
   height: 500px;
   border-radius: 10px;
+  margin:50px;
   display:flex;
   flex-direction: column;
   justify-content:space-between;
@@ -292,10 +303,11 @@
   font-size: 24px;
   font-family: 'Inter';
   text-shadow:1px 1px 5px #222222;
-  padding:10px;
+  padding:10px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .Container-Content-Activitie-Items--2{
-  overflow-y: scroll;
   height: 100px;
   padding:10px;
   font-size: 20px;
@@ -304,10 +316,24 @@
   margin:10px;
   transition: .5s;
 }
+.Container-Content-Activitie-Items--2{
+height: 100px;
+transition: .5s ease-in-out;
+overflow-x: hidden;
+overflow-y: scroll;
+scroll-snap-type: y mandatory;
+scroll-padding-top: 20px;
+}
+.Container-Content-Activitie-Items--2 p{
+  scroll-snap-align: start;
+}
+.Container-Content-Activitie-Items--2 p:hover{
+  scroll-snap-align: start;
+}
 .Container-Content-Activitie-Items:hover .Container-Content-Activitie-Items--2{
   height: 200px;
 }
-.Active-item-1,.Active-item-2,.Active-item-3{
+.Active-item-1,.Active-item-2,.Active-item-3,.Active-item-4,.Active-item-5{
   height: 300px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -330,7 +356,20 @@
   background-position: center;
   background-size:cover;
 }
+.Active-item-4{
+    background-image: url(../Image/Picture/BinhThuan.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+}
+.Active-item-5{
+  background-image: url(../Image/Picture/DongNai.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+}
 .Activitie-Items-btn{
+  color: rgb(83, 83, 83);
   margin:5px 0;
   padding:10px;
   font-size:24px;
@@ -341,6 +380,7 @@
   cursor: pointer;
   border:none;
   background-color:#F0E709;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.5);
 }
 /* #Container-Content-Activities{
   display: flex;

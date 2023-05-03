@@ -9,23 +9,9 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Hachi Maru Pop' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/materialize.css"> <!-- CSS carousel-->
-    <!--Script Carousel -->
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function(){
-          $('.Destination__Container__Right__Image').carousel({
-                  padding: 200
-          });
-          // autoplay();
-          // function autoplay() {
-          // 	$('.carousel').carousel('next');
-          // 	setTimeout(autoplay, 4500);
-          // }
-        });
-      </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="JS/ThirdPage.js" defer></script>
 </head>
 <body>
     <div class="Menu">
@@ -85,38 +71,69 @@
                     <b class="Container-Content-Title2">Interesting activities</b>
                 </div>
             </div>
-            <div class="Container-Content-Activities">
-                <div class="Container-Content-Activitie-Items">
-                    <div class="Container-Content-Activitie-Items--1 Active-item-1">
-                        <u>Rowing</u>
+            <div class="Container-Content-Activities swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="Container-Content-Activitie-Items">
+                            <div class="Container-Content-Activitie-Items--1 Active-item-1">
+                                <u>Rowing</u>
+                            </div>
+                            <div class="Container-Content-Activitie-Items--2">
+                                <p>Boating on Ha Long sea is an extremely interesting sea experience. Visitors can enjoy controlling their small boat to the wide seas.<br>Or if you are a lover of exploring caves, try going to Luon cave, Co cave, Ba Trai Dao, Dau Be, Ba Ham which are suitable places for visitors to kayak. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga velit eum provident consequatur tempora recusandae nemo laboriosam, tenetur perspiciatis. Odio assumenda fugiat commodi totam quo saepe temporibus eum! Mollitia, facere?<br><br>
+                                </p>
+                            </div>
+                            <button class="Activitie-Items-btn">Add to list</button>
+                        </div>
+                        <div class="Container-Content-Activitie-Items">
+                            <div class="Container-Content-Activitie-Items--1 Active-item-2">
+                                <u>Rowing</u>
+                            </div>
+                            <div class="Container-Content-Activitie-Items--2">
+                                <p>Buffalo is the friendly and indispensable animal of the Vietnamese, mostly in the countryside  ... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem, facilis labore, enim voluptas corporis fugiat dolore ad soluta illo reiciendis quis sint ut, distinctio tempora laborum impedit maiores! Architecto?<br><br>
+                                </p>
+                            </div>
+                            <button class="Activitie-Items-btn">Add to list</button>
+                        </div>
+                        <div class="Container-Content-Activitie-Items">
+                            <div class="Container-Content-Activitie-Items--1 Active-item-3">
+                                <u>Rowing</u>
+                            </div>
+                            <div class="Container-Content-Activitie-Items--2">
+                                <p>The small town of Phong Nha is the epicentre for the area’s caving adventures  ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolores ipsam, nemo quibusdam, expedita officiis culpa obcaecati harum id vitae laborum officia fugit. Veniam quae quia sequi hic deleniti aliquam!<br><br>
+                                </p>
+                            </div>
+                            <button class="Activitie-Items-btn">Add to list</button>
+                        </div>
                     </div>
-                    <div class="Container-Content-Activitie-Items--2">
-                        <p>Boating on Ha Long sea is an extremely interesting sea experience. Visitors can enjoy controlling their small boat to the wide seas.<br>Or if you are a lover of exploring caves, try going to Luon cave, Co cave, Ba Trai Dao, Dau Be, Ba Ham which are suitable places for visitors to kayak. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga velit eum provident consequatur tempora recusandae nemo laboriosam, tenetur perspiciatis. Odio assumenda fugiat commodi totam quo saepe temporibus eum! Mollitia, facere?</p>
+                    <div class="swiper-slide">
+                        <div class="Container-Content-Activitie-Items">
+                            <div class="Container-Content-Activitie-Items--1 Active-item-4">
+                                <u>Rowing</u>
+                            </div>
+                            <div class="Container-Content-Activitie-Items--2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, ipsam eos reiciendis quasi neque voluptate repellat esse hic beatae necessitatibus quibusdam perspiciatis placeat animi? Quod esse dolorem sapiente aliquid dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur numquam quas exercitationem ipsum tempora ut maxime. Nobis rerum soluta tempora ipsum accusamus, quidem illum totam amet ad possimus et harum.<br><br>
+                                </p>
+                            </div>
+                            <button class="Activitie-Items-btn">Add to list</button>
+                        </div>
+                        <div class="Container-Content-Activitie-Items">
+                            <div class="Container-Content-Activitie-Items--1 Active-item-5">
+                                <u>Rowing</u>
+                            </div>
+                            <div class="Container-Content-Activitie-Items--2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente, porro voluptatem ipsa id assumenda magnam ut quaerat ullam fuga ducimus natus recusandae saepe dolores consequatur delectus tempora nesciunt earum.
+                                Aspernatur, itaque? Ea laborum commodi dignissimos eius voluptatibus enim totam numquam, ipsa sequi, dolorem eveniet itaque fuga voluptates exercitationem molestias culpa ad a sunt quisquam quas cumque repellendus illo optio.
+                                Sequi corrupti suscipit vero aperiam. Eius veritatis architecto numquam est laudantium praesentium iste aliquid corporis dolore ullam quidem eum expedita aut modi animi nesciunt, nulla excepturi nihil? Nihil, porro modi.<br><br>
+                                </p>
+                            </div>
+                            <button class="Activitie-Items-btn">Add to list</button>
+                        </div>
                     </div>
-                    <button class="Activitie-Items-btn">Add to list</button>
                 </div>
-                <div class="Container-Content-Activitie-Items">
-                    <div class="Container-Content-Activitie-Items--1 Active-item-2">
-                        <u>Ride water bufalo</u>
-                    </div>
-                    <div class="Container-Content-Activitie-Items--2">
-                        <p>Buffalo is the friendly and indispensable animal of the Vietnamese, mostly in the countryside Boating on Ha Long sea is an extremely interesting sea experience. Visitors can enjoy controlling their small boat to the wide seas.Or if you are a lover of exploring caves, try going to Luon cave, Co cave, Ba Trai Dao, Dau Be, Ba Ham which are suitable places for visitors to kayak. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum consequuntur id nobis deleniti quaerat cumque obcaecati sunt sequi? Sunt quos, officiis enim atque optio minima dolorum aliquam similique distinctio quaerat? </p>
-                    </div>
-                    <button class="Activitie-Items-btn" >Add to list</button>
-                </div>
-                <div class="Container-Content-Activitie-Items">
-                    <div class="Container-Content-Activitie-Items--1 Active-item-3">
-                        <u>Drop into the world's...</u>
-                    </div>
-                    <div class="Container-Content-Activitie-Items--2">
-                        <p>The small town of Phong Nha is the epicentre for the area's caving adventures  ...Boating on Ha Long sea is an extremely interesting sea experience. Visitors can enjoy controlling their small boat to the wide seas.<br>Or if you are a lover of exploring caves, try going to Luon cave, Co cave, Ba Trai Dao, Dau Be, Ba Ham which are suitable places for visitors to kayak. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat soluta inventore quas dolore quae ipsum iste tenetur, velit, reiciendis sit iure neque maxime sunt corporis, est magni necessitatibus perferendis sapiente?</p>
-                    </div>
-                    <button class="Activitie-Items-btn">Add to list</button>
-                </div>
-                <div id="Container-Content-Activities-icon">
-                    <img src="Image/Icon/Vector.svg">
-                </div>
-               
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>    
     </div>
