@@ -9,23 +9,14 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Hachi Maru Pop' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> <!-- Swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="CSS/materialize.css"> <!-- CSS carousel-->
     <!--Script Carousel -->
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function(){
-          $('.Destination__Container__Right__Image').carousel({
-                  padding: 200
-          });
-          // autoplay();
-          // function autoplay() {
-          // 	$('.carousel').carousel('next');
-          // 	setTimeout(autoplay, 4500);
-          // }
-        });
-      </script>
+    <script src="JS/FisrtPage.js" defer></script>
 </head>
 <body>
     <div class="Menu">
@@ -58,11 +49,14 @@
                                 <li><a href="">City</a></li>
                                 <li><a href="">Resorts</a></li>
                             </ul></li>
-                            <li class="Menu__Container__Header__Right--More--list--2"><a href="">ACTIVITIES</a> </li>
-                            <li class="Menu__Container__Header__Right--More--list--3"> <a href="">SERVICE TOURIST</a> </li>
+                            <li class="Menu__Container__Header__Right--More--list--2"><a href="ThirdPage.html">ACTIVITIES</a> </li>
+                            <li class="Menu__Container__Header__Right--More--list--3"> <a href="FourthPage.html">SERVICE TOURIST</a> </li>
                             <li class="Menu__Container__Header__Right--More--list--4"><a href="">VIDEO</a> </li>
                         </ul>
                     </button>
+                    <div class="Menu__Container__Header__Right--User">
+                       <a href="AdminPage.html"><img src="Image/Picture/Avatar 1.png" alt="User"></a> 
+                    </div>
                 </div>
             </div>
             <div class="Menu__Container__Content">
@@ -205,21 +199,25 @@
                 <div class="Active__Container__Left--Select">
                     <h4>Selection your Video:</h4>
                     <div class="Active__Container__Left--Select--btn">
-                        <button></button>   
-                        <button></button>                    
+                        <button class="Select-btn-Prevert"></button>   
+                        <button class="Select-btn-Next"></button>                    
                     </div>
                 </div>
-                <div class="Active__Container__Left--Videoitems">
-                    <div class="Active__Container__Left--Videoitems-1">
-                        <iframe width="240" height="135" src="https://www.youtube.com/embed/jBZ3U4v7UWw?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <div class="Active__Container__Left--Videoitems-2">
-                        <iframe width="240" height="135" src="https://www.youtube.com/embed/YHBqLih80uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <div class="Active__Container__Left--Videoitems-3">
-                        <iframe width="240" height="135" src="https://www.youtube.com/embed/mSJNyV4TydA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>                
-                </div>
+                <div class="Active__Container__Left--Videoitems swiper">
+                        <div class="swiper-wrapper Active__Container__Left--Videoitems--wrap">
+                            <div class="swiper-slide Active__Container__Left--Videoitems--slide1">
+                                <iframe width="240" height="135" src="https://www.youtube.com/embed/YHBqLih80uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="240" height="135" src="https://www.youtube.com/embed/WhQapHmaYYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="240" height="135" src="https://www.youtube.com/embed/IvGU0GunOL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">   
+                                <iframe width="240" height="135" src="https://www.youtube.com/embed/YHBqLih80uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="240" height="135" src="https://www.youtube.com/embed/WhQapHmaYYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="240" height="135" src="https://www.youtube.com/embed/IvGU0GunOL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>  
+                        </div>
+                        <div class="swiper-pagination"></div>    
+                    </div>          
             </div>
             <div class="Active__Container__Right">
                 <a href="">
