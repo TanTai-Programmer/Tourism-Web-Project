@@ -1479,4 +1479,288 @@
 }
 .Footer__Container__Button--Right img:hover{
   box-shadow:0 0 10px rgb(255, 255, 255);
+<<<<<<< HEAD
+}
+.Container-Content{
+  display: flex;
+  width: 1442px;
+  height: 1000px;
+  margin-left:810px;
+  flex-direction: column;
+  background-color: rgb(248, 226, 230); 
+
+}
+.Container-Content-Title{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 30px;
+  font-size: 50px;
+}
+.Container-Content-Title1{
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  
+}
+.Container-Content-Title2{
+  font-family: 'Inter';
+}
+#Container-Content-Activities{
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-left: 30px;
+  justify-content: flex-start;
+}
+.Container-Content-Activitie1{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 203, 210);
+  width: 439px;
+  height: 582px;
+ 
+}
+#Container-Content-Activitie2{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 203, 210);
+  width: 299px;
+  height: 439px;
+  margin-left: 103px;
+  margin-top: 90px;
+}
+#Container-Content-Activitie3{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 203, 210);
+  width: 299px;
+  height: 439px;
+  margin-left: 103px;
+  margin-top: 90px;
+}
+#Container-Content-Activities-icon{
+  margin-left: 75px;
+  margin-top: 300px;
+
+}
+#Container-Content-Activitie1-item1{
+  display: flex;
+  flex-direction: column;
+  
+  width: 439px;
+  height: 300px;
+  background-image: url(../Image/Picture/dia_diem_cheo_thuyen_kayak_3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content:end;
+}
+#Container-Content-Activitie1-item1 >u{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  color: white;
+  font-size: 35px;
+}
+#Container-Content-Activitie1-item2{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+#Container-Content-Activitie1-item2 >p:first-child{
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align:justify;
+  font-family:'Lucida Sans';
+  color: #6d6d6d;
+}
+#Container-Content-Activitie1-item2 > button:last-child{
+    width: 200px;
+    height: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 22px;
+    color: white;
+    background: #ebeb49;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#Container-Content-Activitie2-item1{
+  display: flex;
+  flex-direction: column;
+  width: 299px;
+  height: 239px;
+  background-image: url(../Image/Picture/Tourist-ride-a-water-buffalo-in-Vietnam-@moshichubby.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content:end;
+  background-blend-mode:darken;
+}
+
+#Container-Content-Activitie2-item1 >u{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  color: white;
+  font-size: 15px;
+}
+#Container-Content-Activitie2-item2{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+#Container-Content-Activitie2-item2 >p:first-child{
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align:justify;
+  font-family:'Lucida Sans';
+  color: #6d6d6d;
+}
+#Container-Content-Activitie2-item2 > button:last-child{
+    width: 150px;
+    height: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 50;
+    font-size: 15px;
+    color: white;
+    background: #ebeb49;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#Container-Content-Activitie3-item1{
+  display: flex;
+  flex-direction: column;
+  width: 299px;
+  height: 239px;
+  background-image: url(../Image/Picture/han-son-doong.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content:end;
+  background-blend-mode:darken;
+}
+
+#Container-Content-Activitie3-item1 >u{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  color: white;
+  font-size: 15px;
+}
+#Container-Content-Activitie3-item2{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+#Container-Content-Activitie3-item2 >p:first-child{
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align:justify;
+  font-family:'Lucida Sans';
+  color: #6d6d6d;
+}
+#Container-Content-Activitie3-item2 > button:last-child{
+    width: 150px;
+    height: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 50;
+    font-size: 15px;
+    color: white;
+    background: #ebeb49;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.Cost-Content{
+  display: flex;
+  flex-direction: column;
+  width: 1442px;
+  height:2000px;
+  /* background-color: #dfdfdf; */
+  margin-left:810px;
+}
+.Cost-Content-Hotel{
+  height: 500px;
+  background-color: white;
+  border-bottom-style:ridge;
+  border-bottom-color: white;
+  display: flex;
+  flex-direction: row;
+}
+#Cost-Content-Hotel-Left{
+  background-image: url(../Image/Picture/Hotel.jpg);
+  width: 250px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 54px;
+  border-radius: 20px;
+  
+}
+#Cost-Content-Hotel-Left-Title{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 250px;
+  height: 100px;
+  margin-top: 300px;
+  color:whitesmoke;
+  font-family: 'Inter';
+  font-size: 25px;
+  font-style: italic;
+}
+
+#Cost-Content-Hotel-Right{
+  display: flex;
+  flex-direction: row;
+  background-color:  rgb(240, 203, 210);
+  width: 1000px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+#Cost-Content-Hotel-Right-Item1{
+  background-image: url(../Image/Picture/haian-beach-hotel-spa.jpg);
+  height: 300px;
+  width: 317px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  
+=======
+>>>>>>> 8808af09c66aec6dc1bea5a703e35abb1684fdcd
 }
