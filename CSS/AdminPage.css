@@ -5,23 +5,8 @@ body{
 .Container{
     display: flex;
 }
-.Sidebar{
-    background-color:aquamarine;
-    width: 20%;
-    transition: 1s;
-    height: 1000px;
-}
-.Content{
-    background-color:salmon;
-    width: 80%;
-    transition: 1s;
-    overflow: hidden;
-}
 .btnclose{
     animation: close 1s;
-}
-.Sidebar-logo{
-    height: 30px;
 }
 .btnopen{
     display: none;
@@ -42,4 +27,125 @@ body{
     100%{
         opacity: 1;
     }
+}
+.Sidebar{
+    background-color:aquamarine;
+    width: 15%;
+    transition: .5s;
+    height: 1000px;
+    position: fixed;
+}
+.Content{
+    width: 85%;
+    margin-left: 15%;
+    background-color: aqua;
+    transition: .5s;
+}
+.Content-Nav--Btn{
+    width: 50px;
+
+}
+.Content-Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: aliceblue;
+    position: fixed;
+    width: 85%;
+    transition: .5s;
+}
+.Content-Nav-Left--List{
+    list-style: none;
+    display: flex;
+    padding:0;
+}
+.Content-Nav-Left--List li{
+    padding:10px;
+    border-bottom:4px solid transparent;
+}
+.Content-Nav-Left--List li:hover{
+    border-bottom:4px solid silver;
+}
+.Content-Nav-Right--List input{
+    width:240px ;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 96px;
+    border:3px solid silver;
+    background: none;
+    font-size:14px;
+    outline: none;
+    color: white;
+    transition: .5s;
+}
+.Content-Nav-Right--List input:focus{
+    width:350px;
+  }
+.Content-Nav-Right--List input::placeholder{
+    color: silver;
+    font-weight: 400;
+  }
+.Content-Nav-Left--List li>a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter";
+    color:silver;
+}
+.Content-Nav-Left--List i{
+    padding:5px;
+}
+.Content-Nav-Right{
+    display: flex;
+}
+.Content-Nav-Right--List{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Content-Nav-Right--List li{
+    padding: 10px;
+}
+.Content-Nav-Right--List li>a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter";
+    color:silver;
+}
+.Content-Nav-Right--List i{
+    padding:0 10px;
+}
+.Content-Nav-Right--List span{
+    font-size: 20px;
+    color: silver;
+}
+.Bell:hover{
+    animation: bell .5s
+}
+@keyframes bell {
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(45deg);
+    }
+    70%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.Content-Nav-Right--List li:last-child i{
+    transform: rotate(0deg);
+    transition: 1s;
+}
+.Content-Nav-Right--List li:last-child:hover i{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+.Content-Container{
+    margin-top:110px;
 }

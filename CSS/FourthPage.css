@@ -219,6 +219,9 @@
     padding: 0px;
     transition: .25s
   }
+  .Menu__Container__Header__Right--User img:hover{
+    padding: 3px;
+  }
   .Footer{
     display: flex;
     justify-content: center;

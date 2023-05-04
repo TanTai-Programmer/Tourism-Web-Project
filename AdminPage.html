@@ -10,40 +10,42 @@
     <!-- <link rel="stylesheet" href="CSS/iconall.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="CSS/AdminPage.css">
+    <script src="JS/AdminPage.js" defer></script>
 
 </head>
 <body>
     <div class="Container">
         <div class="Sidebar">
             <div class="Sidebar-logo">
-                <button class="btnclose" onclick="Close()"> Dong</button>
+                <button class="btnclose" onclick="Close()">Dong</button>
             </div>
-            <p>fsdvbdxf xfd</p>
+            <div>savfdzb xfg</div>
         </div>
         <div class="Content">
-            <div class="Sidebar-logo">
-                <button class="btnopen" onclick="Open()">Mo</button>
+            <div class="Content-Nav">
+                <div class="Content-Nav-Left">
+                    <ul class="Content-Nav-Left--List">
+                        <div class="Content-Nav--Btn">
+                            <button class="btnopen" onclick="Open()">Mo</button>
+                        </div>
+                        <li><a href=""><i class="fas fa-database"></i>Databroad</a></li>
+                        <li><a href=""><i class="fas fa-map-marked-alt"></i>Content Destination</a></li>
+                        <li><a href=""><i class="fas fa-blog"></i>Blog Travel</a></li>
+                        <li><a href=""><i class="fab fa-servicestack"></i>Manager Service</a></li>
+                    </ul>
+                </div>
+                <div class="Content-Nav-Right">
+                    <ul class="Content-Nav-Right--List">
+                        <input type="search" placeholder="Inter Your Finds...">
+                        <span><i class="Bell fas fa-bell"></i></span>
+                        <span><i class="fas fa-envelope"></i></span>
+                        <li><a href=""><i class="fas fa-user"></i>User</a></li>
+                        <li><a href=""><i class="fas fa-cog"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <p>vsxbgfnch</p>
+            <div class="Content-Container"> nisi similique possimus fugit hic mollitia maxime modi, quasi excepturi, nulla tempore architecto! Optio id quod dicta dolorum dolorem dolores sunt veniam a expedita voluptas?</div>
         </div>
-        <script>
-        var sidebar = document.querySelector(".Sidebar")
-        var Content = document.querySelector(".Content")
-        var btnclose=document.querySelector(".btnclose")
-        var btnopen = document.querySelector(".btnopen")
-        function Close(){
-            Content.style.width ="95%";
-            sidebar.style.width ="5%";
-            btnclose.style.display="none"
-            btnopen.style.display="inline"
-        }
-        function Open(){
-            Content.style.width ="80%";
-            sidebar.style.width ="20%";
-            btnclose.style.display="inline"
-            btnopen.style.display="none"
-        }
-    </script>
         <!-- <div class="Sidebar-Left Sidebar-Left-Response">
             <div class="Sidebar-Left-Logo">
                 <img src="Image/Icon/Plane.svg" alt="Logo">
