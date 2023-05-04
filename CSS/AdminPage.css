@@ -29,11 +29,115 @@ body{
     }
 }
 .Sidebar{
-    background-color:aquamarine;
+    /* background-color:rgb(69, 84, 79); */
     width: 15%;
     transition: .5s;
     height: 1000px;
     position: fixed;
+}
+.Sidebar-logo{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 83px;
+    overflow:hidden ;
+    background-color:lavenderblush;
+}
+.Sidebar-logo a{
+    text-decoration: none;
+    font-size:20px;
+    font-weight: 600;
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: pink;
+}
+.Sidebarbtn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btnclose:hover .Sidebar--Btn1{
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .btnclose:hover .Sidebar--Btn2{
+    opacity: 0;
+  }
+  .btnclose:hover .Sidebar--Btn3{
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .Sidebar--Btn1,.Sidebar--Btn2,.Sidebar--Btn3 {
+    width: 35px;
+    height: 5px;
+    background-color: silver;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+.Sidebar-List-Items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding:0;
+}
+.Sidebar-List-Items li{
+    padding:10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 90%;
+}
+.Sidebar-List-Items li a{
+    color: silver;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.Sidebar-List-Items li a i{
+    width: 25px;
+    padding:10px;
+}
+.Sidebar-List-Items--main{
+    display: flex;
+    align-items: center;
+
+}
+.Sidebar-List-Items--Child{
+    padding:0;
+    width: 90%;
+}
+.Sidebar-List-Items--Child >li:hover{
+    background-color: rgb(255, 255, 255);
+}
+.Sidebar-List-Items--Child li{
+    width: 100%;
+    background-color: none;
+}
+.Sidebar-List-Items--Child li a{
+    font-size: 14px;
+}
+.Sidebar-List-Items--Child1,.Sidebar-List-Items--Child2,.Sidebar-List-Items--Child3,.Sidebar-List-Items--Child4{
+    display: none;
+}
+.Sidebar-List-title{
+    width:150px;
+}
+.Sidebar-Down{
+    color: silver;
+    transition: .5s;
+    transform: rotate(-90deg);
+}
+.Sidebar-List-Items >li:hover{
+    background-color: rgba(255, 212, 212, 0.5);
+}
+.Sidebar-List-Items li:hover .Sidebar-Down{
+    transform: rotate(0deg);
 }
 .Content{
     width: 85%;
