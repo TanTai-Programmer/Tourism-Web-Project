@@ -9,8 +9,8 @@
     <script src="JS/jquery-3.6.4.min.js"></script>
     <!-- <link rel="stylesheet" href="CSS/iconall.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="CSS/AdminPage.css">
-    <script src="JS/AdminPage.js" defer></script>
+    <link rel="stylesheet" href="CSS/TopDestination.css">
+    <script src="JS/TopDestination.js" defer></script>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <ul class="Sidebar-List-Items">
                     <li class="Sidebar-List-Items-li">
                         <div class="Sidebar-List-Items--main">
-                            <a href=""><i class="fas fa-database"></i><span class="Sidebar-List-title">Databroad</span></a><i class="Sidebar-Down  Sidebar-Down1 fas fa-chevron-down"></i>
+                            <a href="AdminPage.html"><i class="fas fa-database"></i><span class="Sidebar-List-title">Databroad</span></a><i class="Sidebar-Down  Sidebar-Down1 fas fa-chevron-down"></i>
                         </div>
                         <ul class="Sidebar-List-Items--Child Sidebar-List-Items--Child1">
                             <li><a href="">Data User</a></li>
@@ -40,7 +40,7 @@
                             <a href=""><i class="fas fa-map-marked-alt"></i><span class="Sidebar-List-title">Content Destination</span></a><i class=" Sidebar-Down Sidebar-Down2 fas fa-chevron-down"></i>
                         </div> 
                         <ul class="Sidebar-List-Items--Child Sidebar-List-Items--Child2">
-                            <li><a href="TopDestination.html">Top Destination</a></li>
+                            <li><a href="">Top Destination</a></li>
                             <li><a href="">Total Destination</a></li>
                         </ul>
                     </li>
@@ -95,7 +95,30 @@
                     </ul>
                 </div>
             </div>
-            <div class="Content-Container">Form</div>
+            <div class="Content-Container">
+                <form action="" class="Add-Form Content-Container-Destination">
+                    <h3>Input Destination</h3>
+                    <div class="Destination-Input Content-Container-Destination--ID">
+                        <label for="Desination-id">ID:</label><br>
+                        <input type="text" name="" id="Desination-id">
+                    </div>
+                    <div class="Destination-Input  Content-Container-Destination--Name">
+                        <label for="Destination-name">Destination Name:</label> <br>
+                        <input name="" id="Destination-name" cols="30" rows="10">
+                    </div>
+                    <div class="Destination-Input  Content-Container-Destination--Description">
+                        <label for="Destination--Description">Description:</label> <br>
+                        <textarea name="" id="Destination--Description" cols="30" rows="10"></textarea>
+                    </div>
+                    <div  class="Destination-Input  Content-Container-Destination--Image">
+                        <label for="Destination-img">Image Link:</label> <br>
+                        <input type="file" id="Destination-img" >
+                        <p id="demo"></p>
+                        <img src="" alt="">
+                    </div>
+                    <input type="submit" id="SubmitForm">
+                </form>
+            </div>
         </div>
     </div>
 </body>

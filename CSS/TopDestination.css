@@ -1,0 +1,332 @@
+
+body{
+    margin:0px;
+}
+.Container{
+    display: flex;
+}
+.btnclose{
+    animation: close 1s;
+}
+.btnopen{
+    display: none;
+    animation: open 1s;
+}
+@keyframes open {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes close {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.Sidebar{
+    /* background-color:rgb(69, 84, 79); */
+    width: 15%;
+    transition: .5s;
+    height: 1000px;
+    position: fixed;
+    overflow: hidden;
+}
+.Sidebar-logo{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 83px;
+    /* overflow:hidden ; */
+    background-color:lavenderblush;
+}
+.Sidebar-logo a{
+    text-decoration: none;
+    font-size:20px;
+    font-weight: 600;
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: pink;
+}
+.Sidebarbtn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btnclose:hover .Sidebar--Btn1{
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .btnclose:hover .Sidebar--Btn2{
+    opacity: 0;
+  }
+  .btnclose:hover .Sidebar--Btn3{
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .Sidebar--Btn1,.Sidebar--Btn2,.Sidebar--Btn3 {
+    width: 35px;
+    height: 5px;
+    background-color: silver;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+.Sidebar-List-Items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding:0;
+}
+.Sidebar-List-Items-li{
+    padding:10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.Sidebar-List-Items-li a{
+    color: silver;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.Sidebar-List-Items-li a i{
+    width: 25px;
+    padding:10px;
+}
+.Sidebar-List-Items--main{
+    display: flex;
+    align-items: center;
+}
+.Sidebar-List-Items--Child{
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.Sidebar-List-Items--Child >li:hover{
+    background-color: rgb(255, 255, 255);
+}
+.Sidebar-List-Items--Child li{
+    width: 100%;
+    padding: 10px 0;
+}
+.Sidebar-List-Items--Child li a{
+    font-size: 14px;
+    padding-left: 70px;
+    width: 150px; /*Mấu chốt để chuyển động nó mượt nằm ở đây */
+}
+.Sidebar-List-Items--Child1,.Sidebar-List-Items--Child2,.Sidebar-List-Items--Child3,.Sidebar-List-Items--Child4{
+    display: none;
+}
+.Sidebar-List-title{
+    width:150px;
+}
+.Sidebar-Down{
+    color: silver;
+    transition: .5s;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+.Sidebar-List-Items >li:hover{
+    background-color: rgba(255, 212, 212, 0.5);
+}
+.Sidebar-List-Items li:hover .Sidebar-Down{
+    transform: rotate(0deg);
+}
+.Content{
+    width: 85%;
+    margin-left: 15%;
+    background-image: url(../Image/Picture/CanTho.jpg);
+    height: 100vh;
+    transition: .5s;
+    display: flex;
+    justify-content:center;
+}
+.Content-Nav--Btn{
+    width: 50px;
+
+}
+.Content-Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: aliceblue;
+    position: fixed;
+    width: 85%;
+    transition: .5s;
+}
+.Content-Nav-Left--List{
+    list-style: none;
+    display: flex;
+    padding:0;
+}
+.Content-Nav-Left--List li{
+    padding:10px;
+    border-bottom:4px solid transparent;
+}
+.Content-Nav-Left--List li:hover{
+    border-bottom:4px solid silver;
+}
+.Content-Nav-Right--List input{
+    width:240px ;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 96px;
+    border:3px solid silver;
+    background: none;
+    font-size:14px;
+    outline: none;
+    color: white;
+    transition: .5s;
+}
+.Content-Nav-Right--List input:focus{
+    width:350px;
+  }
+.Content-Nav-Right--List input::placeholder{
+    color: silver;
+    font-weight: 400;
+  }
+.Content-Nav-Left--List li>a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter";
+    color:silver;
+}
+.Content-Nav-Left--List i{
+    padding:5px;
+}
+.Content-Nav-Right{
+    display: flex;
+}
+.Content-Nav-Right--List{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Content-Nav-Right--List li{
+    padding: 10px;
+}
+.Content-Nav-Right--List li>a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter";
+    color:silver;
+}
+.Content-Nav-Right--List i{
+    padding:0 10px;
+}
+.Content-Nav-Right--List span{
+    font-size: 20px;
+    color: silver;
+}
+.Bell:hover{
+    animation: bell .5s
+}
+@keyframes bell {
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(45deg);
+    }
+    70%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.Content-Nav-Right--List li:last-child i{
+    transform: rotate(0deg);
+    transition: 1s;
+}
+.Content-Nav-Right--List li:last-child:hover i{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+.Content-Container{
+    margin-top:110px;
+    display: flex;
+}
+.Content-Container-Destination{
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(231, 255, 214, 0.8);
+    height: fit-content;
+    padding:30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+.Destination-Input  label{
+    color: rgba(255, 0, 0, 0.846);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Inter";
+}
+.Destination-Input  input{
+    width: 97.5%;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding-left:2%;
+    margin:10px 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0,.5);
+    font-size: 20px;
+    color:silver;
+    transition: .2s;
+}
+.Destination-Input input:focus{
+    box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
+}
+.Content-Container-Destination--Description textarea{
+    /* width: 100%; */
+    min-width: 450px;
+    min-height: 200px;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding:10px;
+    margin:10px 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0,.5);
+    font-size: 20px;
+    font-family: "Inter";
+    color:silver;
+    transition: .2s;
+}
+.Content-Container-Destination--Description textarea:focus{
+    box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
+}
+.Content-Container-Destination--Image input{
+    height:fit-content;
+    color: red;
+    box-shadow: 0px 0px 5px rgba(0, 0,0,1);
+}
+.Content-Container-Destination--Image input:focus{
+    height:fit-content;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,1);
+}
+.Content-Container-Destination--Image input[type=file]::file-selector-button{
+    background-color: rgb(46, 164, 255);
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin:10px;
+}
