@@ -59,3 +59,14 @@ function Open(){
         SidebarItem[i].style.overflow="hidden"
     }
 }
+$(".Sidebar-Down").click (function (){
+  Open()
+})
+  // if(Close()==true)
+  // {
+  //   console.log("No Dang dong")
+  //   Open()
+  // }
+  // else if (Open()==true) {
+  //   console.log("Nos dang mo")
+  // }
