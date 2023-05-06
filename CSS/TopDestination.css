@@ -2,6 +2,17 @@
 body{
     margin:0px;
 }
+::-webkit-scrollbar{
+    background:none;
+    opacity: 10%;
+    border-radius: 20px;
+    width:10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #fd9c9e;
+    border-radius: 10px;
+    opacity: 0.5;
+  }
 .Container{
     display: flex;
 }
@@ -147,8 +158,11 @@ body{
 .Content{
     width: 85%;
     margin-left: 15%;
-    background-image: url(../Image/Picture/CanTho.jpg);
-    height: 100vh;
+    background-image: url(../Image/Picture/DaNangCity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* height: 100vh; */
     transition: .5s;
     display: flex;
     justify-content:center;
@@ -165,6 +179,7 @@ body{
     position: fixed;
     width: 85%;
     transition: .5s;
+    z-index: 1;
 }
 .Content-Nav-Left--List{
     list-style: none;
@@ -260,20 +275,31 @@ body{
 }
 .Content-Container{
     margin-top:110px;
+    width: 100%;
     display: flex;
+    /* flex-direction: column; */
+    justify-content:space-around;
+    align-items: center;
 }
 .Content-Container-Destination{
     min-width: 450px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(231, 255, 214, 0.8);
+    background-color: #ffffff05;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
     height: fit-content;
     padding:30px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
 }
+.Content-Container-Destination h3{
+    color: #ff9999;
+    font-size: 24px;
+    font-family: "Inter";
+}
 .Destination-Input  label{
-    color: rgba(255, 0, 0, 0.846);
+    color: rgba(255, 255, 255, 0.846);
     font-weight: 600;
     font-size: 20px;
     font-family: "Inter";
@@ -297,6 +323,7 @@ body{
 .Content-Container-Destination--Description textarea{
     /* width: 100%; */
     min-width: 450px;
+    max-width: 1000px;
     min-height: 200px;
     border-radius: 5px;
     height: 40px;
@@ -329,4 +356,64 @@ body{
     border-radius: 10px;
     color: white;
     margin:10px;
+}
+#SubmitForm{
+    background-color: #efffeeba;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    transition: .5s;
+}
+#SubmitForm:hover{
+    background-color:  #40ff3dba;
+}
+.Content-Container-Demo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Content-Container-Show{
+    color:white;
+    font-size:30px;
+    font-family: "Inter";
+    font-weight: bold;
+    padding:10px;
+}
+.Content-Container-Data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:10px;
+}
+.Content-Container-Data img{
+    max-width: 400px;
+    border-radius: 10px;
+}
+.Content-Container-Data-ID{
+    color: red;
+    font-weight: bold;
+    font-size:20px;
+    padding:10px;
+}
+.Content-Container-Data-Name{
+    font-size: 24px;
+    font-family: "Inter";
+    font-weight: 700;
+    padding:10px;
+}
+.Content-Container-Data-Description{
+    max-width: 400px;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-family: "Inter";
+    font-size: 20px;
+    padding:10px;
 }

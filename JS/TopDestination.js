@@ -65,6 +65,7 @@ $(".Sidebar-Down").click (function (){
 const AddForm = document.querySelector(".Add-Form")
 const IDinput = document.getElementById("Desination-id")
 const Name = document.getElementById("Destination-name")
+const ImagePath = document.getElementById("Image-Path")
 const Description = document.getElementById("Destination--Description")
 
 const APIurl = 'http://localhost:3000/TP'
@@ -81,37 +82,75 @@ function InputAPI(){
             body: JSON.stringify({
                 id: IDinput.value,
                 name: Name.value,
-                description: Description.value,
-                img: "a"
+                Description: Description.value,
             })
         })
     }
-var the;
-var Gan ;
-var thay ;
-Getimg()
-function Getimg(){
-    const imgInput = document.getElementById("Destination-img")
-    imgInput.addEventListener('change',(e)=>{
-        const file = imgInput.files[0];
-        const reader = new FileReader();
-                
-        reader.addEventListener("load", () => {
-            ExportURL(reader.result)
-            Gan = the 
-            console.log(Gan)
-            return Gan;
-        });
-        setTimeout(() => {
-            console.log(Gan)
-        }, 100); // Phai doi 1 day thi Gan moi co ket qua 
-        //Ngu da thu sai Callback hoac Promise 
-        reader.readAsDataURL(file);
-
-        })
-    function ExportURL(url){
-        // console.log(url)
-        the=url
-        return the;
+    fetch(APIurl)
+    .then(function(response){
+      return response.json()
+    })
+    .then((data) =>{
+      getData(data)
+    })
+    var ShowDemo = document.querySelector('.Content-Container-Data')
+    function getData(data) {
     }
-}
+
+    const DataDemo = document.querySelector(".Content-Container-Data")
+        IDinput.addEventListener('blur',()=>{
+            if(IDinput.value===null){
+                
+            }
+            else{
+                PrintDemo()
+            }
+        })
+
+    ImagePath.addEventListener('blur',()=>{
+        if(ImagePath.value===''){
+
+            }
+            else{
+                PrintDemo()
+            }
+    })
+    Description.addEventListener('blur',()=>{
+        if(Description.value===''){
+
+        }
+        else{
+            PrintDemo()
+        }
+    })
+    Name.addEventListener('blur',()=>{
+        if(Name.value===''){
+
+        }
+        else{
+            PrintDemo()
+        }
+    })
+    function PrintDemo() {
+        DataDemo.innerHTML = `
+        <div class="Content-Container-Data-ID">${IDinput.value}</div>
+                            <img src="${ImagePath.value}" alt="">
+                            <div class="Content-Container-Data-Name">${Name.value}</div>
+                            <div class="Content-Container-Data-Description">${Description.value}</div>
+                            </div>
+        `
+    }
+    
+
+    // const imgInput = document.getElementById("Destination-img")
+    // const link = new FileReader()
+    // var y ='Somthing'
+    // imgInput.onchange = function (){
+    //     const file = imgInput.files[0];
+    //         link.onload =  function GetURL(y){
+    //             console.log(y.currentTarget.result)
+    //             return y.currentTarget.result
+    //         };
+    //         console.log(link)
+    //     link.readAsDataURL(file);
+    // }

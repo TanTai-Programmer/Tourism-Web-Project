@@ -9,6 +9,10 @@ var BinhThuan = document.querySelector('#VN-40')
 var BinhThuanName = BinhThuan.getAttribute('class')
 var QuangBinh = document.querySelector('#VN-24')
 var QuangBinhName = QuangBinh.getAttribute('class')
+var HaNoi = document.querySelector('#VN-HN')
+console.log(HaNoi)
+var HaNoiName = HaNoi.getAttribute('class')
+console.log(HaNoiName)
 
 //In ra màn hình
 var html=document.querySelector('.Content__Destination')
@@ -25,6 +29,13 @@ fetch(DataAPI)
   getData(data)
 })
 function getData(data) {
+  HaNoi.onmouseover = ()=>{
+    getDataName (HaNoiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HaNoi.onmouseout = Remo
   DaNang.onmouseover = ()=>{
     getDataName (DaNangName)
     const Replace = data.filter(FilterData)
