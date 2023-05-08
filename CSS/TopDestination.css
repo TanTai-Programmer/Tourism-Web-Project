@@ -285,6 +285,7 @@ body{
     min-width: 450px;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     background-color: #ffffff05;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
@@ -298,11 +299,16 @@ body{
     font-size: 24px;
     font-family: "Inter";
 }
+.Destination-Input{
+    position: relative;
+}
 .Destination-Input  label{
-    color: rgba(255, 255, 255, 0.846);
+    color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 20px;
     font-family: "Inter";
+    padding-right:10px;
+    width: fit-content;
 }
 .Destination-Input  input{
     width: 97.5%;
@@ -312,7 +318,6 @@ body{
     border: none;
     padding-left:2%;
     margin:10px 0;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0,.5);
     font-size: 20px;
     color:silver;
     transition: .2s;
@@ -320,10 +325,23 @@ body{
 .Destination-Input input:focus{
     box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
 }
+.Destination-Input input:focus::placeholder{
+    opacity: 0;
+}
+.Destination-Input input::placeholder{
+    opacity: .25;
+    transition: .5s;
+}
+
+.Content-Container-Destination--Description{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
 .Content-Container-Destination--Description textarea{
     /* width: 100%; */
     min-width: 450px;
-    max-width: 1000px;
+    max-width:600px;
     min-height: 200px;
     border-radius: 5px;
     height: 40px;
@@ -331,7 +349,6 @@ body{
     border: none;
     padding:10px;
     margin:10px 0;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0,.5);
     font-size: 20px;
     font-family: "Inter";
     color:silver;
@@ -340,12 +357,19 @@ body{
 .Content-Container-Destination--Description textarea:focus{
     box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
 }
+.Content-Container-Destination--Description textarea::placeholder{
+    opacity: .25;
+    transition: .5s;
+}
+.Content-Container-Destination--Description textarea:focus::placeholder{
+    opacity: 0;
+}
 .Content-Container-Destination--Image input{
     height:fit-content;
     color: red;
     box-shadow: 0px 0px 5px rgba(0, 0,0,1);
 }
-.Content-Container-Destination--Image input:focus{
+/* .Content-Container-Destination--Image input:focus{
     height:fit-content;
     box-shadow: 0px 0px 10px rgba(0, 0,0,1);
 }
@@ -356,7 +380,7 @@ body{
     border-radius: 10px;
     color: white;
     margin:10px;
-}
+} */
 #SubmitForm{
     background-color: #efffeeba;
     border-radius: 10px;
@@ -369,7 +393,7 @@ body{
     transition: .5s;
 }
 #SubmitForm:hover{
-    background-color:  #40ff3dba;
+    background-color:  #04ff00ba;
 }
 .Content-Container-Demo{
     display: flex;
@@ -420,13 +444,24 @@ body{
     padding:10px;
     text-align:justify;
 }
-.SuccessID{
-    color: rgb(0, 255, 30);
+.Status{
+    color: red;
+}
+.InputSuccess{
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+}
+.InputError{
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+}
+.Success{
+    color: rgb(0, 255, 0);
     font-size:18px;
     font-family: "Inter";
+    transition: 1s;
 }
-.ErrorID{
+.Error{
     color: red;
     font-size:18px;
     font-family: "Inter";
+    transition: 1s;
 }
