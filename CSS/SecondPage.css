@@ -316,19 +316,46 @@ path:hover{
   display: none;
 } */
 .Content__Destination{
-  margin:-50px 0px;
-  width:400px;
+  margin:50px 0px;
+  width:300px;
   display:flex;
   flex-direction:column ;
+  align-items: center;
   background-color: #ffffff;
   border-radius: 10px;
   position: absolute;
   left:30px;
   top:30px;
-  max-height: 600px;
   overflow: hidden;
 }
-.Content__Destination--image{
+.Content__Destination img{
+  height: 200px;
+  border-radius: 10px;
+}
+.Content__Destination--ID{
+  color: red;
+  font-weight: bold;
+  font-size:20px;
+  padding:5px 10px;
+}
+.Content-Destination-Data-Name{
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 700;
+  padding:5px 10px;
+}
+.Content-Destination-Data-Description{
+  max-width: 400px;
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-family: "Inter";
+  font-size: 14px;
+  padding:5px 10px;
+  margin-bottom: 20px;
+  text-align:justify;
+}
+/* .Content__Destination--image{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,7 +371,7 @@ path:hover{
  font-size: 18px;
  font-family: 'Inter';
  font-weight: 400;
-}
+} */
 .Destination-Top{
   position: relative;
 }
@@ -390,7 +417,8 @@ path:hover{
 }
 .Destination-Top-Item1__Content{
   margin: 10px;
-  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0));
+  mask-image: linear-gradient(#fff, rgba(255,255,255,0));
+  -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item1__Content-p{
   max-height: 200px;  
@@ -453,6 +481,7 @@ path:hover{
   top:300px;
   left:150px;
   width: 450px;
+  mask-image: linear-gradient(#fff, rgba(255,255,255,0));
   -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item2__Content-p{
@@ -514,6 +543,7 @@ path:hover{
 }
 .Destination-Top-Item3__Content{
   margin: 10px;
+  mask-image: linear-gradient(#fff, rgba(255,255,255,0));
   -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item3__Content-p{
@@ -575,6 +605,7 @@ path:hover{
 .Destination-Top-Item4__Content{
   margin: 10px;
   width: 500px;
+  mask-image: linear-gradient(#fff, rgba(255,255,255,0));
   -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item4__Content-p{
@@ -634,6 +665,7 @@ path:hover{
 .Destination-Top-Item5__Content{
   margin: 10px;
   width: 500px;
+  mask-image: linear-gradient(#fff, rgba(255,255,255,0));
   -webkit-mask-image: linear-gradient(#fff, rgba(255,255,255,0))
 }
 .Destination-Top-Item5__Content-p{

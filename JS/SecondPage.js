@@ -10,9 +10,10 @@ var BinhThuanName = BinhThuan.getAttribute('class')
 var QuangBinh = document.querySelector('#VN-24')
 var QuangBinhName = QuangBinh.getAttribute('class')
 var HaNoi = document.querySelector('#VN-HN')
-console.log(HaNoi)
 var HaNoiName = HaNoi.getAttribute('class')
-console.log(HaNoiName)
+var  QuangTri = document.querySelector('#VN-25')
+var QuangTriName = QuangTri.getAttribute('class')
+console.log(QuangTriName)
 
 //In ra màn hình
 var html=document.querySelector('.Content__Destination')
@@ -29,6 +30,13 @@ fetch(DataAPI)
   getData(data)
 })
 function getData(data) {
+  QuangTri.onmouseover = ()=>{
+    getDataName (QuangTriName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangTri.onmouseout = Remo
   HaNoi.onmouseover = ()=>{
     getDataName (HaNoiName)
     const Replace = data.filter(FilterData)
@@ -85,13 +93,20 @@ function getDataName (data){
   return Gan
 }
 function Printscreen(b){
-  return `
-  <div class="Content__Destination--image">
-      <img src="${b.img}" alt="" >
-  </div>
-  <p> ${b.name} </p>
-  <p>${b.Description}</p>
+  return   `
+  <div class="Content__Destination--ID">${b.id}</div>
+  <img src="${b.img}" alt="">
+  <div class="Content-Destination-Data-Name">${b.name}</div>
+  <div class="Content-Destination-Data-Description">${b.Description}</div>
   `
+  // `
+  // <div class="Content__Destination--image">
+  //     <img src="${b.img}" alt="" >
+  // </div>
+  // <p> ${b.name} </p>
+  // <p>${b.Description}</p>
+  // `
+
 }
 
 
@@ -99,7 +114,7 @@ function Printscreen(b){
 
 $( document ).on( "mousemove", function( event ) {
     $( ".Content__Destination" ).css({
-        left : event.pageX -200,
-        top:event.pageY -600
+        left : event.pageX -150,
+        top:event.pageY -500
     } )
   });

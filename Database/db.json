@@ -32,8 +32,15 @@
     },
     {
       "id": "60",
+      "img": "../Image/Picture/Ho Guom.jpg",
       "Description": "Khi giới thiệu về Thủ đô Hà Nội đến du khách bạn đừng quên nhắc đến các điểm tham quan, du lịch nổi tiếng nhé! Ở đây có rất nhiều khu vui chơi, điểm đến hấp dẫn, độc đáo như: Dinh Độc Lập, Nhà thờ Đức Bà, Chợ Bến Thành, Nhà hát Lớn Thành Phố, Bưu điện thành phố Hồ Chí Minh, Bảo tàng Phụ nữ Nam Bộ, Bến Nhà Rồng, Bảo tàng tranh 3D Art in us, Hẻm Bia: Lost in HongKong, Đường sách Nguyễn Văn Bình,…",
       "name": "HaNoi"
+    },
+    {
+      "id": "70",
+      "img": "../Image/Picture/Ho Guom.jpg",
+      "name": "QuangTri",
+      "Description": "Khi giới thiệu về Thủ đô Hà Nội đến du khách bạn đừng quên nhắc đến các điểm tham quan, du lịch nổi tiếng nhé! Ở đây có rất nhiều khu vui chơi, điểm đến hấp dẫn, độc đáo "
     }
   ]
 }

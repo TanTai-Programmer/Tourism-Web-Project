@@ -98,13 +98,28 @@ function InputAPI(){
     }
 
     const DataDemo = document.querySelector(".Content-Container-Data")
+    const pattenID = /^\d+$/gm
+    var ShowStatus = document.querySelector(".Status")
+    console.log(ShowStatus)
         IDinput.addEventListener('blur',()=>{
-            if(IDinput.value===null){
-                
+            if(IDinput.value===''){
+                ShowStatus.style.display="none"
             }
             else{
-                PrintDemo()
-            }
+                if(pattenID.test(IDinput.value)){
+                    ShowStatus.style.display="inline-block"
+                    ShowStatus.classList.add("SuccessID")
+                    ShowStatus.classList.remove("ErrorID")
+                    ShowStatus.innerHTML='Success!'
+                    PrintDemo()
+                }
+                 else{
+                    ShowStatus.style.display="inline-block"
+                    ShowStatus.classList.add("ErrorID")
+                    ShowStatus.classList.remove("SuccessID")
+                    ShowStatus.innerHTML='Error Please input true!'
+                }
+            }    
         })
 
     ImagePath.addEventListener('blur',()=>{

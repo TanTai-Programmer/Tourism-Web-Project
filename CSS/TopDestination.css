@@ -417,3 +417,13 @@ body{
     font-size: 20px;
     padding:10px;
 }
+.SuccessID{
+    color: rgb(0, 255, 30);
+    font-size:18px;
+    font-family: "Inter";
+}
+.ErrorID{
+    color: red;
+    font-size:18px;
+    font-family: "Inter";
+}
