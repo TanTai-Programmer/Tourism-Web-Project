@@ -222,11 +222,8 @@ function InputAPI(){
     AddForm.addEventListener('submit', (e)=>{
         e.preventDefault()
         if(CheckID()&&CheckName()&&CheckDesc()&&CheckPath()){
-            console.log(true)
             InputAPI()
-        }
-        else{
-            console.log(false)
+            alert('Input API Success!')
         }
 });
 })
@@ -240,8 +237,20 @@ function InputAPI(){
         </div>
         `
     }
-    
-
+    const BtnInput = document.querySelector('.Function-Input')
+    const BtnUpdate = document.querySelector('.Function-Update')
+    const UpdateForm = document.querySelector('.Update-Form')
+    const ContentDemo = document.querySelector('.Content-Container-Demo')
+    BtnInput.onclick = function(){
+        AddForm.style.display='flex'
+        UpdateForm.style.display='none'
+        ContentDemo.style.display='flex'
+    }
+    BtnUpdate.onclick = function (){
+        AddForm.style.display = 'none'
+        UpdateForm.style.display='flex'
+        ContentDemo.style.display='none'
+    }
     // const imgInput = document.getElementById("Destination-img")
     // const link = new FileReader()
     // var y ='Somthing'

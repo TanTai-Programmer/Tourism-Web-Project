@@ -274,30 +274,47 @@ body{
     transition: 1s;
 }
 .Content-Container{
-    margin-top:110px;
-    width: 100%;
     display: flex;
-    /* flex-direction: column; */
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    margin-top:85px;
 }
-.Content-Container-Destination{
+.Content-Container-Function{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: #ffffff05;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+.Container-Function{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.Container-Function button{
+    background:none;
+    outline:none;
+    border: none;
+    color:#fd9c9e;
+    padding:10px;
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 700;
+    cursor: pointer;
+}
+.Content-Container-Function-Destination{
     min-width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background-color: #ffffff05;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
     height: fit-content;
-    padding:30px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
-}
-.Content-Container-Destination h3{
-    color: #ff9999;
-    font-size: 24px;
-    font-family: "Inter";
+    padding:2px 30px 30px 30px;
 }
 .Destination-Input{
     position: relative;
@@ -333,12 +350,12 @@ body{
     transition: .5s;
 }
 
-.Content-Container-Destination--Description{
+.Content-Container-Function-Destination--Description{
     display: flex;
     flex-direction: column;
     justify-content: start;
 }
-.Content-Container-Destination--Description textarea{
+.Content-Container-Function-Destination--Description textarea{
     /* width: 100%; */
     min-width: 450px;
     max-width:600px;
@@ -354,17 +371,17 @@ body{
     color:silver;
     transition: .2s;
 }
-.Content-Container-Destination--Description textarea:focus{
+.Content-Container-Function-Destination--Description textarea:focus{
     box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
 }
-.Content-Container-Destination--Description textarea::placeholder{
+.Content-Container-Function-Destination--Description textarea::placeholder{
     opacity: .25;
     transition: .5s;
 }
-.Content-Container-Destination--Description textarea:focus::placeholder{
+.Content-Container-Function-Destination--Description textarea:focus::placeholder{
     opacity: 0;
 }
-.Content-Container-Destination--Image input{
+.Content-Container-Function-Destination--Image input{
     height:fit-content;
     color: red;
     box-shadow: 0px 0px 5px rgba(0, 0,0,1);
@@ -464,4 +481,7 @@ body{
     font-size:18px;
     font-family: "Inter";
     transition: 1s;
+}
+.Update-Form{
+    display: none;
 }
