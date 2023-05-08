@@ -100,12 +100,11 @@ function InputAPI(){
     const DataDemo = document.querySelector(".Content-Container-Data")
     const pattenID = /^\d+$/gm
     var ShowStatus = document.querySelector(".Status")
-    console.log(ShowStatus)
         IDinput.addEventListener('blur',()=>{
             if(IDinput.value===''){
-                ShowStatus.style.display="none"
+               console.log("Somthingtsvfdf")
             }
-            else{
+            else {
                 if(pattenID.test(IDinput.value)){
                     ShowStatus.style.display="inline-block"
                     ShowStatus.classList.add("SuccessID")

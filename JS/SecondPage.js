@@ -13,7 +13,6 @@ var HaNoi = document.querySelector('#VN-HN')
 var HaNoiName = HaNoi.getAttribute('class')
 var  QuangTri = document.querySelector('#VN-25')
 var QuangTriName = QuangTri.getAttribute('class')
-console.log(QuangTriName)
 
 //In ra màn hình
 var html=document.querySelector('.Content__Destination')
@@ -33,7 +32,7 @@ function getData(data) {
   QuangTri.onmouseover = ()=>{
     getDataName (QuangTriName)
     const Replace = data.filter(FilterData)
-    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
   QuangTri.onmouseout = Remo
@@ -68,7 +67,7 @@ function getData(data) {
   QuangBinh.onmouseover = ()=>{
     getDataName (QuangBinhName)
     const Replace = data.filter(FilterData)
-    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
   QuangBinh.onmouseout = Remo
@@ -93,28 +92,31 @@ function getDataName (data){
   return Gan
 }
 function Printscreen(b){
-  return   `
+  return  `
   <div class="Content__Destination--ID">${b.id}</div>
   <img src="${b.img}" alt="">
   <div class="Content-Destination-Data-Name">${b.name}</div>
-  <div class="Content-Destination-Data-Description">${b.Description}</div>
+  <div class="Content-Destination-Data-Description">
+    <div class="Content-Destination-Data-Description--Content">${b.Description}</div>
+  </div>
+  <div class="Content-Destination-Data-Seemore">Click on province to see more <i class="fas fa-hand-point-down"></i> </div>
   `
-  // `
-  // <div class="Content__Destination--image">
-  //     <img src="${b.img}" alt="" >
-  // </div>
-  // <p> ${b.name} </p>
-  // <p>${b.Description}</p>
-  // `
-
 }
-
-
-
+function GetHeight (b){
+  console.log(b.Description)
+  return (b.Description)
+}
+var DescriptionScroll = document.querySelector(".Content-Destination-Data-Description--Content")
+function startScroll(){
+    let id = setInterval(function() {
+      DescriptionScroll.scrollBy(0, 1);
+    }, 30);
+    return id;
+}
 
 $( document ).on( "mousemove", function( event ) {
     $( ".Content__Destination" ).css({
         left : event.pageX -150,
-        top:event.pageY -500
+        top:event.pageY -600
     } )
   });

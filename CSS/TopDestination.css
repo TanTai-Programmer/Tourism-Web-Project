@@ -162,7 +162,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /* height: 100vh; */
+    height: 100vh;
     transition: .5s;
     display: flex;
     justify-content:center;
@@ -391,9 +391,11 @@ body{
     background-color: #ffffff;
     border-radius: 10px;
     padding:10px;
+    width:400px;
 }
 .Content-Container-Data img{
     max-width: 400px;
+    max-height: 300px;
     border-radius: 10px;
 }
 .Content-Container-Data-ID{
@@ -406,16 +408,17 @@ body{
     font-size: 24px;
     font-family: "Inter";
     font-weight: 700;
-    padding:10px;
+    padding:5px 10px;
 }
 .Content-Container-Data-Description{
     max-width: 400px;
-    max-height: 200px;
+    max-height:250px;
     overflow: hidden;
     overflow-y: scroll;
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 16px;
     padding:10px;
+    text-align:justify;
 }
 .SuccessID{
     color: rgb(0, 255, 30);

@@ -346,14 +346,27 @@ path:hover{
 }
 .Content-Destination-Data-Description{
   max-width: 400px;
-  max-height: 150px;
-  overflow: hidden;
-  overflow-y: scroll;
+  max-height: 155px;
   font-family: "Inter";
   font-size: 14px;
   padding:5px 10px;
   margin-bottom: 20px;
   text-align:justify;
+  transition: .5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.Content-Destination-Data-Description--Content{
+  scroll-snap-align: start;
+  margin-bottom: 5px;
+  display:-webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+.Content-Destination-Data-Seemore{
+  color:silver;
+  padding:5px;
 }
 /* .Content__Destination--image{
   display: flex;
