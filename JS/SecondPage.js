@@ -102,10 +102,10 @@ function Printscreen(b){
   <div class="Content-Destination-Data-Seemore">Click on province to see more <i class="fas fa-hand-point-down"></i> </div>
   `
 }
-function GetHeight (b){
-  console.log(b.Description)
-  return (b.Description)
-}
+// function GetHeight (b){
+//   console.log(b.Description)
+//   return (b.Description)
+// }
 var DescriptionScroll = document.querySelector(".Content-Destination-Data-Description--Content")
 function startScroll(){
     let id = setInterval(function() {
@@ -117,6 +117,6 @@ function startScroll(){
 $( document ).on( "mousemove", function( event ) {
     $( ".Content__Destination" ).css({
         left : event.pageX -150,
-        top:event.pageY -600
+        top:event.pageY -550
     } )
   });

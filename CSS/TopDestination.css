@@ -158,7 +158,7 @@ body{
 .Content{
     width: 85%;
     margin-left: 15%;
-    background-image: url(../Image/Picture/DaNangCity.jpg);
+    background-image: url(../Image/Picture/HaLong.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -308,13 +308,22 @@ body{
     font-weight: 700;
     cursor: pointer;
 }
+.Function-btn{
+    opacity: 0.5;
+}
+.Btn-Active{
+    opacity: 1;
+}
 .Content-Container-Function-Destination{
     min-width: 450px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: start;
     height: fit-content;
     padding:2px 30px 30px 30px;
+}
+.Function-Active{
+    display: flex;
 }
 .Destination-Input{
     position: relative;
@@ -433,6 +442,8 @@ body{
     border-radius: 10px;
     padding:10px;
     width:400px;
+    transition: .5s;
+    overflow: hidden;
 }
 .Content-Container-Data img{
     max-width: 400px;
@@ -461,6 +472,28 @@ body{
     padding:10px;
     text-align:justify;
 }
+.Content-Container-Data-BtnFunction{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 100%;
+    opacity: 1;
+    padding-top:10px;
+}
+.BtnFunc{
+    cursor: pointer;
+    border:none;
+    border-radius: 10px;
+    padding:5px 10px;
+    background-color:rgb(1, 187, 255);
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.BtnFunc:hover{
+    background-color:rgb(109, 255, 109)
+}
 .Status{
     color: red;
 }
@@ -484,4 +517,21 @@ body{
 }
 .Update-Form{
     display: none;
+    /* padding:0px; */
+    width: 88%;
+}
+.Update-Form.Function-Active{
+    display: flex;
+}
+.Update-Form-Val{
+    display: none;
+    flex-direction: column;
+}
+.Update-Form-Val.Function-Val-Active{
+    display: flex;
+}
+.Destination-NotFound{
+    color: silver;
+    font-size:20px;
+    text-align: center;
 }

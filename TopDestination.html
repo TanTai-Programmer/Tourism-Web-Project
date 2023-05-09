@@ -98,10 +98,10 @@
             <div class="Content-Container">
                 <div class="Content-Container-Function">
                     <div class="Container-Function">
-                        <button class="Function-Input">Input Destination</button>
-                        <button class="Function-Update">Update/Delete Destination</button>
+                        <button class="Function-btn Function-Input Btn-Active">Input Destination</button>
+                        <button class="Function-btn Function-Update">Update/Delete Destination</button>
                     </div>
-                    <form action="" class="Add-Form Content-Container-Function-Destination">
+                    <form action="" class="Add-Form Content-Container-Function-Destination Function-Active ">
                         <div class="Destination-Input Content-Container-Function-Destination--ID">
                             <label for="Desination-id">ID:</label><span class="Status StatusID">*</span><br>
                             <input type="text" name="" id="Desination-id" placeholder="Example: 01">
@@ -130,20 +130,45 @@
                         </div> -->
                         <input type="submit" value="Submit"id="SubmitForm" >
                     </form>
-                    <form action="" class="Update-Form">
-                        <input type="text" placeholder="Input ID Destination">
-                        
+                    <form action="" class="Update-Form Content-Container-Function-Destination">
+                        <div class="Destination-Input Content-Container-Function-Destination--ID">
+                            <label for="Desination-id">Input ID Destination:</label><span class="Status StatusID">*</span><br>
+                            <input type="text" name="" id="ID-input" placeholder="Example: 01">
+                        </div>
+                    </form>
+                    <form action="" class="Update-Form-Val Content-Container-Function-Destination">
+                        <div class="Destination-Input Content-Container-Function-Destination--ID">
+                            <label for="Desination-id">ID:</label><span class="Status StatusID">*</span><br>
+                            <input type="text" name="" id="ID-Update" placeholder="Example: 01">
+
+                        </div>
+                        <div class="Destination-Input  Content-Container-Function-Destination--Name">
+                            <label for="Destination-name">Destination Name:</label><span class=" Status StatusName">*</span> <br>
+                            <input name="" id="Name-Update" cols="30" rows="10" placeholder="Example: HaNoi">
+    
+                        </div>
+                        <div class="Destination-Input  Content-Container-Function-Destination--Description">
+                            <label for="Destination--Description">Description:</label>
+                            <textarea name="" id="Description-Update" cols="30" rows="10" placeholder="Example: Thủ Đô Hà Nội là của nước Việt Nam; Hoàng Sa Trường Sa là của Việt Nam,...."></textarea>
+                            <span class="Status StatusDescription">*</span>
+                        </div>
+                        <div class="Destination-Input">
+                            <label for="Image-Path">Image-Path:</label>
+                            <span class="Status StatusPath">*</span> <br>
+                            <input type="text" name="" id="Image-Path-Update"  placeholder="../Image/Picture/HoGuom.jpg">
+                        </div>
+                        <input type="submit" value="Update"id="SubmitForm" >
                     </form>
                 </div>
                 <div class="Content-Container-Demo">
                     <div class="Content-Container-Show">Demo</div>
                     <div class="Content-Container-Data">
-                        <div class="Content-Container-Data-ID">ID: 12</div>
+                        <!-- <div class="Content-Container-Data-ID">ID: 12</div>
                         <img src="../Image/Picture/Ho Guom.jpg" alt="">
                         <div class="Content-Container-Data-Name">HaNoi</div>
                         <div class="Content-Container-Data-Description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, optio expedita assumenda excepturi nemo odio ipsam incidunt magni dicta quaerat. Illo ullam aliquam cupiditate autem voluptatem voluptatum reprehenderit maxime reiciendis?
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ab dolores quis rerum aspernatur at accusamus explicabo, et minus hic voluptatum possimus quo provident. Commodi aperiam dolore autem aliquid iste?
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -98,6 +98,9 @@ function InputAPI(){
                 StatusID.classList.add("Error")
                 IDinput.classList.add("InputError")
                 StatusID.innerHTML ='Input value!'
+                if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+                    Print()
+                }
                 SubmitForm.style.cssText='visibility:hidden;opacity:0'
                 return false;
             }
@@ -133,6 +136,9 @@ function InputAPI(){
                     StatusName.classList.add("Error")
                     Name.classList.add("InputError")
                     StatusName.innerHTML ='Input value!'
+                    if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+                        Print()
+                    }
                     SubmitForm.style.cssText='visibility:hidden; opacity:0'
                     return false
             }
@@ -168,6 +174,9 @@ function InputAPI(){
                 Description.classList.remove("InputSuccess")
                 StatusDesc.classList.add("Error")
                 StatusDesc.innerHTML ='Input value!'
+                if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+                    Print()
+                }
                 SubmitForm.style.cssText='visibility:hidden; opacity:0'
                 return false;
             }
@@ -195,6 +204,9 @@ function InputAPI(){
         StatusPath.classList.add("Error")
         Name.classList.add("InputError")
         StatusPath.innerHTML ='Input path'
+        if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+            Print()
+        }
         SubmitForm.style.cssText='visibility:hidden; opacity:0'
         return false;
     }
@@ -228,8 +240,27 @@ function InputAPI(){
 });
 })
     const DataDemo = document.querySelector(".Content-Container-Data")
+    Print()
+    function Print(){
+        const DataReplace = [ReplaceFunc()]
+        DataDemo.innerHTML= DataReplace.join('')
+}
+function ReplaceFunc(){
+    return  `
+    <div class="Content-Container-Data-ID">ID: 12</div>
+    <img src="../Image/Picture/Ho Guom.jpg" alt="">
+    <div class="Content-Container-Data-Name">HaNoi</div>
+    <div class="Content-Container-Data-Description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, optio expedita assumenda excepturi nemo odio ipsam incidunt magni dicta quaerat. Illo ullam aliquam cupiditate autem voluptatem voluptatum reprehenderit maxime reiciendis?
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ab dolores quis rerum aspernatur at accusamus explicabo, et minus hic voluptatum possimus quo provident. Commodi aperiam dolore autem aliquid iste?
+    </div>
+    `
+}
     function PrintDemo() {
-        DataDemo.innerHTML = `
+        const DataReplace = [ReplaceFuncDemo()]
+        DataDemo.innerHTML =  DataReplace.join('')
+    }
+    function ReplaceFuncDemo(){
+        return `
         <div class="Content-Container-Data-ID">${IDinput.value}</div>
         <img src="${ImagePath.value}" alt="">
         <div class="Content-Container-Data-Name">${Name.value}</div>
@@ -239,18 +270,161 @@ function InputAPI(){
     }
     const BtnInput = document.querySelector('.Function-Input')
     const BtnUpdate = document.querySelector('.Function-Update')
-    const UpdateForm = document.querySelector('.Update-Form')
+    const UpdateForm =document.querySelector('.Update-Form')
+    const UpdateFormVal = document.querySelector('.Update-Form-Val')
     const ContentDemo = document.querySelector('.Content-Container-Demo')
+
+
     BtnInput.onclick = function(){
-        AddForm.style.display='flex'
-        UpdateForm.style.display='none'
-        ContentDemo.style.display='flex'
+        UpdateForm.classList.remove('Function-Active')
+        UpdateFormVal.classList.add('Function-Val-Active')
+        AddForm.classList.add('Function-Active')
+        BtnInput.classList.add('Btn-Active')
+        BtnUpdate.classList.remove('Btn-Active')
+        UpdateFormVal.classList.remove('Function-Val-Active')
+        // UpdateFormVal.classList.remove('Function-Val-Active')
+
+        if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+            Print()
+        }
+        else{
+            PrintDemo()
+        }
     }
     BtnUpdate.onclick = function (){
-        AddForm.style.display = 'none'
-        UpdateForm.style.display='flex'
-        ContentDemo.style.display='none'
+        UpdateForm.classList.add('Function-Active')
+        AddForm.classList.remove('Function-Active')
+        BtnInput.classList.remove('Btn-Active')
+        BtnUpdate.classList.add('Btn-Active')
+        if(IDinputUpdate.value==''){
+            DataDemo.style.cssText="visibility : hidden ; opacity:0"
+            // Print()
+        }
+        else {
+            UpdateAPI(IDinputUpdate.value)
+        }
     }
+    const IDinputUpdate = document.getElementById('ID-input')
+
+    IDinputUpdate.addEventListener('blur', function(){
+        UpdateAPI(IDinputUpdate.value)
+    })
+    
+
+    function UpdateAPI (val){
+        fetch(APIurl)
+        .then(function(response){
+            return response.json()
+          })
+          .then((data) =>{
+            getData(data,val)
+          })
+        // .catch(function(error){
+        //     alert(error)
+        // })
+    }
+    function getData(data,val){
+        const GetID = data.filter(FilterData)
+        const PrintUpdate= GetID.map(PrintFunc)
+        const CompareID = GetID.map(CompareFunc)
+        const Arg=GetID.map(Printscreen)
+        UpdateFormVal.innerHTML= Arg.join('')
+        if(CompareID == ''){
+            PrintCompare()
+            DataDemo.style.cssText="visibility : visible ; opacity:1"
+            // alert("Khong co diem den vui long chọn Tabs Input")
+        }
+        else {
+            DataDemo.style.cssText="visibility : visible ; opacity:1"
+            DataDemo.innerHTML=PrintUpdate.join('')
+        }
+        if(IDinputUpdate.value==''){
+            // Print()
+            // DataDemo.style.cssText="visibility : hidden ; opacity:0"
+        }
+        else{
+            DataDemo.style.cssText="visibility : visible ; opacity:1"
+        }
+        // DataDemo.innerHTML=PrintUpdate.join('')
+        const BtnEdit = document.querySelector(".EditBtnFunc")
+
+        BtnEdit.addEventListener("click",()=>{
+            UpdateFormVal.classList.add('Function-Val-Active')
+        })
+    }
+
+    function CompareFunc(data){
+        // console.log(IDinputUpdate.value)
+        return data.id == IDinputUpdate.value
+    }
+    function PrintCompare(){
+        DataDemo.innerHTML=`
+        <div class="Destination-NotFound">Not Find Destination!<br> Please Chose Tab "Input Destination"</div>
+        `
+    }
+    function FilterData(data){
+        if (data.id === IDinputUpdate.value){
+          return data.id
+        }
+      }
+    function Printscreen(data){
+        return`
+        <div class="Destination-Input Content-Container-Function-Destination--ID">
+            <label for="Desination-id">ID:</label><span class="Status StatusID">*</span><br>
+            <input type="text" name="" id="ID-Update" placeholder="Example: 01" value="${data.id}">
+        </div>
+        <div class="Destination-Input  Content-Container-Function-Destination--Name">
+            <label for="Destination-name">Destination Name:</label><span class=" Status StatusName">*</span> <br>
+            <input name="" id="Name-Update" cols="30" rows="10" placeholder="Example: HaNoi" value="${data.name}">
+        </div>
+        <div class="Destination-Input  Content-Container-Function-Destination--Description">
+            <label for="Destination--Description">Description:</label>
+            <textarea name="" id="Description-Update" cols="30" rows="10" placeholder="Example: Thủ Đô Hà Nội là của nước Việt Nam; Hoàng Sa Trường Sa là của Việt Nam,....">${data.Description}</textarea>
+            <span class="Status StatusDescription">*</span>
+        </div>
+        <div class="Destination-Input">
+            <label for="Image-Path">Image-Path:</label>
+            <span class="Status StatusPath">*</span> <br>
+            <input type="text" name="" id="Image-Path-Update"  placeholder="../Image/Picture/HoGuom.jpg" value="${data.img}">
+        </div>
+        <input type="submit" value="Update"id="SubmitForm" >
+        `
+    }
+
+    function PrintFunc(data){
+        const ReplaceFunc = [PrintFuncData(data)]
+        return ReplaceFunc
+    }
+    function PrintFuncData(data){
+        return `
+        <div class="Content-Container-Data-ID">${data.id}</div>
+        <img src="${data.img}" alt="">
+        <div class="Content-Container-Data-Name">${data.name}</div>
+        <div class="Content-Container-Data-Description">${data.Description}</div>
+        </div>
+        <div class="Content-Container-Data-BtnFunction">
+            <button class="BtnFunc EditBtnFunc">Edit</button>
+            <button class="BtnFunc DelBtnFunc">Delete</button>
+        </div>
+        `
+    }
+
+        //Check trạng thái có tìm được API url hay không
+        // var http=new XMLHttpRequest();
+        // http.open('HEAD',`${APIurl}/${IDinputUpdate.value}`,false);
+        // http.send();
+        // if(http.status!= 404){
+        //     console.log("Dung r ")
+        // }
+        // else{
+        //     console.log("Sai r")
+        // }
+        // .then(function(response){
+        //     return response.json()
+        //   })
+        //   .then((data) =>{
+        //     getData(data)
+        //   })
     // const imgInput = document.getElementById("Destination-img")
     // const link = new FileReader()
     // var y ='Somthing'
