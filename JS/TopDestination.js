@@ -74,6 +74,8 @@ const SubmitForm =document.getElementById("SubmitForm")
 const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces' // Sử dụng API là MockAPI 
 
 function InputAPI(){
+    const ImgURL = localStorage.getItem('img')
+    console.log(typeof ImgURL)
         fetch(APIurl,{
             method: 'POST',
             headers: {
@@ -83,10 +85,11 @@ function InputAPI(){
                 id: IDinput.value,
                 name: Name.value,
                 Description: Description.value,
-                img:ImagePath.value,
+                img:ImgURL,
             })
         })
     }
+    const imgInput = document.getElementById("Destination-img")
     $(document).ready(function (){
     const StatusID = document.querySelector(".StatusID")
     IDinput.addEventListener('blur', function(e) {
@@ -94,13 +97,19 @@ function InputAPI(){
             return CheckID()
         })
         function CheckID(){
+            if(imgInput.value==''){
+                Print()
+            }
             const pattenID = /^\d+$/gm // Đặt biến trong hàm thì hàm chaỵ đúng; ngược lại
             if((IDinput.value)===''){
                 StatusID.classList.add("Error")
                 IDinput.classList.add("InputError")
                 StatusID.innerHTML ='Input value!'
-                if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+                if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(imgInput.value=='')){
                     Print()
+                }
+                else{
+                    PrintDemo()
                 }
                 SubmitForm.style.cssText='visibility:hidden;opacity:0'
                 return false;
@@ -113,7 +122,12 @@ function InputAPI(){
                     StatusID.classList.remove("Error")
                     StatusID.innerHTML='*'
                     SubmitForm.style.cssText='visibility:visible; opacity:1'
-                    PrintDemo()
+                    if(imgInput.value !=''){
+                        PrintDemo() 
+                    }
+                    else{
+                        PrintDemoImage()
+                    }
                     return true
                 }
                  else{
@@ -137,8 +151,11 @@ function InputAPI(){
                     StatusName.classList.add("Error")
                     Name.classList.add("InputError")
                     StatusName.innerHTML ='Input value!'
-                    if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+                    if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(imgInput.value=='')){
                         Print()
+                    }
+                    else{
+                        PrintDemo()
                     }
                     SubmitForm.style.cssText='visibility:hidden; opacity:0'
                     return false
@@ -151,7 +168,12 @@ function InputAPI(){
                         StatusName.classList.remove("Error")
                         StatusName.innerHTML='*'
                         SubmitForm.style.cssText='visibility:visible; opacity:1'
-                        PrintDemo()
+                        if(imgInput.value !=''){
+                            PrintDemo() 
+                        }
+                        else{
+                            PrintDemoImage()
+                        }
                         return true;
                     }
                      else{
@@ -175,8 +197,11 @@ function InputAPI(){
                 Description.classList.remove("InputSuccess")
                 StatusDesc.classList.add("Error")
                 StatusDesc.innerHTML ='Input value!'
-                if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+                if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(imgInput.value=='')){
                     Print()
+                }
+                else{
+                    PrintDemo()
                 }
                 SubmitForm.style.cssText='visibility:hidden; opacity:0'
                 return false;
@@ -188,58 +213,105 @@ function InputAPI(){
                 StatusDesc.classList.remove("Error")
                 StatusDesc.innerHTML =("*")
                 SubmitForm.style.cssText='visibility:visible; opacity:1'
-                PrintDemo()
+                if(imgInput.value !=''){
+                    PrintDemo() 
+                }
+                else{
+                    PrintDemoImage()
+                }
                 return true;
             }
         }
 
-    const StatusPath = document.querySelector(".StatusPath")
-   ImagePath.addEventListener ('blur', function (e) {
-    CheckPath()
-   })
-        function CheckPath(){
-        const pattenPath = /(^[(..)+(\/)]{3})/gm
-    if (ImagePath.value==''){
-        ImagePath.classList.add("InputError")
-        ImagePath.classList.remove("InputSuccess")
-        StatusPath.classList.add("Error")
-        Name.classList.add("InputError")
-        StatusPath.innerHTML ='Input path'
-        if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
-            Print()
-        }
-        SubmitForm.style.cssText='visibility:hidden; opacity:0'
-        return false;
-    }
-    else{
-        if(pattenPath.test(ImagePath.value)){
-            ImagePath.classList.add("InputSuccess")
-            ImagePath.classList.remove("InputError")
-            StatusPath.classList.add("Success")
-            StatusPath.classList.remove("Error")
-            StatusPath.innerHTML='*'
-            SubmitForm.style.cssText='visibility:visible; opacity:1'
+    
+
+    const link = new FileReader()
+    imgInput.onchange = function (){
+        const file = imgInput.files[0];
+            link.onload =  function GetURL(e){
+                // console.log(e.currentTarget.result)
+                // callback(e.currentTarget.result)
+                return callback(e.currentTarget.result)
+            };
+            link.readAsDataURL(file);
+           function callback(a){
+            const IMG = localStorage.setItem('img',a)
             PrintDemo()
-            return  true
+            // const DataURL = localStorage.getItem('img')
+            // console.log(DataURL)
+            return a}
+            if(imgInput.value !==''){
+                console.log("Co du lieu")
+              }
+              else{
+                console.log("Khong cos duw lieu")
+              }
         }
-         else{
-            ImagePath.classList.add("InputError")
-            ImagePath.classList.remove("InputSuccess")
-            StatusPath.classList.add("Error")
-            StatusPath.classList.remove("Success")
-            StatusPath.innerHTML='Error !! Please input value is path'
-            SubmitForm.style.cssText='visibility:hidden; opacity:0'
-            return false
-        } 
-    }}
+//     const StatusPath = document.querySelector(".StatusPath")
+//    ImagePath.addEventListener ('blur', function (e) {
+//     CheckPath()
+//    })
+//         function CheckPath(){
+//         const pattenPath = /(^[(..)+(\/)]{3})/gm
+//     if (ImagePath.value==''){
+//         ImagePath.classList.add("InputError")
+//         ImagePath.classList.remove("InputSuccess")
+//         StatusPath.classList.add("Error")
+//         Name.classList.add("InputError")
+//         StatusPath.innerHTML ='Input path'
+//         if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+//             Print()
+//         }
+//         SubmitForm.style.cssText='visibility:hidden; opacity:0'
+//         return false;
+//     }
+//     else{
+//         if(pattenPath.test(ImagePath.value)){
+//             ImagePath.classList.add("InputSuccess")
+//             ImagePath.classList.remove("InputError")
+//             StatusPath.classList.add("Success")
+//             StatusPath.classList.remove("Error")
+//             StatusPath.innerHTML='*'
+//             SubmitForm.style.cssText='visibility:visible; opacity:1'
+//             PrintDemo()
+//             return  true
+//         }
+//          else{
+//             ImagePath.classList.add("InputError")
+//             ImagePath.classList.remove("InputSuccess")
+//             StatusPath.classList.add("Error")
+//             StatusPath.classList.remove("Success")
+//             StatusPath.innerHTML='Error !! Please input value is path'
+//             SubmitForm.style.cssText='visibility:hidden; opacity:0'
+//             return false
+//         } 
+//     }}
     AddForm.addEventListener('submit', (e)=>{
         e.preventDefault()
-        if(CheckID()&&CheckName()&&CheckDesc()&&CheckPath()){
+        if(CheckID()&&CheckName()&&CheckDesc()&&imgInput.value !=''){
             InputAPI()
             alert('Input API Success!')
         }
 });
 })
+// $(document).ready(function(){
+    // const imgInput = document.getElementById("Destination-img")
+    // const link = new FileReader()
+    // imgInput.onchange = function (){
+    //     const file = imgInput.files[0];
+    //         link.onload =  function GetURL(e){
+    //             // console.log(e.currentTarget.result)
+    //             // callback(e.currentTarget.result)
+    //             return callback(e.currentTarget.result)
+    //         };
+    //         link.readAsDataURL(file);
+    //        function callback(a){
+    //         const IMG = localStorage.setItem('img',a)
+    //         const DataURL = localStorage.getItem('img')
+    //         console.log(DataURL)
+    //         return a}
+    //       }
+// })
     const DataDemo = document.querySelector(".Content-Container-Data")
     Print()
     function Print(){
@@ -256,14 +328,28 @@ function ReplaceFunc(){
     </div>
     `
 }
+function PrintDemoImage(){
+    const DataReplace = [ReplaceFuncDemoImage()]
+    DataDemo.innerHTML =  DataReplace.join('')
+}
+function ReplaceFuncDemoImage(){
+    return `
+    <div class="Content-Container-Data-ID">${IDinput.value}</div>
+    <img src="" alt="">
+    <div class="Content-Container-Data-Name">${Name.value}</div>
+    <div class="Content-Container-Data-Description">${Description.value}</div>
+    </div>
+    `
+}
     function PrintDemo() {
         const DataReplace = [ReplaceFuncDemo()]
         DataDemo.innerHTML =  DataReplace.join('')
     }
     function ReplaceFuncDemo(){
+        const Image = localStorage.getItem('img')
         return `
         <div class="Content-Container-Data-ID">${IDinput.value}</div>
-        <img src="${ImagePath.value}" alt="">
+        <img src="${Image}" alt="">
         <div class="Content-Container-Data-Name">${Name.value}</div>
         <div class="Content-Container-Data-Description">${Description.value}</div>
         </div>
@@ -284,13 +370,18 @@ function ReplaceFunc(){
         BtnUpdate.classList.remove('Btn-Active')
         UpdateFormVal.classList.remove('Function-Val-Active')
         // UpdateFormVal.classList.remove('Function-Val-Active')
-
-        if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
+        DataDemo.style.cssText ="visibility : visible"
+        if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(imgInput.value=='')){
             Print()
         }
-        else{
+        else if(imgInput.value!=''){
             PrintDemo()
+            console.log("Data co du lieu")
+            // Print()
         }
+        // else{
+        //     PrintDemo()
+        // }
     }
     BtnUpdate.onclick = function (){
         UpdateForm.classList.add('Function-Active')
@@ -447,48 +538,52 @@ function ReplaceFunc(){
                         return true;
                     }
             }
-            const StatusPathUpdate= document.querySelector('.StatusPathUpdate')
-            ImagePathUpdate.addEventListener ('blur', function (e) {
-            CheckPath()
-            })
-                function CheckPath(){
-                const pattenPath = /(^[(..)+(\/)]{3})/gm
-            if (ImagePathUpdate.value==''){
-                ImagePathUpdate.classList.add("InputError")
-                ImagePathUpdate.classList.remove("InputSuccess")
-                StatusPathUpdate.classList.add("Error")
-                Name.classList.add("InputError")
-                StatusPathUpdate.innerHTML ='Input path'
-                if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
-                    Print()
-                }
-                else{
-                    PrintDemoUpdate()
-                }
-                SubmitForm.style.cssText='visibility:hidden; opacity:0'
-                return false;
-            }
-            else{
-                if(pattenPath.test(ImagePathUpdate.value)){
-                    ImagePathUpdate.classList.add("InputSuccess")
-                    ImagePathUpdate.classList.remove("InputError")
-                    StatusPathUpdate.classList.add("Success")
-                    StatusPathUpdate.classList.remove("Error")
-                    StatusPathUpdate.innerHTML='*'
-                    SubmitForm.style.cssText='visibility:visible; opacity:1'
-                    PrintDemoUpdate()
-                    return  true
-                }
-                else{
-                    ImagePath.classList.add("InputError")
-                    ImagePath.classList.remove("InputSuccess")
-                    StatusPathUpdate.classList.add("Error")
-                    StatusPathUpdate.classList.remove("Success")
-                    StatusPathUpdate.innerHTML='Error !! Please input value is path'
-                    SubmitForm.style.cssText='visibility:hidden; opacity:0'
-                    return false
-                } 
-            }}
+            // const StatusPathUpdate= document.querySelector('.StatusPathUpdate')
+            // ImagePathUpdate.addEventListener ('blur', function (e) {
+            // CheckPath()
+            // })
+            //     function CheckPath(){
+            //     const pattenPath = /(^[(..)+(\/)]{3})/gm
+            // if (ImagePathUpdate.value==''){
+            //     ImagePathUpdate.classList.add("InputError")
+            //     ImagePathUpdate.classList.remove("InputSuccess")
+            //     StatusPathUpdate.classList.add("Error")
+            //     Name.classList.add("InputError")
+            //     StatusPathUpdate.innerHTML ='Input path'
+            //     if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
+            //         Print()
+            //     }
+            //     else{
+            //         PrintDemoUpdate()
+            //     }
+            //     SubmitForm.style.cssText='visibility:hidden; opacity:0'
+            //     return false;
+            // }
+            // else{
+            //     if(pattenPath.test(ImagePathUpdate.value)){
+            //         ImagePathUpdate.classList.add("InputSuccess")
+            //         ImagePathUpdate.classList.remove("InputError")
+            //         StatusPathUpdate.classList.add("Success")
+            //         StatusPathUpdate.classList.remove("Error")
+            //         StatusPathUpdate.innerHTML='*'
+            //         SubmitForm.style.cssText='visibility:visible; opacity:1'
+            //         PrintDemoUpdate()
+            //         return  true
+            //     }
+            //     else{
+            //         ImagePath.classList.add("InputError")
+            //         ImagePath.classList.remove("InputSuccess")
+            //         StatusPathUpdate.classList.add("Error")
+            //         StatusPathUpdate.classList.remove("Success")
+            //         StatusPathUpdate.innerHTML='Error !! Please input value is path'
+            //         SubmitForm.style.cssText='visibility:hidden; opacity:0'
+            //         return false
+            //     } 
+            // }}
+
+
+
+
             function PrintDemoUpdate() {
                 const DataReplace = [ReplaceFuncDemoUpdate()]
                 DataDemo.innerHTML =  DataReplace.join('')
@@ -519,8 +614,7 @@ function ReplaceFunc(){
                 })
                 alert("Update Destination Success! ")
             })
-            
-})
+})          
 }
     function CompareFunc(data){
         // console.log(IDinputUpdate.value)
@@ -549,15 +643,13 @@ function ReplaceFunc(){
             <textarea name="" id="Description-Update" cols="30" rows="10" placeholder="Example: Thủ Đô Hà Nội là của nước Việt Nam; Hoàng Sa Trường Sa là của Việt Nam,....">${data.Description}</textarea>
             <span class="Status StatusDescriptionUpdate">*</span>
         </div>
-        <div class="Destination-Input">
-            <label for="Image-Path">Image-Path:</label>
-            <span class="Status StatusPathUpdate">*</span> <br>
-            <input type="text" name="" id="Image-Path-Update"  placeholder="../Image/Picture/HoGuom.jpg" value="${data.img}">
+        <div  class="Destination-Input  Content-Container-Function-Destination--Image">
+        <label for="Destination-img">Image Link:</label> <br>
+        <input type="file" id="Destination-img" >
         </div>
         <input type="submit" value="Update"id="SubmitFormUpdate" >
         `
     }
-
     function PrintFunc(data){
         const ReplaceFunc = [PrintFuncData(data)]
         return ReplaceFunc
