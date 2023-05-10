@@ -9,12 +9,9 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Hachi Maru Pop' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/materialize.css"> <!-- CSS carousel-->
-    <!--Script Carousel -->
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="JS/FourthPage.js" defer></script>
 </head>
 <body>
     <div class="Menu">
@@ -56,54 +53,238 @@
                         <a href="AdminPage.html"><img src="Image/Picture/Avatar 1.png" alt="User"></a> 
                      </div>
                 </div>
+                <div class="Menu__Container__Content">
+                    <div class="Menu__Container__Content--Title">
+                        <p>
+                           Enjoy your <span>travel</span> with <span>cheapest cost</span> in VietNam
+                        </p>
+                    </div>
+                </div> 
             </div>
            
         </div>
     </div>
-    <div class="Cost-Content">
-        <div class="Cost-Content-Hotel">
-            <div id="Cost-Content-Hotel-Left">
-                
-                <div id="Cost-Content-Hotel-Left-Title">
-                    <p>Hotel</p>
+    <div class="Cost-Container">
+        <div class="Cost-Container-Content">
+            <div class="Cost-Container-Content-Left Cost-Img-1">
+                <div class="Cost-Container-Content-Left-Item ">
+                    <p>Hotel</p>       
                 </div>
             </div>
-            <div id="Cost-Content-Hotel-Right">
-                <div id="Cost-Content-Hotel-Right-Item1">
-                    <img src="Image/Icon/Vector.svg">
+            <div class="Cost-Container-Content-Right ">
+                <div class="Cost-Container-Content-Right-Item ">
+                    <div class="Cost-Container-Content-Right-Item1 Cost-Item-1">
+                        <div class="Cost-Container-Content-Right-Item1-line1 ">
+                            <img id="vector-next" src="Image/Icon/Vector (1).svg">
+                           
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item1-line2 ">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item2 ">
+                        <div class="Cost-Container-Content-Right-Item2-line1 ">
+                            <p>1. HAIAN Beach Hotel & Spa</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item2-line2 ">
+                            <button>Show prices</button>
+                            <p>Enter dates to see prices</p>
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item3 ">
+                        <div class="Cost-Container-Content-Right-Item3-line1 ">
+                            <img id="icon" src="Image/Icon/icon _messages_.svg">
+                            <p>2,645 Reviews</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line2 ">#Best to stay in DaNang</div>
+                        <div class="Cost-Container-Content-Right-Item3-line3 ">
+                            <img id="icon" src="Image/Icon/Rectangle.svg">
+                            <p>By <b>Jae May</b></p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line4 ">
+                            Our stay at here was graet. The room was really comfortable and clean
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line5 ">
+                            <img id="icon" src="Image/Icon/icon _leaf globe thin_.svg">
+                            <p><a href="FirstPage.html">Visit the hotel website</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div id="Cost-Content-Hotel-Right-Item2">
-                    
+                <div class="Cost-Container-Content-Right-button ">
+                    <img src="Image/Icon/Rectangle 55.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
                 </div>
-                <div id="Cost-Content-Hotel-Right-Item3">
-                    
-                </div>
-            </div>
+            </div>                       
         </div>
-        <div class="Cost-Content-Tiket plane">
-            <div id="Cost-Content-Tiket plane-Left">
 
+        <div class="Cost-Container-Content">
+            <div class="Cost-Container-Content-Left Cost-Img-2 ">
+                <div class="Cost-Container-Content-Left-Item ">
+                    <p>Ticket plane</p>       
+                </div>
             </div>
-            <div id="Cost-Content-Tiket plane-Right">
-                
+            <div class="Cost-Container-Content-Right ">
+                <div class="Cost-Container-Content-Right-Item ">
+                    <div class="Cost-Container-Content-Right-Item1 Cost-Item-2">
+                        <div class="Cost-Container-Content-Right-Item1-line1  ">
+                            <img id="vector-next" src="Image/Icon/Vector (1).svg">
+                           
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item1-line2 ">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item2 ">
+                        <div class="Cost-Container-Content-Right-Item2-line1 ">
+                            <p>1.HAI AU Aviation</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item2-line2">
+                            <button>Show prices</button>
+                            <p>Enter dates to see prices</p>
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item3 ">
+                        <div class="Cost-Container-Content-Right-Item3-line1 ">
+                            <img id="icon" src="Image/Icon/icon _messages_.svg">
+                            <p>285 Reviews</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line2 ">#Top airs to HaLongBay</div>
+                        <div class="Cost-Container-Content-Right-Item3-line3 ">
+                            <img id="icon" src="Image/Icon/Rectangle.svg">
+                            <p>By <b>Cele</b></p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line4 ">
+                            We really enjoyed flying over Ha Long Bay, it <br>was a spectacular view even though it wasn't a very sunny and <br>clear day.
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line5 ">
+                            <img id="icon" src="Image/Icon/icon _leaf globe thin_.svg">
+                            <p><a href="FirstPage.html">Visit the ticket plane website</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Cost-Container-Content-Right-button ">
+                    <img src="Image/Icon/Rectangle 55.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                </div>
             </div>
-        </div>
-        <div class="Cost-Content-Tourist">
-            <div id="Cost-Content-Tourist-Left">
+        </div>  
 
+        <div class="Cost-Container-Content">
+            <div class="Cost-Container-Content-Left Cost-Img-3">
+                <div class="Cost-Container-Content-Left-Item ">
+                    <p>Tourist</p>       
+                </div>
             </div>
-            <div id="Cost-Content-Tourist-Right">
-                
+            <div class="Cost-Container-Content-Right ">
+                <div class="Cost-Container-Content-Right-Item ">
+                    <div class="Cost-Container-Content-Right-Item1 Cost-Item-3 ">
+                        <div class="Cost-Container-Content-Right-Item1-line1 ">
+                            <img id="vector-next" src="Image/Icon/Vector (1).svg">
+                           
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item1-line2 ">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item2 ">
+                        <div class="Cost-Container-Content-Right-Item2-line1 ">
+                            <p>1.Ninh Binh Full-Day</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item2-line2 ">
+                            <button>Show prices</button>
+                            <p>Enter dates to see prices</p>
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item3 ">
+                        <div class="Cost-Container-Content-Right-Item3-line1 ">
+                            <img id="icon" src="Image/Icon/icon _messages_.svg">
+                            <p>948 Reviews</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line2 ">#Recomended</div>
+                        <div class="Cost-Container-Content-Right-Item3-line3 ">
+                            <img id="icon" src="Image/Icon/Rectangle.svg">
+                            <p>By <b>Laryal</b></p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line4 ">
+                            I book this trip on 29th march. And Actually we have a good<br> experience with this trip.
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line5 ">
+                            <img id="icon" src="Image/Icon/icon _leaf globe thin_.svg">
+                            <p><a href="FirstPage.html">Visit the tourist website</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Cost-Container-Content-Right-button ">
+                    <img src="Image/Icon/Rectangle 55.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                </div>
             </div>
-        </div>
-        <div class="Cost-Content-Restaurants">
-            <div id="Cost-Content-Restaurants-Left">
+        </div>  
 
+        <div class="Cost-Container-Content">
+            <div class="Cost-Container-Content-Left Cost-Img-4">
+                <div class="Cost-Container-Content-Left-Item ">
+                    <p>Restaurants</p>       
+                </div>
             </div>
-            <div id="Cost-Content-Restaurants-Right">
-                
+            <div class="Cost-Container-Content-Right ">
+                <div class="Cost-Container-Content-Right-Item">
+                    <div class="Cost-Container-Content-Right-Item1 Cost-Item-4">
+                        <div class="Cost-Container-Content-Right-Item1-line1  ">
+                            <img id="vector-next" src="Image/Icon/Vector (1).svg">
+                           
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item1-line2 ">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                            <img id="ellipse" src="Image/Icon/Ellipse 7@2x.svg">
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item2 ">
+                        <div class="Cost-Container-Content-Right-Item2-line1 ">
+                            <p>1.ESSENCE Restaurant </p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item2-line2 ">
+                            <button>Show prices</button>
+                            <p>Enter dates to see prices</p>
+                        </div>
+                    </div>
+                    <div class="Cost-Container-Content-Right-Item3">
+                        <div class="Cost-Container-Content-Right-Item3-line1 ">
+                            <img id="icon" src="Image/Icon/icon _messages_.svg">
+                            <p>4,872 Reviews</p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line2 ">#Top restaurants in Hanoi</div>
+                        <div class="Cost-Container-Content-Right-Item3-line3 ">
+                            <img id="icon" src="Image/Icon/Rectangle.svg">
+                            <p>By <b>Nacho</b></p>
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line4 ">
+                            Great food and atmosphere! The service was very<br> professional as well. After lunch, we went up to the roof bar and<br> it looked very nice. Recommended!
+                        </div>
+                        <div class="Cost-Container-Content-Right-Item3-line5 ">
+                            <img id="icon" src="Image/Icon/icon _leaf globe thin_.svg">
+                            <p><a href="FirstPage.html">Visit the restaurant website</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Cost-Container-Content-Right-button ">
+                    <img src="Image/Icon/Rectangle 55.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                    <img src="Image/Icon/Ellipse 7.svg">
+                </div>
             </div>
-        </div>
+        </div>  
+
     </div>
    
     <div class="Footer">
