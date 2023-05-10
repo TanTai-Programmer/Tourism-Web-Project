@@ -421,6 +421,20 @@ body{
 #SubmitForm:hover{
     background-color:  #04ff00ba;
 }
+#SubmitFormUpdate{
+    background-color: #efffeeba;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    transition: .5s;
+}
+#SubmitFormUpdate:hover{
+    background-color:  #04ff00ba;
+}
 .Content-Container-Demo{
     display: flex;
     flex-direction: column;

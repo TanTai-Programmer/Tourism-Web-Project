@@ -18,7 +18,8 @@ var QuangTriName = QuangTri.getAttribute('class')
 var html=document.querySelector('.Content__Destination')
 
 //Lấy dữ liệu API gán 
-var DataAPI ='http://localhost:3000/TP'
+// var DataAPI ='http://localhost:3000/TP'
+var DataAPI ='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
 var Gan = ''
 
 fetch(DataAPI)

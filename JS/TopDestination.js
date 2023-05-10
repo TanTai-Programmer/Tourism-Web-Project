@@ -70,7 +70,8 @@ const Description = document.getElementById("Destination--Description")
 const SubmitForm =document.getElementById("SubmitForm")
 
 
-const APIurl = 'http://localhost:3000/TP'
+// const APIurl = 'http://localhost:3000/TP'
+const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
 
 function InputAPI(){
         fetch(APIurl,{
@@ -307,23 +308,23 @@ function ReplaceFunc(){
     const IDinputUpdate = document.getElementById('ID-input')
 
     IDinputUpdate.addEventListener('blur', function(){
-        UpdateAPI(IDinputUpdate.value)
+        UpdateAPI()
     })
     
 
-    function UpdateAPI (val){
+    function UpdateAPI (){
         fetch(APIurl)
         .then(function(response){
             return response.json()
           })
           .then((data) =>{
-            getData(data,val)
+            getData(data)
           })
         // .catch(function(error){
-        //     alert(error)
+        //     alert('! Please Start JSON Server')
         // })
     }
-    function getData(data,val){
+    function getData(data){
         const GetID = data.filter(FilterData)
         const PrintUpdate= GetID.map(PrintFunc)
         const CompareID = GetID.map(CompareFunc)
@@ -346,13 +347,179 @@ function ReplaceFunc(){
             DataDemo.style.cssText="visibility : visible ; opacity:1"
         }
         // DataDemo.innerHTML=PrintUpdate.join('')
+        const IDAPI = (GetID[0].idAPI)
         const BtnEdit = document.querySelector(".EditBtnFunc")
-
+        const BtnDel = document.querySelector(".DelBtnFunc")
+        const BtnSubmitUpdate = document.querySelector("#SubmitFormUpdate")
+        const NameUpdate =document.querySelector('#Name-Update')
+        const DescriptionUpdate = document.querySelector('#Description-Update')
+        const ImagePathUpdate = document.querySelector('#Image-Path-Update')
+        const URLUpdate =(APIurl+'/'+IDAPI)
         BtnEdit.addEventListener("click",()=>{
             UpdateFormVal.classList.add('Function-Val-Active')
         })
-    }
+        BtnDel.addEventListener("click",()=>{
+            fetch((URLUpdate),{
+                method: 'DELETE',
+            })
+            .then((response)=>{
+                return response.json()
+            })
+            .then(()=>{
+                // DataDemo.remove() //Xoa khoi DOM ( nghia la khong hien len man hinh nua)=> Khong sai cai nay vi no xoa luon luc sau muon hien lai khong duoc
+                alert("Delete Destination Success! ")
+                // location.reload() // Tai lai trang khong nen su dung cai nay vi moi lan tai lai trang thao tac update rom ra
+            })
+        })
+        $(document).ready(function (){
+            const StatusNameUpdate= document.querySelector('.StatusNameUpdate')
+            NameUpdate.addEventListener('blur',(e)=>{
+                CheckNameUpdate()
+            })
+                function CheckNameUpdate(){
+                    const pattenNameUpdate = /^[A-Za-z]+$/gm
+                    if(NameUpdate.value===''){
+                            StatusNameUpdate.classList.add("Error")
+                            NameUpdate.classList.add("InputError")
+                            StatusNameUpdate.innerHTML ='Input value!'
+                            console.log(NameUpdate.value,DescriptionUpdate.value,ImagePathUpdate.value)
+                            if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
+                                Print()
+                            }
+                            else{
+                                PrintDemoUpdate()
+                            }
+                            BtnSubmitUpdate.style.cssText='visibility:hidden; opacity:0'
+                            return false
+                    }
+                    else{
+                            if(pattenNameUpdate.test(NameUpdate.value)){
+                                NameUpdate.classList.add("InputSuccess")
+                                NameUpdate.classList.remove("InputError")
+                                StatusNameUpdate.classList.add("Success")
+                                StatusNameUpdate.classList.remove("Error")
+                                StatusNameUpdate.innerHTML='*'
+                                BtnSubmitUpdate.style.cssText='visibility:visible; opacity:1'
+                                PrintDemoUpdate()
+                                return true;
+                            }
+                             else{
+                                NameUpdate.classList.add("InputError")
+                                NameUpdate.classList.remove("InputSuccess")
+                                StatusNameUpdate.classList.add("Error")
+                                StatusNameUpdate.classList.remove("Success")
+                                StatusNameUpdate.innerHTML='Error !! Please input value is string letter'
+                                BtnSubmitUpdate.style.cssText='visibility:hidden; opacity:0'
+                                return false
+                            } 
+                    }
+            }
+            const StatusDescUpdate = document.querySelector(".StatusDescriptionUpdate")
+            DescriptionUpdate.addEventListener('blur', function(e){
 
+                CheckDesc()
+            })
+                function CheckDesc(){
+                    if(DescriptionUpdate.value==''){
+                        DescriptionUpdate.classList.add("InputError")
+                        DescriptionUpdate.classList.remove("InputSuccess")
+                        StatusDescUpdate.classList.add("Error")
+                        StatusDescUpdate.innerHTML ='Input value!'
+                        if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
+                            Print()
+                        }
+                        else{
+                            PrintDemoUpdate()
+                        }
+                        SubmitForm.style.cssText='visibility:hidden; opacity:0'
+                        return false;
+                    }
+                    else{
+                        DescriptionUpdate.classList.add("InputSuccess")
+                        DescriptionUpdate.classList.remove("InputError")
+                        StatusDescUpdate.classList.add("Success")
+                        StatusDescUpdate.classList.remove("Error")
+                        StatusDescUpdate.innerHTML =("*")
+                        SubmitForm.style.cssText='visibility:visible; opacity:1'
+                        PrintDemoUpdate()
+                        return true;
+                    }
+            }
+            const StatusPathUpdate= document.querySelector('.StatusPathUpdate')
+            ImagePathUpdate.addEventListener ('blur', function (e) {
+            CheckPath()
+            })
+                function CheckPath(){
+                const pattenPath = /(^[(..)+(\/)]{3})/gm
+            if (ImagePathUpdate.value==''){
+                ImagePathUpdate.classList.add("InputError")
+                ImagePathUpdate.classList.remove("InputSuccess")
+                StatusPathUpdate.classList.add("Error")
+                Name.classList.add("InputError")
+                StatusPathUpdate.innerHTML ='Input path'
+                if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
+                    Print()
+                }
+                else{
+                    PrintDemoUpdate()
+                }
+                SubmitForm.style.cssText='visibility:hidden; opacity:0'
+                return false;
+            }
+            else{
+                if(pattenPath.test(ImagePathUpdate.value)){
+                    ImagePathUpdate.classList.add("InputSuccess")
+                    ImagePathUpdate.classList.remove("InputError")
+                    StatusPathUpdate.classList.add("Success")
+                    StatusPathUpdate.classList.remove("Error")
+                    StatusPathUpdate.innerHTML='*'
+                    SubmitForm.style.cssText='visibility:visible; opacity:1'
+                    PrintDemoUpdate()
+                    return  true
+                }
+                else{
+                    ImagePath.classList.add("InputError")
+                    ImagePath.classList.remove("InputSuccess")
+                    StatusPathUpdate.classList.add("Error")
+                    StatusPathUpdate.classList.remove("Success")
+                    StatusPathUpdate.innerHTML='Error !! Please input value is path'
+                    SubmitForm.style.cssText='visibility:hidden; opacity:0'
+                    return false
+                } 
+            }}
+            function PrintDemoUpdate() {
+                const DataReplace = [ReplaceFuncDemoUpdate()]
+                DataDemo.innerHTML =  DataReplace.join('')
+            }
+            function ReplaceFuncDemoUpdate(){
+                return `
+                <div class="Content-Container-Data-ID">${IDinputUpdate.value}</div>
+                <img src="${ImagePathUpdate.value}" alt="">
+                <div class="Content-Container-Data-Name">${NameUpdate.value}</div>
+                <div class="Content-Container-Data-Description">${DescriptionUpdate.value}</div>
+                </div>
+                `
+            }
+
+            BtnSubmitUpdate.addEventListener("click",(e)=>{
+                e.preventDefault() //Không sử dụng submit được tại bấm là nó tải lại trang luôn r :) 
+                fetch((URLUpdate),{
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: IDinputUpdate.value,
+                        name: NameUpdate.value,
+                        Description: DescriptionUpdate.value,
+                        img:ImagePathUpdate.value,
+                    })
+                })
+                alert("Update Destination Success! ")
+            })
+            
+})
+}
     function CompareFunc(data){
         // console.log(IDinputUpdate.value)
         return data.id == IDinputUpdate.value
@@ -364,30 +531,27 @@ function ReplaceFunc(){
     }
     function FilterData(data){
         if (data.id === IDinputUpdate.value){
-          return data.id
+
+          return data.idAPI
         }
       }
     function Printscreen(data){
         return`
-        <div class="Destination-Input Content-Container-Function-Destination--ID">
-            <label for="Desination-id">ID:</label><span class="Status StatusID">*</span><br>
-            <input type="text" name="" id="ID-Update" placeholder="Example: 01" value="${data.id}">
-        </div>
         <div class="Destination-Input  Content-Container-Function-Destination--Name">
-            <label for="Destination-name">Destination Name:</label><span class=" Status StatusName">*</span> <br>
+            <label for="Destination-name">Destination Name:</label><span class=" Status StatusNameUpdate">*</span> <br>
             <input name="" id="Name-Update" cols="30" rows="10" placeholder="Example: HaNoi" value="${data.name}">
         </div>
         <div class="Destination-Input  Content-Container-Function-Destination--Description">
             <label for="Destination--Description">Description:</label>
             <textarea name="" id="Description-Update" cols="30" rows="10" placeholder="Example: Thủ Đô Hà Nội là của nước Việt Nam; Hoàng Sa Trường Sa là của Việt Nam,....">${data.Description}</textarea>
-            <span class="Status StatusDescription">*</span>
+            <span class="Status StatusDescriptionUpdate">*</span>
         </div>
         <div class="Destination-Input">
             <label for="Image-Path">Image-Path:</label>
-            <span class="Status StatusPath">*</span> <br>
+            <span class="Status StatusPathUpdate">*</span> <br>
             <input type="text" name="" id="Image-Path-Update"  placeholder="../Image/Picture/HoGuom.jpg" value="${data.img}">
         </div>
-        <input type="submit" value="Update"id="SubmitForm" >
+        <input type="submit" value="Update"id="SubmitFormUpdate" >
         `
     }
 
