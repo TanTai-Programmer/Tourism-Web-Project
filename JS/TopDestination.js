@@ -70,8 +70,8 @@ const Description = document.getElementById("Destination--Description")
 const SubmitForm =document.getElementById("SubmitForm")
 
 
-// const APIurl = 'http://localhost:3000/TP'
-const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
+// const APIurl = 'http://localhost:3000/TP' //Sử dụng API là JSON Server 
+const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces' // Sử dụng API là MockAPI 
 
 function InputAPI(){
         fetch(APIurl,{
@@ -347,14 +347,16 @@ function ReplaceFunc(){
             DataDemo.style.cssText="visibility : visible ; opacity:1"
         }
         // DataDemo.innerHTML=PrintUpdate.join('')
-        const IDAPI = (GetID[0].idAPI)
+        const IDAPI = (GetID[0].idAPI) //Sử dụng cho MockAPI 
+        // const ID = (GetID[0].id) //Sử dụng cho JSON Server 
         const BtnEdit = document.querySelector(".EditBtnFunc")
         const BtnDel = document.querySelector(".DelBtnFunc")
         const BtnSubmitUpdate = document.querySelector("#SubmitFormUpdate")
         const NameUpdate =document.querySelector('#Name-Update')
         const DescriptionUpdate = document.querySelector('#Description-Update')
         const ImagePathUpdate = document.querySelector('#Image-Path-Update')
-        const URLUpdate =(APIurl+'/'+IDAPI)
+        const URLUpdate =(APIurl+'/'+IDAPI) //Sử dụng cho MockAPI 
+        // const URLUpdate =(APIurl+'/'+ID) //Sử dụng cho Json Server 
         BtnEdit.addEventListener("click",()=>{
             UpdateFormVal.classList.add('Function-Val-Active')
         })
@@ -532,7 +534,8 @@ function ReplaceFunc(){
     function FilterData(data){
         if (data.id === IDinputUpdate.value){
 
-          return data.idAPI
+          return data.idAPI // Sử dụng cho MockAPI
+        //   return data.id // Sử dụng cho JSON Server 
         }
       }
     function Printscreen(data){
