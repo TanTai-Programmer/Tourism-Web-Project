@@ -1,0 +1,552 @@
+
+body{
+    margin:0px;
+}
+::-webkit-scrollbar{
+    background:none;
+    opacity: 10%;
+    border-radius: 20px;
+    width:10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #fd9c9e;
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+.Container{
+    display: flex;
+}
+.btnclose{
+    animation: close 1s;
+}
+.btnopen{
+    display: none;
+    animation: open 1s;
+}
+@keyframes open {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes close {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.Sidebar{
+    /* background-color:rgb(69, 84, 79); */
+    width: 15%;
+    transition: .5s;
+    height: 1000px;
+    position: fixed;
+    overflow: hidden;
+}
+.Sidebar-logo{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 83px;
+    /* overflow:hidden ; */
+    background-color:lavenderblush;
+}
+.Sidebar-logo a{
+    text-decoration: none;
+    font-size:20px;
+    font-weight: 600;
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: pink;
+}
+.Sidebarbtn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btnclose:hover .Sidebar--Btn1{
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .btnclose:hover .Sidebar--Btn2{
+    opacity: 0;
+  }
+  .btnclose:hover .Sidebar--Btn3{
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .Sidebar--Btn1,.Sidebar--Btn2,.Sidebar--Btn3 {
+    width: 35px;
+    height: 5px;
+    background-color: silver;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+.Sidebar-List-Items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding:0;
+}
+.Sidebar-List-Items-li{
+    padding:10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.Sidebar-List-Items-li a{
+    color: silver;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.Sidebar-List-Items-li a i{
+    width: 25px;
+    padding:10px;
+}
+.Sidebar-List-Items--main{
+    display: flex;
+    align-items: center;
+}
+.Sidebar-List-Items--Child{
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.Sidebar-List-Items--Child >li:hover{
+    background-color: rgb(255, 255, 255);
+}
+.Sidebar-List-Items--Child li{
+    width: 100%;
+    padding: 10px 0;
+}
+.Sidebar-List-Items--Child li a{
+    font-size: 14px;
+    padding-left: 70px;
+    width: 150px; /*Mấu chốt để chuyển động nó mượt nằm ở đây */
+}
+.Sidebar-List-Items--Child1,.Sidebar-List-Items--Child2,.Sidebar-List-Items--Child3,.Sidebar-List-Items--Child4{
+    display: none;
+}
+.Sidebar-List-title{
+    width:150px;
+}
+.Sidebar-Down{
+    color: silver;
+    transition: .5s;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+.Sidebar-List-Items >li:hover{
+    background-color: rgba(255, 212, 212, 0.5);
+}
+.Sidebar-List-Items li:hover .Sidebar-Down{
+    transform: rotate(0deg);
+}
+.Content{
+    width: 85%;
+    margin-left: 15%;
+    background-image: url(../Image/Picture/han-son-doong.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    transition: .5s;
+    display: flex;
+    justify-content:center;
+}
+.Content-Nav--Btn{
+    width: 50px;
+
+}
+.Content-Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: aliceblue;
+    position: fixed;
+    width: 85%;
+    transition: .5s;
+    z-index: 1;
+}
+.Content-Nav-Left--List{
+    list-style: none;
+    display: flex;
+    padding:0;
+}
+.Content-Nav-Left--List li{
+    padding:10px;
+    border-bottom:4px solid transparent;
+}
+.Content-Nav-Left--List li:hover{
+    border-bottom:4px solid silver;
+}
+.Content-Nav-Right--List input{
+    width:240px ;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 96px;
+    border:3px solid silver;
+    background: none;
+    font-size:14px;
+    outline: none;
+    color: white;
+    transition: .5s;
+}
+.Content-Nav-Right--List input:focus{
+    width:350px;
+  }
+.Content-Nav-Right--List input::placeholder{
+    color: silver;
+    font-weight: 400;
+  }
+.Content-Nav-Left--List li>a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter";
+    color:silver;
+}
+.Content-Nav-Left--List i{
+    padding:5px;
+}
+.Content-Nav-Right{
+    display: flex;
+}
+.Content-Nav-Right--List{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Content-Nav-Right--List li{
+    padding: 10px;
+}
+.Content-Nav-Right--List li>a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Inter";
+    color:silver;
+}
+.Content-Nav-Right--List i{
+    padding:0 10px;
+}
+.Content-Nav-Right--List span{
+    font-size: 20px;
+    color: silver;
+}
+.Bell:hover{
+    animation: bell .5s
+}
+@keyframes bell {
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(45deg);
+    }
+    70%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.Content-Nav-Right--List li:last-child i{
+    transform: rotate(0deg);
+    transition: 1s;
+}
+.Content-Nav-Right--List li:last-child:hover i{
+    transform: rotate(90deg);
+    transition: 1s;
+}
+.Content-Container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top:85px;
+}
+.Content-Container-Function{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    margin: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: #ffffff05;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+.Container-Function{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.Container-Function button{
+    background:none;
+    outline:none;
+    border: none;
+    color:#fd9c9e;
+    padding:10px;
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 700;
+    cursor: pointer;
+}
+.Function-btn{
+    opacity: 0.5;
+}
+.Btn-Active{
+    opacity: 1;
+}
+.Content-Container-Function-Destination{
+    min-width: 450px;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    height: fit-content;
+    padding:2px 30px 30px 30px;
+}
+.Function-Active{
+    display: flex;
+}
+.Destination-Input{
+    position: relative;
+}
+.Destination-Input  label{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Inter";
+    padding-right:10px;
+    width: fit-content;
+}
+.Destination-Input  input{
+    width: 97.5%;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding-left:2%;
+    margin:10px 0;
+    font-size: 20px;
+    color:silver;
+    transition: .2s;
+}
+.Destination-Input input:focus{
+    box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
+}
+.Destination-Input input:focus::placeholder{
+    opacity: 0;
+}
+.Destination-Input input::placeholder{
+    opacity: .25;
+    transition: .5s;
+}
+
+.Content-Container-Function-Destination--Description{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.Content-Container-Function-Destination--Description textarea{
+    /* width: 100%; */
+    min-width: 450px;
+    max-width:600px;
+    min-height: 200px;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding:10px;
+    margin:10px 0;
+    font-size: 20px;
+    font-family: "Inter";
+    color:silver;
+    transition: .2s;
+}
+.Content-Container-Function-Destination--Description textarea:focus{
+    box-shadow: 5px 5px 3px rgba(0, 0, 0,.5);
+}
+.Content-Container-Function-Destination--Description textarea::placeholder{
+    opacity: .25;
+    transition: .5s;
+}
+.Content-Container-Function-Destination--Description textarea:focus::placeholder{
+    opacity: 0;
+}
+.Content-Container-Function-Destination--Image input{
+    height:fit-content;
+    color: red;
+    box-shadow: 0px 0px 5px rgba(0, 0,0,1);
+}
+.Content-Container-Function-Destination--Image input:focus{
+    height:fit-content;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,1);
+}
+.Content-Container-Function-Destination--Image input[type=file]::file-selector-button{
+    background-color: rgb(46, 164, 255);
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin:10px;
+}
+#SubmitForm{
+    background-color: #efffeeba;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    transition: .5s;
+}
+#SubmitForm:hover{
+    background-color:  #04ff00ba;
+}
+#SubmitFormUpdate{
+    background-color: #efffeeba;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    transition: .5s;
+}
+#SubmitFormUpdate:hover{
+    background-color:  #04ff00ba;
+}
+.Content-Container-Demo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Content-Container-Show{
+    color:white;
+    font-size:30px;
+    font-family: "Inter";
+    font-weight: bold;
+    padding:10px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.Content-Container-Data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:10px;
+    width:400px;
+    transition: .5s;
+    overflow: hidden;
+}
+.Content-Container-Data img{
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 10px;
+}
+.Content-Container-Data-ID{
+    color: red;
+    font-weight: bold;
+    font-size:20px;
+    padding:10px;
+}
+.Content-Container-Data-Name{
+    font-size: 24px;
+    font-family: "Inter";
+    font-weight: 700;
+    padding:5px 10px;
+}
+.Content-Container-Data-Description{
+    max-width: 400px;
+    max-height:250px;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-family: "Inter";
+    font-size: 16px;
+    padding:10px;
+    text-align:justify;
+}
+.Content-Container-Data-BtnFunction{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 100%;
+    opacity: 1;
+    padding-top:10px;
+}
+.BtnFunc{
+    cursor: pointer;
+    border:none;
+    border-radius: 10px;
+    padding:5px 10px;
+    background-color:rgb(1, 187, 255);
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.BtnFunc:hover{
+    background-color:rgb(109, 255, 109)
+}
+.Status{
+    color: red;
+}
+.InputSuccess{
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
+}
+.InputError{
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+}
+.Success{
+    color: rgb(0, 255, 0);
+    font-size:18px;
+    font-family: "Inter";
+    transition: 1s;
+}
+.Error{
+    color: red;
+    font-size:18px;
+    font-family: "Inter";
+    transition: 1s;
+}
+.Update-Form{
+    display: none;
+    /* padding:0px; */
+    width: 88%;
+}
+.Update-Form.Function-Active{
+    display: flex;
+}
+.Update-Form-Val{
+    display: none;
+    flex-direction: column;
+}
+.Update-Form-Val.Function-Val-Active{
+    display: flex;
+}
+.Destination-NotFound{
+    color: silver;
+    font-size:20px;
+    text-align: center;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager - Administrator</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="JS/jquery-3.6.4.min.js"></script>
+    <!-- <link rel="stylesheet" href="CSS/iconall.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/TopDestination.css">
+    <script src="JS/TopDestination.js" defer></script>
+
+</head>
+<body>
+    <div class="Container">
+        <div class="Sidebar">
+            <div class="Sidebar-logo">
+                <a href="FirstPage.html"><img src="Image/Icon/Plane.svg" alt=""> Go Go</a> 
+                <button class="Sidebarbtn btnclose" onclick="Close()">
+                    <div class="Sidebar--Btn1"></div>
+                    <div class="Sidebar--Btn2"></div>
+                    <div class="Sidebar--Btn3"></div>
+                </button>
+            </div>
+            <div class="Sidebar-List">
+                <ul class="Sidebar-List-Items">
+                    <li class="Sidebar-List-Items-li">
+                        <div class="Sidebar-List-Items--main">
+                            <a href="AdminPage.html"><i class="fas fa-database"></i><span class="Sidebar-List-title">Databroad</span></a><i class="Sidebar-Down  Sidebar-Down1 fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="Sidebar-List-Items--Child Sidebar-List-Items--Child1">
+                            <li><a href="">Data User</a></li>
+                            <li><a href="">ToTal Visit</a></li>
+                        </ul>
+                    </li>
+                    <li class="Sidebar-List-Items-li">
+                        <div  class="Sidebar-List-Items--main Sidebar-List-Items--main2">
+                            <a href=""><i class="fas fa-map-marked-alt"></i><span class="Sidebar-List-title">Content Destination</span></a><i class=" Sidebar-Down Sidebar-Down2 fas fa-chevron-down"></i>
+                        </div> 
+                        <ul class="Sidebar-List-Items--Child Sidebar-List-Items--Child2">
+                            <li><a href="">Top Destination</a></li>
+                            <li><a href="">Total Destination</a></li>
+                        </ul>
+                    </li>
+                    <li class="Sidebar-List-Items-li">
+                        <div  class="Sidebar-List-Items--main"> 
+                            <a href=""><i class="fas fa-blog"></i><span class="Sidebar-List-title">Blog Travel</span></a><i class="Sidebar-Down Sidebar-Down3 fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="Sidebar-List-Items--Child Sidebar-List-Items--Child3">
+                            <li><a href="">Top Travel Destination</a></li>
+                            <li><a href="">Top Service</a></li>
+                            <li><a href="">Top Active</a></li>
+                        </ul>
+                    </li>
+                    <li class="Sidebar-List-Items-li">
+                        <div  class="Sidebar-List-Items--main">
+                            <a href=""><i class="fab fa-servicestack"></i><span class="Sidebar-List-title">Manager Service </span></a><i class="Sidebar-Down Sidebar-Down4 fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="Sidebar-List-Items--Child Sidebar-List-Items--Child4">
+                            <li><a href="">Top Hotel</a></li>
+                            <li><a href="">Top Tourist</a></li>
+                            <li><a href="">Top Plane</a></li>
+                            <li><a href="">Top Restaurant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Content">
+            <div class="Content-Nav">
+                <div class="Content-Nav-Left">
+                    <ul class="Content-Nav-Left--List">
+                        <div class="Content-Nav--Btn">
+                            <button class="Sidebarbtn btnopen" onclick="Open()">
+                                <div class="Sidebar--Btn1"></div>
+                                <div class="Sidebar--Btn2"></div>
+                                <div class="Sidebar--Btn3"></div>
+                            </button>
+                        </div>
+                        <li><a href=""><i class="fas fa-database"></i>Databroad</a></li>
+                        <li><a href=""><i class="fas fa-map-marked-alt"></i>Content Destination</a></li>
+                        <li><a href=""><i class="fas fa-blog"></i>Blog Travel</a></li>
+                        <li><a href=""><i class="fab fa-servicestack"></i>Manager Service</a></li>
+                    </ul>
+                </div>
+                <div class="Content-Nav-Right">
+                    <ul class="Content-Nav-Right--List">
+                        <input type="search" placeholder="Inter Your Finds...">
+                        <span><i class="Bell fas fa-bell"></i></span>
+                        <span><i class="fas fa-envelope"></i></span>
+                        <li><a href=""><i class="fas fa-user"></i>User</a></li>
+                        <li><a href=""><i class="fas fa-cog"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Content-Container">
+                <div class="Content-Container-Function">
+                    <div class="Container-Function">
+                        <button class="Function-btn Function-Input Btn-Active">Input Destination</button>
+                        <button class="Function-btn Function-Update">Update/Delete Destination</button>
+                    </div>
+                    <form action="" class="Add-Form Content-Container-Function-Destination Function-Active ">
+                        <div class="Destination-Input Content-Container-Function-Destination--ID">
+                            <label for="Desination-id">ID:</label><span class="Status StatusID">*</span><br>
+                            <input type="text" name="" id="Desination-id" placeholder="Example: 01">
+       
+                        </div>
+                        <div class="Destination-Input  Content-Container-Function-Destination--Name">
+                            <label for="Destination-name">Destination Name:</label><span class=" Status StatusName">*</span> <br>
+                            <input name="" id="Destination-name" cols="30" rows="10" placeholder="Example: HaNoi">
+    
+                        </div>
+                        <div class="Destination-Input  Content-Container-Function-Destination--Description">
+                            <label for="Destination--Description">Description:</label>
+                            <textarea name="" id="Destination--Description" cols="30" rows="10" placeholder="Example: Thủ Đô Hà Nội là của nước Việt Nam; Hoàng Sa Trường Sa là của Việt Nam,...."></textarea>
+                            <span class="Status StatusDescription">*</span>
+                        </div>
+                        <!-- <div class="Destination-Input">
+                            <label for="Image-Path">Image-Path:</label>
+                            <span class="Status StatusPath">*</span> <br>
+                            <input type="text" name="" id="Image-Path"  placeholder="../Image/Picture/HoGuom.jpg">
+                        </div> -->
+                        <div  class="Destination-Input  Content-Container-Function-Destination--Image">
+                            <label for="Destination-img">Image Link:</label> <br>
+                            <input type="file" id="Destination-img" >
+                        </div>
+                        <input type="submit" value="Submit"id="SubmitForm" >
+                    </form>
+                    <form action="" class="Update-Form Content-Container-Function-Destination">
+                        <div class="Destination-Input Content-Container-Function-Destination--ID">
+                            <label for="Desination-id">Input ID Destination:</label><span class="Status StatusID">*</span><br>
+                            <input type="text" name="" id="ID-input" placeholder="Example: 01">
+                        </div>
+                    </form>
+                    <form action="" class="Update-Form-Val Content-Container-Function-Destination">
+                        <!-- <div class="Destination-Input Content-Container-Function-Destination--ID">
+                            <label for="Desination-id">ID:</label><span class="Status StatusID">*</span><br>
+                            <input type="text" name="" id="ID-Update" placeholder="Example: 01">
+
+                        </div>
+                        <div class="Destination-Input  Content-Container-Function-Destination--Name">
+                            <label for="Destination-name">Destination Name:</label><span class=" Status StatusName">*</span> <br>
+                            <input name="" id="Name-Update" cols="30" rows="10" placeholder="Example: HaNoi">
+    
+                        </div>
+                        <div class="Destination-Input  Content-Container-Function-Destination--Description">
+                            <label for="Destination--Description">Description:</label>
+                            <textarea name="" id="Description-Update" cols="30" rows="10" placeholder="Example: Thủ Đô Hà Nội là của nước Việt Nam; Hoàng Sa Trường Sa là của Việt Nam,...."></textarea>
+                            <span class="Status StatusDescription">*</span>
+                        </div>
+                        <div class="Destination-Input">
+                            <label for="Image-Path">Image-Path:</label>
+                            <span class="Status StatusPath">*</span> <br>
+                            <input type="text" name="" id="Image-Path-Update"  placeholder="../Image/Picture/HoGuom.jpg">
+                        </div>
+                        <input type="submit" value="Update"id="SubmitFormUpdate" > -->
+                    </form>
+                </div>
+                <div class="Content-Container-Demo">
+                    <div class="Content-Container-Show">Demo</div>
+                    <div class="Content-Container-Data">
+                        <!-- <div class="Content-Container-Data-ID">ID: 12</div>
+                        <img src="../Image/Picture/Ho Guom.jpg" alt="">
+                        <div class="Content-Container-Data-Name">HaNoi</div>
+                        <div class="Content-Container-Data-Description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, optio expedita assumenda excepturi nemo odio ipsam incidunt magni dicta quaerat. Illo ullam aliquam cupiditate autem voluptatem voluptatum reprehenderit maxime reiciendis?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ab dolores quis rerum aspernatur at accusamus explicabo, et minus hic voluptatum possimus quo provident. Commodi aperiam dolore autem aliquid iste?
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

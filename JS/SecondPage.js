@@ -9,12 +9,17 @@ var BinhThuan = document.querySelector('#VN-40')
 var BinhThuanName = BinhThuan.getAttribute('class')
 var QuangBinh = document.querySelector('#VN-24')
 var QuangBinhName = QuangBinh.getAttribute('class')
+var HaNoi = document.querySelector('#VN-HN')
+var HaNoiName = HaNoi.getAttribute('class')
+var  QuangTri = document.querySelector('#VN-25')
+var QuangTriName = QuangTri.getAttribute('class')
 
 //In ra màn hình
 var html=document.querySelector('.Content__Destination')
 
 //Lấy dữ liệu API gán 
-var DataAPI ='http://localhost:3000/TP'
+// var DataAPI ='http://localhost:3000/TP'
+var DataAPI ='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
 var Gan = ''
 
 fetch(DataAPI)
@@ -25,6 +30,20 @@ fetch(DataAPI)
   getData(data)
 })
 function getData(data) {
+  QuangTri.onmouseover = ()=>{
+    getDataName (QuangTriName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangTri.onmouseout = Remo
+  HaNoi.onmouseover = ()=>{
+    getDataName (HaNoiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HaNoi.onmouseout = Remo
   DaNang.onmouseover = ()=>{
     getDataName (DaNangName)
     const Replace = data.filter(FilterData)
@@ -49,7 +68,7 @@ function getData(data) {
   QuangBinh.onmouseover = ()=>{
     getDataName (QuangBinhName)
     const Replace = data.filter(FilterData)
-    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
   QuangBinh.onmouseout = Remo
@@ -74,21 +93,31 @@ function getDataName (data){
   return Gan
 }
 function Printscreen(b){
-  return `
-  <div class="Content__Destination--image">
-      <img src="${b.img}" alt="" >
+  return  `
+  <div class="Content__Destination--ID">${b.id}</div>
+  <img src="${b.img}" alt="">
+  <div class="Content-Destination-Data-Name">${b.name}</div>
+  <div class="Content-Destination-Data-Description">
+    <div class="Content-Destination-Data-Description--Content">${b.Description}</div>
   </div>
-  <p> ${b.name} </p>
-  <p>${b.Description}</p>
+  <div class="Content-Destination-Data-Seemore">Click on province to see more <i class="fas fa-hand-point-down"></i> </div>
   `
 }
-
-
-
+// function GetHeight (b){
+//   console.log(b.Description)
+//   return (b.Description)
+// }
+var DescriptionScroll = document.querySelector(".Content-Destination-Data-Description--Content")
+function startScroll(){
+    let id = setInterval(function() {
+      DescriptionScroll.scrollBy(0, 1);
+    }, 30);
+    return id;
+}
 
 $( document ).on( "mousemove", function( event ) {
     $( ".Content__Destination" ).css({
-        left : event.pageX -200,
-        top:event.pageY -600
+        left : event.pageX -150,
+        top:event.pageY -550
     } )
   });
