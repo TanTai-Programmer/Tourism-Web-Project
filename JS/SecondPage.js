@@ -1,8 +1,31 @@
 // Khai báo các biến 
+var AnGiang = document.querySelector('#VN-44')
+var AnGiangName =AnGiang.getAttribute('class')
+var BaRiaVungTau = document.querySelector('#VN-43')
+var BaRiaVungTauName = BaRiaVungTau.getAttribute('class')
+var BacGiang =document.querySelector('#VN-54')
+var BacGiangName = BacGiang.getAttribute('class')
+var BacKan = document.querySelector('#VN-53')
+var BacKanName = BacKan.getAttribute('class')
+var BacLieu = document.querySelector('#VN-55')
+var BacLieuName = BacLieu.getAttribute('class')
+var BacNinh =document.querySelector('#VN-56')
+var BacNinhName = BacNinh.getAttribute('class')
+var BenTre = document.querySelector('#VN-50')
+var BenTreName = BenTre .getAttribute('class')
+var BinhDinh =document.querySelector('#VN-31')
+var BinhDinhName = BinhDinh.getAttribute('class')
+var BinhDuong = document.querySelector('#VN-57')
+var BinhDuongName= BinhDuong.getAttribute('class')
+var BinhPhuoc = document.querySelector('#VN-58')
+var BinhPhuocName = BinhPhuoc.getAttribute('class')
+
 var DaNang =document.querySelector('#VN-DN')
 var DaNangName = DaNang.getAttribute('class')
 var HCM = document.querySelector('#VN-SG')
 var HCMName = HCM.getAttribute('class')
+var CanTho = document.querySelector('#VN-CT')
+var CanThoName = CanTho.getAttribute('class')
 var DongNai = document.querySelector('#VN-39')
 var DongNaiName = DongNai.getAttribute('class')
 var BinhThuan = document.querySelector('#VN-40')
@@ -18,8 +41,8 @@ var QuangTriName = QuangTri.getAttribute('class')
 var html=document.querySelector('.Content__Destination')
 
 //Lấy dữ liệu API gán 
-// var DataAPI ='http://localhost:3000/TP'
-var DataAPI ='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
+var DataAPI ='http://localhost:3000/TP'
+// var DataAPI ='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
 var Gan = ''
 
 fetch(DataAPI)
@@ -30,6 +53,41 @@ fetch(DataAPI)
   getData(data)
 })
 function getData(data) {
+  AnGiang.onmouseover = ()=>{
+    getDataName (AnGiangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  AnGiang.onmouseout = Remo
+  BaRiaVungTau.onmouseover = ()=>{
+    getDataName (BaRiaVungTauName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  BaRiaVungTau.onmouseout =Remo
+  BacKan.onmouseover = ()=>{
+    getDataName(BacKanName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  BacKan.onmouseout = Remo
+  BacLieu.onmouseover = ()=>{
+    getDataName(BacLieuName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  BacLieu.onmouseout = Remo
+  CanTho.onmouseover = ()=>{
+    getDataName (CanThoName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  CanTho.onmouseout = Remo
   QuangTri.onmouseover = ()=>{
     getDataName (QuangTriName)
     const Replace = data.filter(FilterData)

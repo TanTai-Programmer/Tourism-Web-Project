@@ -70,12 +70,11 @@ const Description = document.getElementById("Destination--Description")
 const SubmitForm =document.getElementById("SubmitForm")
 
 
-// const APIurl = 'http://localhost:3000/TP' //Sử dụng API là JSON Server 
-const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces' // Sử dụng API là MockAPI 
+const APIurl = 'http://localhost:3000/TP' //Sử dụng API là JSON Server 
+// const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces' // Sử dụng API là MockAPI 
 
 function InputAPI(){
     const ImgURL = localStorage.getItem('img')
-    console.log(typeof ImgURL)
         fetch(APIurl,{
             method: 'POST',
             headers: {
@@ -87,6 +86,16 @@ function InputAPI(){
                 Description: Description.value,
                 img:ImgURL,
             })
+        })
+        localStorage.removeItem('img')
+        .then(function(response){
+            return response.json()
+          })
+          .then((data) =>{
+            getData(data)
+          })
+        .catch(function(error){
+            alert(error)
         })
     }
     const imgInput = document.getElementById("Destination-img")
@@ -222,9 +231,6 @@ function InputAPI(){
                 return true;
             }
         }
-
-    
-
     const link = new FileReader()
     imgInput.onchange = function (){
         const file = imgInput.files[0];
@@ -247,71 +253,13 @@ function InputAPI(){
                 console.log("Khong cos duw lieu")
               }
         }
-//     const StatusPath = document.querySelector(".StatusPath")
-//    ImagePath.addEventListener ('blur', function (e) {
-//     CheckPath()
-//    })
-//         function CheckPath(){
-//         const pattenPath = /(^[(..)+(\/)]{3})/gm
-//     if (ImagePath.value==''){
-//         ImagePath.classList.add("InputError")
-//         ImagePath.classList.remove("InputSuccess")
-//         StatusPath.classList.add("Error")
-//         Name.classList.add("InputError")
-//         StatusPath.innerHTML ='Input path'
-//         if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(ImagePath.value)==''){
-//             Print()
-//         }
-//         SubmitForm.style.cssText='visibility:hidden; opacity:0'
-//         return false;
-//     }
-//     else{
-//         if(pattenPath.test(ImagePath.value)){
-//             ImagePath.classList.add("InputSuccess")
-//             ImagePath.classList.remove("InputError")
-//             StatusPath.classList.add("Success")
-//             StatusPath.classList.remove("Error")
-//             StatusPath.innerHTML='*'
-//             SubmitForm.style.cssText='visibility:visible; opacity:1'
-//             PrintDemo()
-//             return  true
-//         }
-//          else{
-//             ImagePath.classList.add("InputError")
-//             ImagePath.classList.remove("InputSuccess")
-//             StatusPath.classList.add("Error")
-//             StatusPath.classList.remove("Success")
-//             StatusPath.innerHTML='Error !! Please input value is path'
-//             SubmitForm.style.cssText='visibility:hidden; opacity:0'
-//             return false
-//         } 
-//     }}
     AddForm.addEventListener('submit', (e)=>{
         e.preventDefault()
         if(CheckID()&&CheckName()&&CheckDesc()&&imgInput.value !=''){
             InputAPI()
-            alert('Input API Success!')
         }
 });
 })
-// $(document).ready(function(){
-    // const imgInput = document.getElementById("Destination-img")
-    // const link = new FileReader()
-    // imgInput.onchange = function (){
-    //     const file = imgInput.files[0];
-    //         link.onload =  function GetURL(e){
-    //             // console.log(e.currentTarget.result)
-    //             // callback(e.currentTarget.result)
-    //             return callback(e.currentTarget.result)
-    //         };
-    //         link.readAsDataURL(file);
-    //        function callback(a){
-    //         const IMG = localStorage.setItem('img',a)
-    //         const DataURL = localStorage.getItem('img')
-    //         console.log(DataURL)
-    //         return a}
-    //       }
-// })
     const DataDemo = document.querySelector(".Content-Container-Data")
     Print()
     function Print(){
@@ -369,7 +317,6 @@ function ReplaceFuncDemoImage(){
         BtnInput.classList.add('Btn-Active')
         BtnUpdate.classList.remove('Btn-Active')
         UpdateFormVal.classList.remove('Function-Val-Active')
-        // UpdateFormVal.classList.remove('Function-Val-Active')
         DataDemo.style.cssText ="visibility : visible"
         if((IDinput.value)==''&&(Name.value)==''&&(Description.value)==''&&(imgInput.value=='')){
             Print()
@@ -377,11 +324,7 @@ function ReplaceFuncDemoImage(){
         else if(imgInput.value!=''){
             PrintDemo()
             console.log("Data co du lieu")
-            // Print()
         }
-        // else{
-        //     PrintDemo()
-        // }
     }
     BtnUpdate.onclick = function (){
         UpdateForm.classList.add('Function-Active')
@@ -396,13 +339,26 @@ function ReplaceFuncDemoImage(){
             UpdateAPI(IDinputUpdate.value)
         }
     }
-    const IDinputUpdate = document.getElementById('ID-input')
 
-    IDinputUpdate.addEventListener('blur', function(){
+    //Phan nay danh cho Update 
+    const IDinputUpdate = document.getElementById('ID-input')
+    //Bam phim la no tu tim kiem luon
+    IDinputUpdate.addEventListener('keypress', function(e){
+        UpdateAPI()
+        if(e.key==="Enter"){
+            e.preventDefault();
+            UpdateAPI()
+        }
+    })
+    IDinputUpdate.addEventListener('keydown', function(e){
+        if(e.key==="Backspace"){
+            // e.preventDefault();
+            UpdateAPI()
+        }
+    })
+    IDinputUpdate.addEventListener('blur', function(e){
         UpdateAPI()
     })
-    
-
     function UpdateAPI (){
         fetch(APIurl)
         .then(function(response){
@@ -412,12 +368,14 @@ function ReplaceFuncDemoImage(){
             getData(data)
           })
         // .catch(function(error){
-        //     alert('! Please Start JSON Server')
+        //     alert('Error Not Found Destination')
         // })
     }
     function getData(data){
         const GetID = data.filter(FilterData)
         const PrintUpdate= GetID.map(PrintFunc)
+        const GetImg = GetID.map(GetImageUpdate)
+        localStorage.setItem('ImgAPI',[GetImg])
         const CompareID = GetID.map(CompareFunc)
         const Arg=GetID.map(Printscreen)
         UpdateFormVal.innerHTML= Arg.join('')
@@ -430,24 +388,22 @@ function ReplaceFuncDemoImage(){
             DataDemo.style.cssText="visibility : visible ; opacity:1"
             DataDemo.innerHTML=PrintUpdate.join('')
         }
-        if(IDinputUpdate.value==''){
-            // Print()
-            // DataDemo.style.cssText="visibility : hidden ; opacity:0"
+        if(IDinputUpdate.value ==''){
+
         }
         else{
             DataDemo.style.cssText="visibility : visible ; opacity:1"
         }
-        // DataDemo.innerHTML=PrintUpdate.join('')
-        const IDAPI = (GetID[0].idAPI) //Sử dụng cho MockAPI 
-        // const ID = (GetID[0].id) //Sử dụng cho JSON Server 
+        // const IDAPI = (GetID[0].idAPI) //Sử dụng cho MockAPI 
+        const ID = (GetID[0].id) //Sử dụng cho JSON Server 
         const BtnEdit = document.querySelector(".EditBtnFunc")
         const BtnDel = document.querySelector(".DelBtnFunc")
         const BtnSubmitUpdate = document.querySelector("#SubmitFormUpdate")
         const NameUpdate =document.querySelector('#Name-Update')
         const DescriptionUpdate = document.querySelector('#Description-Update')
-        const ImagePathUpdate = document.querySelector('#Image-Path-Update')
-        const URLUpdate =(APIurl+'/'+IDAPI) //Sử dụng cho MockAPI 
-        // const URLUpdate =(APIurl+'/'+ID) //Sử dụng cho Json Server 
+        const ImageUpdate = document.querySelector('#img-Update')
+        // const URLUpdate =(APIurl+'/'+IDAPI) //Sử dụng cho MockAPI 
+        const URLUpdate =(APIurl+'/'+ID) //Sử dụng cho Json Server 
         BtnEdit.addEventListener("click",()=>{
             UpdateFormVal.classList.add('Function-Val-Active')
         })
@@ -475,12 +431,14 @@ function ReplaceFuncDemoImage(){
                             StatusNameUpdate.classList.add("Error")
                             NameUpdate.classList.add("InputError")
                             StatusNameUpdate.innerHTML ='Input value!'
-                            console.log(NameUpdate.value,DescriptionUpdate.value,ImagePathUpdate.value)
-                            if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
+                            if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImageUpdate.value)==''){
                                 Print()
                             }
-                            else{
+                            else if(ImageUpdate.value !=''){
                                 PrintDemoUpdate()
+                            }
+                            else{
+                                PrintDemoUpdateImg()
                             }
                             BtnSubmitUpdate.style.cssText='visibility:hidden; opacity:0'
                             return false
@@ -493,7 +451,12 @@ function ReplaceFuncDemoImage(){
                                 StatusNameUpdate.classList.remove("Error")
                                 StatusNameUpdate.innerHTML='*'
                                 BtnSubmitUpdate.style.cssText='visibility:visible; opacity:1'
-                                PrintDemoUpdate()
+                                if(ImageUpdate.value==''){
+                                    PrintDemoUpdateImg()
+                                }
+                                else{
+                                    PrintDemoUpdate()
+                                }
                                 return true;
                             }
                              else{
@@ -518,11 +481,14 @@ function ReplaceFuncDemoImage(){
                         DescriptionUpdate.classList.remove("InputSuccess")
                         StatusDescUpdate.classList.add("Error")
                         StatusDescUpdate.innerHTML ='Input value!'
-                        if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
+                        if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImageUpdate.value)==''){
                             Print()
                         }
-                        else{
+                        else if(ImageUpdate.value !=''){
                             PrintDemoUpdate()
+                        }
+                        else{
+                            PrintDemoUpdateImg()
                         }
                         SubmitForm.style.cssText='visibility:hidden; opacity:0'
                         return false;
@@ -538,60 +504,49 @@ function ReplaceFuncDemoImage(){
                         return true;
                     }
             }
-            // const StatusPathUpdate= document.querySelector('.StatusPathUpdate')
-            // ImagePathUpdate.addEventListener ('blur', function (e) {
-            // CheckPath()
-            // })
-            //     function CheckPath(){
-            //     const pattenPath = /(^[(..)+(\/)]{3})/gm
-            // if (ImagePathUpdate.value==''){
-            //     ImagePathUpdate.classList.add("InputError")
-            //     ImagePathUpdate.classList.remove("InputSuccess")
-            //     StatusPathUpdate.classList.add("Error")
-            //     Name.classList.add("InputError")
-            //     StatusPathUpdate.innerHTML ='Input path'
-            //     if((NameUpdate.value)==''&&(DescriptionUpdate.value)==''&&(ImagePathUpdate.value)==''){
-            //         Print()
-            //     }
-            //     else{
-            //         PrintDemoUpdate()
-            //     }
-            //     SubmitForm.style.cssText='visibility:hidden; opacity:0'
-            //     return false;
-            // }
-            // else{
-            //     if(pattenPath.test(ImagePathUpdate.value)){
-            //         ImagePathUpdate.classList.add("InputSuccess")
-            //         ImagePathUpdate.classList.remove("InputError")
-            //         StatusPathUpdate.classList.add("Success")
-            //         StatusPathUpdate.classList.remove("Error")
-            //         StatusPathUpdate.innerHTML='*'
-            //         SubmitForm.style.cssText='visibility:visible; opacity:1'
-            //         PrintDemoUpdate()
-            //         return  true
-            //     }
-            //     else{
-            //         ImagePath.classList.add("InputError")
-            //         ImagePath.classList.remove("InputSuccess")
-            //         StatusPathUpdate.classList.add("Error")
-            //         StatusPathUpdate.classList.remove("Success")
-            //         StatusPathUpdate.innerHTML='Error !! Please input value is path'
-            //         SubmitForm.style.cssText='visibility:hidden; opacity:0'
-            //         return false
-            //     } 
-            // }}
+            const link = new FileReader()
+            ImageUpdate.onchange = function (){
+                const file = ImageUpdate.files[0];
+                    link.onload =  function GetURL(e){
+                        return callback(e.currentTarget.result)
+                    };
+                    link.readAsDataURL(file);
+                   function callback(a){
+                    const IMGUpdate = localStorage.setItem('imgUpdate',a)
 
-
-
-
+                    // const DataURL = localStorage.getItem('img')
+                    // console.log(DataURL)
+                    if(ImageUpdate.value !==''){
+                        PrintDemoUpdate()
+                      }
+                      else{
+                        console.log("Khong cos duw lieu")
+                      }
+                    return a}
+                }
+            function PrintDemoUpdateImg(){
+                const DataReplace = [ReplaceFuncDemoUpdateImg()]
+                DataDemo.innerHTML =  DataReplace.join('')
+            }
+            function ReplaceFuncDemoUpdateImg(){
+                const GetImgAPI = localStorage.getItem('ImgAPI')
+                return `
+                <div class="Content-Container-Data-ID">${IDinputUpdate.value}</div>
+                <img src="${GetImgAPI}" alt="">
+                <div class="Content-Container-Data-Name">${NameUpdate.value}</div>
+                <div class="Content-Container-Data-Description">${DescriptionUpdate.value}</div>
+                </div>
+                `
+            }
             function PrintDemoUpdate() {
                 const DataReplace = [ReplaceFuncDemoUpdate()]
                 DataDemo.innerHTML =  DataReplace.join('')
             }
             function ReplaceFuncDemoUpdate(){
+                const GetImgUpdate = localStorage.getItem('imgUpdate')
                 return `
                 <div class="Content-Container-Data-ID">${IDinputUpdate.value}</div>
-                <img src="${ImagePathUpdate.value}" alt="">
+                <img src="${GetImgUpdate}" alt="">
                 <div class="Content-Container-Data-Name">${NameUpdate.value}</div>
                 <div class="Content-Container-Data-Description">${DescriptionUpdate.value}</div>
                 </div>
@@ -599,6 +554,7 @@ function ReplaceFuncDemoImage(){
             }
 
             BtnSubmitUpdate.addEventListener("click",(e)=>{
+                const ImgUpdate = localStorage.getItem('imgUpdate')
                 e.preventDefault() //Không sử dụng submit được tại bấm là nó tải lại trang luôn r :) 
                 fetch((URLUpdate),{
                     method: 'PUT',
@@ -609,15 +565,19 @@ function ReplaceFuncDemoImage(){
                         id: IDinputUpdate.value,
                         name: NameUpdate.value,
                         Description: DescriptionUpdate.value,
-                        img:ImagePathUpdate.value,
+                        img:ImgUpdate,
                     })
                 })
+                localStorage.removeItem('imgUpdate')
+                localStorage.removeItem('ImgAPI')
                 alert("Update Destination Success! ")
             })
 })          
-}
+    }
+    function GetImageUpdate(data){
+        return data.img
+    }
     function CompareFunc(data){
-        // console.log(IDinputUpdate.value)
         return data.id == IDinputUpdate.value
     }
     function PrintCompare(){
@@ -628,8 +588,8 @@ function ReplaceFuncDemoImage(){
     function FilterData(data){
         if (data.id === IDinputUpdate.value){
 
-          return data.idAPI // Sử dụng cho MockAPI
-        //   return data.id // Sử dụng cho JSON Server 
+        //   return data.idAPI // Sử dụng cho MockAPI
+          return data.id // Sử dụng cho JSON Server 
         }
       }
     function Printscreen(data){
@@ -644,8 +604,8 @@ function ReplaceFuncDemoImage(){
             <span class="Status StatusDescriptionUpdate">*</span>
         </div>
         <div  class="Destination-Input  Content-Container-Function-Destination--Image">
-        <label for="Destination-img">Image Link:</label> <br>
-        <input type="file" id="Destination-img" >
+        <label for="img-Update">Image Link:</label> <br>
+        <input type="file" id="img-Update" >
         </div>
         <input type="submit" value="Update"id="SubmitFormUpdate" >
         `
