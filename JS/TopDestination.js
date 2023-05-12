@@ -500,7 +500,12 @@ function ReplaceFuncDemoImage(){
                         StatusDescUpdate.classList.remove("Error")
                         StatusDescUpdate.innerHTML =("*")
                         SubmitForm.style.cssText='visibility:visible; opacity:1'
-                        PrintDemoUpdate()
+                        if(ImageUpdate.value !=''){
+                            PrintDemoUpdate()
+                        }
+                        else{
+                            PrintDemoUpdateImg()
+                        }
                         return true;
                     }
             }
@@ -555,7 +560,9 @@ function ReplaceFuncDemoImage(){
 
             BtnSubmitUpdate.addEventListener("click",(e)=>{
                 const ImgUpdate = localStorage.getItem('imgUpdate')
+                const ImgAPI = localStorage.getItem('ImgAPI')
                 e.preventDefault() //Không sử dụng submit được tại bấm là nó tải lại trang luôn r :) 
+                if(ImageUpdate.value == '')
                 fetch((URLUpdate),{
                     method: 'PUT',
                     headers: {
@@ -565,9 +572,23 @@ function ReplaceFuncDemoImage(){
                         id: IDinputUpdate.value,
                         name: NameUpdate.value,
                         Description: DescriptionUpdate.value,
-                        img:ImgUpdate,
+                        img:ImgAPI,
                     })
                 })
+                else{
+                    fetch((URLUpdate),{
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: IDinputUpdate.value,
+                            name: NameUpdate.value,
+                            Description: DescriptionUpdate.value,
+                            img:ImgUpdate,
+                        })
+                    })  
+                }
                 localStorage.removeItem('imgUpdate')
                 localStorage.removeItem('ImgAPI')
                 alert("Update Destination Success! ")
