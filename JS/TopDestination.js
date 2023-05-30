@@ -70,11 +70,25 @@ const Description = document.getElementById("Destination--Description")
 const SubmitForm =document.getElementById("SubmitForm")
 
 
-const APIurl = 'http://localhost:3000/TP' //Sử dụng API là JSON Server 
-// const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces' // Sử dụng API là MockAPI 
+// const APIurl = 'http://localhost:3000/TP' //Sử dụng API là JSON Server 
+const APIurl='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces' // Sử dụng API là MockAPI 
+
+function InputAPIImg() {
+    const ImgURL = localStorage.getItem('img')
+    fetch(APIurl,{
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        }, 
+        body: JSON.stringify({
+            img:ImgURL  
+        })
+    })
+        localStorage.removeItem('img')
+}
 
 function InputAPI(){
-    const ImgURL = localStorage.getItem('img')
+    // const ImgURL = localStorage.getItem('img')
         fetch(APIurl,{
             method: 'POST',
             headers: {
@@ -84,10 +98,9 @@ function InputAPI(){
                 id: IDinput.value,
                 name: Name.value,
                 Description: Description.value,
-                img:ImgURL,
+                // img:ImgURL,
             })
         })
-        localStorage.removeItem('img')
         .then(function(response){
             return response.json()
           })
@@ -255,8 +268,11 @@ function InputAPI(){
         }
     AddForm.addEventListener('submit', (e)=>{
         e.preventDefault()
-        if(CheckID()&&CheckName()&&CheckDesc()&&imgInput.value !=''){
+        if(CheckID()&&CheckName()&&CheckDesc()){
             InputAPI()
+            setTimeout(() => {
+                InputAPIImg()
+            },2000);
         }
 });
 })
@@ -394,16 +410,16 @@ function ReplaceFuncDemoImage(){
         else{
             DataDemo.style.cssText="visibility : visible ; opacity:1"
         }
-        // const IDAPI = (GetID[0].idAPI) //Sử dụng cho MockAPI 
-        const ID = (GetID[0].id) //Sử dụng cho JSON Server 
+        const IDAPI = (GetID[0].idAPI) //Sử dụng cho MockAPI 
+        // const ID = (GetID[0].id) //Sử dụng cho JSON Server 
         const BtnEdit = document.querySelector(".EditBtnFunc")
         const BtnDel = document.querySelector(".DelBtnFunc")
         const BtnSubmitUpdate = document.querySelector("#SubmitFormUpdate")
         const NameUpdate =document.querySelector('#Name-Update')
         const DescriptionUpdate = document.querySelector('#Description-Update')
         const ImageUpdate = document.querySelector('#img-Update')
-        // const URLUpdate =(APIurl+'/'+IDAPI) //Sử dụng cho MockAPI 
-        const URLUpdate =(APIurl+'/'+ID) //Sử dụng cho Json Server 
+        const URLUpdate =(APIurl+'/'+IDAPI) //Sử dụng cho MockAPI 
+        // const URLUpdate =(APIurl+'/'+ID) //Sử dụng cho Json Server 
         BtnEdit.addEventListener("click",()=>{
             UpdateFormVal.classList.add('Function-Val-Active')
         })
@@ -609,8 +625,8 @@ function ReplaceFuncDemoImage(){
     function FilterData(data){
         if (data.id === IDinputUpdate.value){
 
-        //   return data.idAPI // Sử dụng cho MockAPI
-          return data.id // Sử dụng cho JSON Server 
+          return data.idAPI // Sử dụng cho MockAPI
+        //   return data.id // Sử dụng cho JSON Server 
         }
       }
     function Printscreen(data){

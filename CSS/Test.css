@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+}
+.Sidebarbtn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btnclose:hover .Sidebar--Btn1{
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .btnclose:hover .Sidebar--Btn2{
+    opacity: 0;
+  }
+  .btnclose:hover .Sidebar--Btn3{
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .Sidebar--Btn1,.Sidebar--Btn2,.Sidebar--Btn3 {
+    width: 35px;
+    height: 5px;
+    background-color: silver;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .Content-Nav-Right--List input{
+    width: 200px;
+    height: 30px;
+    border-radius: 96px;
+    border:3px solid silver;
+    background: none;
+    font-size:14px;
+    outline: none;
+    color: white;
+    transition: .5s all;
+}
+.Content-Nav-Right--List input:focus{
+    width: 250px;
+  }
+.Content-Nav-Right--List input::placeholder{
+    color: silver;
+    font-weight: 400;
+  }

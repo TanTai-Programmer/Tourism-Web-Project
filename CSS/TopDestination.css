@@ -393,7 +393,7 @@ body{
 .Content-Container-Function-Destination--Image input{
     height:fit-content;
     color: red;
-    box-shadow: 0px 0px 5px rgba(0, 0,0,1);
+    box-shadow: 0px 0px 5px rgba(0, 0,0,1)
 }
 .Content-Container-Function-Destination--Image input:focus{
     height:fit-content;
