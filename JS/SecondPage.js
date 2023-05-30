@@ -45,8 +45,6 @@ var HaGiang = document.querySelector('#VN-03')
 var HaGiangName = HaGiang.getAttribute('class')
 var HaNam = document.querySelector('#VN-63')
 var HaNamName = HaNam.getAttribute('class')
-var HaNam = document.querySelector('#VN-63')
-var HaNamName = HaNam.getAttribute('class')
 var HaNoi = document.querySelector('#VN-HN')
 var HaNoiName = HaNoi.getAttribute('class')
 var HaTinh = document.querySelector('#VN-23')
@@ -178,6 +176,55 @@ function getData(data) {
     html.innerHTML = Arg.join('')
   }
   BacLieu.onmouseout = Remo
+  BacNinh.onmouseover = ()=>{
+    getDataName (BacNinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  BacNinh.onmouseout = Remo
+  BenTre.onmouseover = ()=>{
+    getDataName (BenTreName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  BenTre.onmouseout = Remo
+  BinhDinh.onmouseover = ()=>{
+    getDataName (BinhDinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  BinhDinh.onmouseout = Remo
+  BinhDuong.onmouseover = ()=>{
+  getDataName (BinhDuongName)
+  const Replace = data.filter(FilterData)
+  const Arg = Replace.map(Printscreen) //Argument: Đối số 
+  html.innerHTML = Arg.join('')
+  }
+  BinhDuong.onmouseout = Remo
+  BinhPhuoc.onmouseover = ()=>{
+  getDataName (BinhPhuocName)
+  const Replace = data.filter(FilterData)
+  const Arg = Replace.map(Printscreen) //Argument: Đối số 
+  html.innerHTML = Arg.join('')
+  }
+  BinhPhuoc.onmouseout = Remo
+  BinhThuan.onmouseover = ()=>{
+  getDataName (BinhThuanName)
+  const Replace = data.filter(FilterData)
+  const Arg = Replace.map(Printscreen) //Argument: Đối số 
+  html.innerHTML = Arg.join('')
+  }
+  BinhThuan.onmouseout = Remo
+  CaMau.onmouseover = ()=>{
+  getDataName (CaMauName)
+  const Replace = data.filter(FilterData)
+  const Arg = Replace.map(Printscreen) //Argument: Đối số 
+  html.innerHTML = Arg.join('')
+  }
+  CaMau.onmouseout = Remo
   CanTho.onmouseover = ()=>{
     getDataName (CanThoName)
     const Replace = data.filter(FilterData)
@@ -185,13 +232,76 @@ function getData(data) {
     html.innerHTML = Arg.join('')
   }
   CanTho.onmouseout = Remo
-  QuangTri.onmouseover = ()=>{
-    getDataName (QuangTriName)
+  CaoBang.onmouseover = ()=>{
+    getDataName (CaoBangName)
     const Replace = data.filter(FilterData)
     const Arg = Replace.map(Printscreen) //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
-  QuangTri.onmouseout = Remo
+  CaoBang.onmouseout = Remo
+  DaNang.onmouseover = ()=>{
+    getDataName (DaNangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  DaNang.onmouseout = Remo
+  Daklak.onmouseover = ()=>{
+    getDataName (DaklakName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  Daklak.onmouseout = Remo
+  DakNong.onmouseover = ()=>{
+    getDataName (DakNongName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  DakNong.onmouseout = Remo
+  DienBien.onmouseover = ()=>{
+    getDataName (DienBienName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  DienBien.onmouseout = Remo
+  DongNai.onmouseover = ()=>{
+    getDataName (DongNaiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  DongNai.onmouseout = Remo
+  DongThap.onmouseover = ()=>{
+    getDataName (DongThapName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  DongThap.onmouseout = Remo
+  GiaLai.onmouseover = ()=>{
+    getDataName (GiaLaiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  GiaLai.onmouseout = Remo
+  HaGiang.onmouseover = ()=>{
+    getDataName (HaGiangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HaGiang.onmouseout = Remo
+  HaNam.onmouseover = ()=>{
+    getDataName (HaNamName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HaNam.onmouseout = Remo
   HaNoi.onmouseover = ()=>{
     getDataName (HaNoiName)
     const Replace = data.filter(FilterData)
@@ -199,27 +309,153 @@ function getData(data) {
     html.innerHTML = Arg.join('')
   }
   HaNoi.onmouseout = Remo
-  DaNang.onmouseover = ()=>{
-    getDataName (DaNangName)
+  HaTinh.onmouseover = ()=>{
+    getDataName (HaTinhName)
     const Replace = data.filter(FilterData)
     const Arg = Replace.map(Printscreen)  //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
-  DaNang.onmouseout = Remo
-  BinhThuan.onmouseover = ()=>{
-    getDataName (BinhThuanName)
+  HaTinh.onmouseout = Remo
+  HaiDuong.onmouseover = ()=>{
+    getDataName (HaiDuongName)
     const Replace = data.filter(FilterData)
     const Arg = Replace.map(Printscreen)  //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
-  BinhThuan.onmouseout = Remo
-  DongNai.onmouseover = ()=>{
-    getDataName (DongNaiName)
+  HaiDuong.onmouseout = Remo
+  HaiPhong.onmouseover = ()=>{
+    getDataName (HaiPhongName)
     const Replace = data.filter(FilterData)
     const Arg = Replace.map(Printscreen)  //Argument: Đối số 
     html.innerHTML = Arg.join('')
   }
-  DongNai.onmouseout = Remo
+  HaiPhong.onmouseout = Remo 
+  HauGiang.onmouseover = ()=>{
+    getDataName (HauGiangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HauGiang.onmouseout = Remo
+  HoaBinh.onmouseover = ()=>{
+    getDataName (HoaBinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HoaBinh.onmouseout = Remo  
+  HungYen.onmouseover = ()=>{
+    getDataName (HungYenName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  HungYen.onmouseout = Remo 
+  KhanhHoa.onmouseover = ()=>{
+    getDataName (KhanhHoaName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  KhanhHoa.onmouseout = Remo 
+  KienGiang.onmouseover = ()=>{
+    getDataName (KienGiangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  KienGiang.onmouseout = Remo 
+  KomTum.onmouseover = ()=>{
+    getDataName (KomTumName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  KomTum.onmouseout = Remo 
+  LaiChau.onmouseover = ()=>{
+    getDataName (LaiChauName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  LaiChau.onmouseout = Remo 
+  LamDong.onmouseover = ()=>{
+    getDataName (LamDongName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  LamDong.onmouseout = Remo 
+  LangSon.onmouseover = ()=>{
+    getDataName (LangSonName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  LangSon.onmouseout = Remo 
+  LaoCai.onmouseover = ()=>{
+    getDataName (LaoCaiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  LaoCai.onmouseout = Remo 
+  LongAn.onmouseover = ()=>{
+    getDataName (LongAnName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  LongAn.onmouseout = Remo 
+  NamDinh.onmouseover = ()=>{
+    getDataName (NamDinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  NamDinh.onmouseout = Remo 
+  NgheAn.onmouseover = ()=>{
+    getDataName (NgheAnName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  NgheAn.onmouseout = Remo 
+  NinhBinh.onmouseover = ()=>{
+    getDataName (NinhBinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  NinhBinh.onmouseout = Remo 
+  NinhThuan.onmouseover = ()=>{
+    getDataName (NinhThuanName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  NinhThuan.onmouseout = Remo 
+  PhuTho.onmouseover = ()=>{
+    getDataName (PhuThoName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  PhuTho.onmouseout = Remo 
+  PhuYen.onmouseover = ()=>{
+    getDataName (PhuYenName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen)  //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  PhuYen.onmouseout = Remo 
+  QuangTri.onmouseover = ()=>{
+    getDataName (QuangTriName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangTri.onmouseout = Remo
   QuangBinh.onmouseover = ()=>{
     getDataName (QuangBinhName)
     const Replace = data.filter(FilterData)
@@ -227,6 +463,90 @@ function getData(data) {
     html.innerHTML = Arg.join('')
   }
   QuangBinh.onmouseout = Remo
+  QuangNam.onmouseover = ()=>{
+    getDataName (QuangNamName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangNam.onmouseout = Remo
+  QuangNgai.onmouseover = ()=>{
+    getDataName (QuangNgaiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangNgai.onmouseout = Remo
+  QuangNinh.onmouseover = ()=>{
+    getDataName (QuangNinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangNinh.onmouseout = Remo
+  QuangTri.onmouseover = ()=>{
+    getDataName (QuangTriName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  QuangTri.onmouseout = Remo
+  SocTrang.onmouseover = ()=>{
+    getDataName (SocTrangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  SocTrang.onmouseout = Remo
+  SonLa.onmouseover = ()=>{
+    getDataName (SonLaName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  SonLa.onmouseout = Remo
+  TayNinh.onmouseover = ()=>{
+    getDataName (TayNinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  TayNinh.onmouseout = Remo
+  ThaiBinh.onmouseover = ()=>{
+    getDataName (ThaiBinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  ThaiBinh.onmouseout = Remo
+  ThaiNguyen.onmouseover = ()=>{
+    getDataName (ThaiNguyenName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  ThaiNguyen.onmouseout = Remo
+  ThanhHoa.onmouseover = ()=>{
+    getDataName (ThanhHoaName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  ThanhHoa.onmouseout = Remo
+  ThuaThienHue.onmouseover = ()=>{
+    getDataName (ThuaThienHueName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  ThuaThienHue.onmouseout = Remo
+  TienGiang.onmouseover = ()=>{
+    getDataName (TienGiangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  TienGiang.onmouseout = Remo
   HCM.onmouseover= ()=>{
     getDataName(HCMName)
     const Replace = data.filter(FilterData)
@@ -234,6 +554,42 @@ function getData(data) {
     html.innerHTML=Arg.join('')
   }
   HCM.onmouseout = Remo
+  TraVinh.onmouseover = ()=>{
+    getDataName (TraVinhName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  TraVinh.onmouseout = Remo
+  TuyenQuang.onmouseover = ()=>{
+    getDataName (TuyenQuangName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  TuyenQuang.onmouseout = Remo
+  VinhLong.onmouseover = ()=>{
+    getDataName (VinhLongName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  VinhLong.onmouseout = Remo
+  VinhPhuc.onmouseover = ()=>{
+    getDataName (VinhPhucName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  VinhPhuc.onmouseout = Remo
+  YenBai.onmouseover = ()=>{
+    getDataName (YenBaiName)
+    const Replace = data.filter(FilterData)
+    const Arg = Replace.map(Printscreen) //Argument: Đối số 
+    html.innerHTML = Arg.join('')
+  }
+  YenBai.onmouseout = Remo
+
   function Remo(){
     html.innerHTML=''
 }
