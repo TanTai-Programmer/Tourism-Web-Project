@@ -72,5 +72,8 @@ fetch(DataAPI)
 })
 function getData(data){
   var TotalDes = document.querySelector('.ToTal-Des')
-  TotalDes.innerHTML = data.length
+  setTimeout(function(){
+    TotalDes.innerHTML = data.length
+  },2000)
+ 
 }
