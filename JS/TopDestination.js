@@ -105,11 +105,12 @@ function InputAPI(){
             return response.json()
           })
           .then((data) =>{
+            alert("Input Success!")
             getData(data)
           })
-        .catch(function(error){
-            alert(error)
-        })
+        // .catch(function(error){
+        //     alert(error)
+        // })
     }
     const imgInput = document.getElementById("Destination-img")
     $(document).ready(function (){
