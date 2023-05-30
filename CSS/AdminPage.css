@@ -102,6 +102,7 @@ body{
 }
 .Sidebar-List-Items-li a i{
     width: 25px;
+    margin:10px;
     padding:10px;
 }
 .Sidebar-List-Items--main{
@@ -147,7 +148,6 @@ body{
 .Content{
     width: 85%;
     margin-left: 15%;
-    background-color: aqua;
     transition: .5s;
 }
 .Content-Nav--Btn{
@@ -257,4 +257,47 @@ body{
 }
 .Content-Container{
     margin-top:110px;
+}
+.Content-Container-Tag{
+    display: flex;
+    justify-content:space-around;
+    align-items:start;
+    flex-wrap: wrap;
+}
+.Content-Container-Tag-items{
+    width:200px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: rgb(248, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 10px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+}
+.Content-Container-Tag-items h3{
+    color: rgb(112, 112, 112)
+}
+.Content-Container-Tag-items a{
+    font-weight: bold;
+    text-decoration:none;
+    color: green;
+    padding:10px;
+}
+.Content-Container-Tag-items i{
+    padding:5px;
+}
+.ToTal-item{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color:silver;
 }

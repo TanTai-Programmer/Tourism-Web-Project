@@ -62,11 +62,15 @@ function Open(){
 $(".Sidebar-Down").click (function (){
   Open()
 })
-  // if(Close()==true)
-  // {
-  //   console.log("No Dang dong")
-  //   Open()
-  // }
-  // else if (Open()==true) {
-  //   console.log("Nos dang mo")
-  // }
+var DataAPI ='https://645b54e9a8f9e4d6e765794d.mockapi.io/Provinces/API/provinces'
+fetch(DataAPI)
+.then(function(response){
+  return response.json()
+})
+.then((data) =>{
+  getData(data)
+})
+function getData(data){
+  var TotalDes = document.querySelector('.ToTal-Des')
+  TotalDes.innerHTML = data.length
+}
