@@ -362,6 +362,25 @@
   /* justify-content: flex-start; 
   align-items: center; */
 }  
+.Cost-Item-1, .Cost-Item-2, .Cost-Item-3,.Cost-Item-4{
+  height: 300px;
+  width: 317px; 
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Cost-Item-1{
+  background-image: url(../Image/Picture/haian-beach-hotel-spa.jpg);
+}
+.Cost-Item-2{
+  background-image: url(../Image/Picture/tourist.png);
+}
+.Cost-Item-3{
+  background-image: url(../Image/Picture/bd\ 1.png);
+}
+.Cost-Item-4{
+  background-image: url(../Image/Picture/restaurant.png);
+}
 .swiper {
   width: 95%;
   height: 100%;
@@ -379,7 +398,31 @@ body {font-family: Verdana, sans-serif; margin:0}
  border-radius: 10px;
 }
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container-hotel {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 317px; 
+   border-radius: 10px;
+}
+.slideshow-container-ticket {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 317px; 
+   border-radius: 10px;
+}
+.slideshow-container-tourist {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 317px; 
+   border-radius: 10px;
+}
+.slideshow-container-restaurant {
   /* max-width: 1000px; */
   position: relative;
   margin: auto;
