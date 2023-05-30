@@ -140,7 +140,11 @@ fetch(DataAPI)
 .then((data) =>{
   getData(data)
 })
+
 function getData(data) {
+  AnGiang.onclick =()=>{
+    window.location.href='../DataTopDestination.html'
+  }
   AnGiang.onmouseover = ()=>{
     getDataName (AnGiangName)
     const Replace = data.filter(FilterData)
@@ -591,6 +595,10 @@ function getData(data) {
   YenBai.onmouseout = Remo
 
   function Remo(){
+    localStorage.removeItem('namedata')
+    localStorage.removeItem('iddata')
+    localStorage.removeItem('Descriptiondata')
+    localStorage.removeItem('imgdata')
     html.innerHTML=''
 }
 }
@@ -604,6 +612,14 @@ function getDataName (data){
   return Gan
 }
 function Printscreen(b){
+  var dataname = b.name
+  var dataid = b.id
+  var dataDes = b.Description
+  var dataImg = b.img
+  localStorage.setItem('namedata',dataname)
+  localStorage.setItem('iddata',dataid)
+  localStorage.setItem('Descriptiondata',dataDes)
+  localStorage.setItem('imgdata',dataImg)
   return  `
   <div class="Content__Destination--ID">${b.id}</div>
   <img src="${b.img}" alt="">
