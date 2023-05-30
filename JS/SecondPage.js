@@ -143,7 +143,7 @@ fetch(DataAPI)
 
 function getData(data) {
   AnGiang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   AnGiang.onmouseover = ()=>{
     getDataName (AnGiangName)
@@ -153,7 +153,7 @@ function getData(data) {
   }
   AnGiang.onmouseout = Remo
   BaRiaVungTau.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BaRiaVungTau.onmouseover = ()=>{
     getDataName (BaRiaVungTauName)
@@ -163,7 +163,7 @@ function getData(data) {
   }
   BaRiaVungTau.onmouseout =Remo
   BacGiang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BacGiang.onmouseover = ()=>{
     getDataName (BacGiangName)
@@ -173,7 +173,7 @@ function getData(data) {
   }
   BacGiang.onmouseout = Remo
   BacKan.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BacKan.onmouseover = ()=>{
     getDataName(BacKanName)
@@ -183,7 +183,7 @@ function getData(data) {
   }
   BacKan.onmouseout = Remo
   BacLieu.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BacLieu.onmouseover = ()=>{
     getDataName(BacLieuName)
@@ -193,7 +193,7 @@ function getData(data) {
   }
   BacLieu.onmouseout = Remo
   BacNinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BacNinh.onmouseover = ()=>{
     getDataName (BacNinhName)
@@ -203,7 +203,7 @@ function getData(data) {
   }
   BacNinh.onmouseout = Remo
   BenTre.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BenTre.onmouseover = ()=>{
     getDataName (BenTreName)
@@ -213,7 +213,7 @@ function getData(data) {
   }
   BenTre.onmouseout = Remo
   BinhDinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BinhDinh.onmouseover = ()=>{
     getDataName (BinhDinhName)
@@ -223,7 +223,7 @@ function getData(data) {
   }
   BinhDinh.onmouseout = Remo
   BinhDuong.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BinhDuong.onmouseover = ()=>{
   getDataName (BinhDuongName)
@@ -233,7 +233,7 @@ function getData(data) {
   }
   BinhDuong.onmouseout = Remo
   BinhPhuoc.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BinhPhuoc.onmouseover = ()=>{
   getDataName (BinhPhuocName)
@@ -243,7 +243,7 @@ function getData(data) {
   }
   BinhPhuoc.onmouseout = Remo
   BinhThuan.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   BinhThuan.onmouseover = ()=>{
   getDataName (BinhThuanName)
@@ -253,7 +253,7 @@ function getData(data) {
   }
   BinhThuan.onmouseout = Remo
   CaMau.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   CaMau.onmouseover = ()=>{
   getDataName (CaMauName)
@@ -263,7 +263,7 @@ function getData(data) {
   }
   CaMau.onmouseout = Remo
   CanTho.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   CanTho.onmouseover = ()=>{
     getDataName (CanThoName)
@@ -273,7 +273,7 @@ function getData(data) {
   }
   CanTho.onmouseout = Remo
   CaoBang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   CaoBang.onmouseover = ()=>{
     getDataName (CaoBangName)
@@ -283,7 +283,7 @@ function getData(data) {
   }
   CaoBang.onmouseout = Remo
   DaNang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   DaNang.onmouseover = ()=>{
     getDataName (DaNangName)
@@ -293,7 +293,7 @@ function getData(data) {
   }
   DaNang.onmouseout = Remo
   Daklak.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   Daklak.onmouseover = ()=>{
     getDataName (DaklakName)
@@ -303,7 +303,7 @@ function getData(data) {
   }
   Daklak.onmouseout = Remo
   DakNong.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   DakNong.onmouseover = ()=>{
     getDataName (DakNongName)
@@ -313,7 +313,7 @@ function getData(data) {
   }
   DakNong.onmouseout = Remo
   DienBien.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   DienBien.onmouseover = ()=>{
     getDataName (DienBienName)
@@ -323,7 +323,7 @@ function getData(data) {
   }
   DienBien.onmouseout = Remo
   DongNai.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   DongNai.onmouseover = ()=>{
     getDataName (DongNaiName)
@@ -333,7 +333,7 @@ function getData(data) {
   }
   DongNai.onmouseout = Remo
   DongThap.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   DongThap.onmouseover = ()=>{
     getDataName (DongThapName)
@@ -343,7 +343,7 @@ function getData(data) {
   }
   DongThap.onmouseout = Remo
   GiaLai.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   GiaLai.onmouseover = ()=>{
     getDataName (GiaLaiName)
@@ -353,7 +353,7 @@ function getData(data) {
   }
   GiaLai.onmouseout = Remo
   HaGiang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   HaGiang.onmouseover = ()=>{
     getDataName (HaGiangName)
@@ -363,7 +363,7 @@ function getData(data) {
   }
   HaGiang.onmouseout = Remo
   HaNam.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   HaNam.onmouseover = ()=>{
     getDataName (HaNamName)
@@ -373,7 +373,7 @@ function getData(data) {
   }
   HaNam.onmouseout = Remo
   HaNoi.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   HaNoi.onmouseover = ()=>{
     getDataName (HaNoiName)
@@ -383,7 +383,7 @@ function getData(data) {
   }
   HaNoi.onmouseout = Remo
   HaTinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   HaTinh.onmouseover = ()=>{
     getDataName (HaTinhName)
@@ -393,7 +393,7 @@ function getData(data) {
   }
   HaTinh.onmouseout = Remo
   HaiDuong.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   HaiDuong.onmouseover = ()=>{
     getDataName (HaiDuongName)
@@ -403,7 +403,7 @@ function getData(data) {
   }
   HaiDuong.onmouseout = Remo
   HaiPhong.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   }
   HaiPhong.onmouseover = ()=>{
     getDataName (HaiPhongName)
@@ -413,7 +413,7 @@ function getData(data) {
   }
   HaiPhong.onmouseout = Remo
   HauGiang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   HauGiang.onmouseover = ()=>{
     getDataName (HauGiangName)
@@ -423,7 +423,7 @@ function getData(data) {
   }
   HauGiang.onmouseout = Remo
   HoaBinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   HoaBinh.onmouseover = ()=>{
     getDataName (HoaBinhName)
@@ -433,7 +433,7 @@ function getData(data) {
   }
   HoaBinh.onmouseout = Remo  
   HungYen.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   HungYen.onmouseover = ()=>{
     getDataName (HungYenName)
@@ -443,7 +443,7 @@ function getData(data) {
   }
   HungYen.onmouseout = Remo 
   KhanhHoa.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   KhanhHoa.onmouseover = ()=>{
     getDataName (KhanhHoaName)
@@ -453,7 +453,7 @@ function getData(data) {
   }
   KhanhHoa.onmouseout = Remo 
   KienGiang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   KienGiang.onmouseover = ()=>{
     getDataName (KienGiangName)
@@ -463,7 +463,7 @@ function getData(data) {
   }
   KienGiang.onmouseout = Remo 
   KomTum.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   KomTum.onmouseover = ()=>{
     getDataName (KomTumName)
@@ -473,7 +473,7 @@ function getData(data) {
   }
   KomTum.onmouseout = Remo 
   LaiChau.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   LaiChau.onmouseover = ()=>{
     getDataName (LaiChauName)
@@ -483,7 +483,7 @@ function getData(data) {
   }
   LaiChau.onmouseout = Remo 
   LamDong.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   LamDong.onmouseover = ()=>{
     getDataName (LamDongName)
@@ -493,7 +493,7 @@ function getData(data) {
   }
   LamDong.onmouseout = Remo 
   LangSon.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   LangSon.onmouseover = ()=>{
     getDataName (LangSonName)
@@ -503,7 +503,7 @@ function getData(data) {
   }
   LangSon.onmouseout = Remo 
   LaoCai.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   LaoCai.onmouseover = ()=>{
     getDataName (LaoCaiName)
@@ -513,7 +513,7 @@ function getData(data) {
   }
   LaoCai.onmouseout = Remo 
   LongAn.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   LongAn.onmouseover = ()=>{
     getDataName (LongAnName)
@@ -523,7 +523,7 @@ function getData(data) {
   }
   LongAn.onmouseout = Remo 
   NamDinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   NamDinh.onmouseover = ()=>{
     getDataName (NamDinhName)
@@ -533,7 +533,7 @@ function getData(data) {
   }
   NamDinh.onmouseout = Remo 
   NgheAn.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   NgheAn.onmouseover = ()=>{
     getDataName (NgheAnName)
@@ -543,7 +543,7 @@ function getData(data) {
   }
   NgheAn.onmouseout = Remo 
   NinhBinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   NinhBinh.onmouseover = ()=>{
     getDataName (NinhBinhName)
@@ -553,7 +553,7 @@ function getData(data) {
   }
   NinhBinh.onmouseout = Remo 
   NinhThuan.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   NinhThuan.onmouseover = ()=>{
     getDataName (NinhThuanName)
@@ -563,7 +563,7 @@ function getData(data) {
   }
   NinhThuan.onmouseout = Remo 
   PhuTho.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   PhuTho.onmouseover = ()=>{
     getDataName (PhuThoName)
@@ -573,7 +573,7 @@ function getData(data) {
   }
   PhuTho.onmouseout = Remo 
   PhuYen.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   PhuYen.onmouseover = ()=>{
     getDataName (PhuYenName)
@@ -583,7 +583,7 @@ function getData(data) {
   }
   PhuYen.onmouseout = Remo 
   QuangTri.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   QuangTri.onmouseover = ()=>{
     getDataName (QuangTriName)
@@ -593,7 +593,7 @@ function getData(data) {
   }
   QuangTri.onmouseout = Remo
   QuangBinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   QuangBinh.onmouseover = ()=>{
     getDataName (QuangBinhName)
@@ -603,7 +603,7 @@ function getData(data) {
   }
   QuangBinh.onmouseout = Remo
   QuangNam.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   QuangNam.onmouseover = ()=>{
     getDataName (QuangNamName)
@@ -613,7 +613,7 @@ function getData(data) {
   }
   QuangNam.onmouseout = Remo
   QuangNgai.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   QuangNgai.onmouseover = ()=>{
     getDataName (QuangNgaiName)
@@ -623,7 +623,7 @@ function getData(data) {
   }
   QuangNgai.onmouseout = Remo
   QuangNinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   QuangNinh.onmouseover = ()=>{
     getDataName (QuangNinhName)
@@ -633,7 +633,7 @@ function getData(data) {
   }
   QuangNinh.onmouseout = Remo
   QuangTri.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   QuangTri.onmouseover = ()=>{
     getDataName (QuangTriName)
@@ -643,7 +643,7 @@ function getData(data) {
   }
   QuangTri.onmouseout = Remo
   SocTrang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   SocTrang.onmouseover = ()=>{
     getDataName (SocTrangName)
@@ -653,7 +653,7 @@ function getData(data) {
   }
   SocTrang.onmouseout = Remo
   SonLa.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   SonLa.onmouseover = ()=>{
     getDataName (SonLaName)
@@ -663,7 +663,7 @@ function getData(data) {
   }
   SonLa.onmouseout = Remo
   TayNinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   TayNinh.onmouseover = ()=>{
     getDataName (TayNinhName)
@@ -673,7 +673,7 @@ function getData(data) {
   }
   TayNinh.onmouseout = Remo
   ThaiBinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   ThaiBinh.onmouseover = ()=>{
     getDataName (ThaiBinhName)
@@ -683,7 +683,7 @@ function getData(data) {
   }
   ThaiBinh.onmouseout = Remo
   ThaiNguyen.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   ThaiNguyen.onmouseover = ()=>{
     getDataName (ThaiNguyenName)
@@ -693,7 +693,7 @@ function getData(data) {
   }
   ThaiNguyen.onmouseout = Remo
   ThanhHoa.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   ThanhHoa.onmouseover = ()=>{
     getDataName (ThanhHoaName)
@@ -703,7 +703,7 @@ function getData(data) {
   }
   ThanhHoa.onmouseout = Remo
   ThuaThienHue.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   ThuaThienHue.onmouseover = ()=>{
     getDataName (ThuaThienHueName)
@@ -713,7 +713,7 @@ function getData(data) {
   }
   ThuaThienHue.onmouseout = Remo
   TienGiang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   TienGiang.onmouseover = ()=>{
     getDataName (TienGiangName)
@@ -723,7 +723,7 @@ function getData(data) {
   }
   TienGiang.onmouseout = Remo
   HCM.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   HCM.onmouseover= ()=>{
     getDataName(HCMName)
@@ -733,7 +733,7 @@ function getData(data) {
   }
   HCM.onmouseout = Remo
   TraVinh.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   TraVinh.onmouseover = ()=>{
     getDataName (TraVinhName)
@@ -743,7 +743,7 @@ function getData(data) {
   }
   TraVinh.onmouseout = Remo
   TuyenQuang.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   TuyenQuang.onmouseover = ()=>{
     getDataName (TuyenQuangName)
@@ -753,7 +753,7 @@ function getData(data) {
   }
   TuyenQuang.onmouseout = Remo
   VinhLong.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   VinhLong.onmouseover = ()=>{
     getDataName (VinhLongName)
@@ -763,7 +763,7 @@ function getData(data) {
   }
   VinhLong.onmouseout = Remo
   VinhPhuc.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   VinhPhuc.onmouseover = ()=>{
     getDataName (VinhPhucName)
@@ -773,7 +773,7 @@ function getData(data) {
   }
   VinhPhuc.onmouseout = Remo
   YenBai.onclick =()=>{
-    window.location.href='../DataTopDestination.html'
+    window.location.href='DataTopDestination.html'
   } 
   YenBai.onmouseover = ()=>{
     getDataName (YenBaiName)
